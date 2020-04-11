@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+	<html lang="es">
+		<head>
+			<meta charset="utf-8">
+			<meta name="viewport" content="width=device-width, user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
+			<title>Acceso</title>
+			<link rel="stylesheet" type="text/css" href="css/forms.css">
+			<script src="js/validar_form.js"></script>
+			<script src="js/modernizr_form.custom.lis.js"></script>
+		</head>
+
+		<body>
+
+			<header>
+				<h1>Bienvenido.</h1>
+			</header>
+
+			<section>
+				<article>
+					<form action="php/Verificacion_Usuario" method="POST">
+						<label>Usuario:</label>
+						<br>
+						<input type="text" name="usuario" id="usuario" placeholder="Ingrese Usuario">
+						<br>
+						<br>
+						<label>Contraseña:</label>
+						<br>
+						<input type="password" name="password" id="password" placeholder="Contraseña">
+						<br>
+						<br>
+						<input type="submit" name="ingresar" id="ingresar" value="Ingresar" class="submit">
+					</form>
+				</article>
+			</section>
+
+			
+		</body>
+	</html>
