@@ -18,6 +18,11 @@
         <link rel="stylesheet" type="text/css" href="../css/style_SM.css">
     </head>
     <body id="page-top">
+        <?php
+            include("../php/Conexion.php");
+
+        ?>
+
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
             <div class="container">
@@ -36,17 +41,18 @@
                 </div>
             </div>
         </nav>
+        
         <!-- Masthead-->
         <!-- Prefacio del Sitio, con imagen -->
         <header class="masthead">
             <div class="container h-100">
                 <div class="row h-100 align-items-center justify-content-center text-center">
                     <div class="col-lg-10 align-self-end">
-                        <h1 class="text-uppercase text-white font-weight-bold">Acompañamos a las mujeres paso a paso</h1>
+                        <?php echo imprimirtitulo1(1); ?>
                         <hr class="divider my-4" />
                     </div>
                     <div class="col-lg-8 align-self-baseline">
-                        <p class="text-white-75 font-weight-light mb-5">En una educación que cambia vidas, para una formación integral y asi forjar un futuro con nuevas aspiraciones</p>
+                        <?php echo imprimirdescripcion1(1); ?>
                         <button type="button" class="btn btn-primary btn-xl js-scroll-trigger" data-toggle='modal' data-target='#modifi_enun'>Modificar enunciado</button>
                     </div>
                 </div>
@@ -61,8 +67,9 @@
                     <div class="col-lg-4 col-md-6 text-center">
                         <div class="mt-5">
                             <!-- <i class="fas fa-4x fa-money-bill-alt text-primary mb-4"></i> -->
-                            <h3 class="h4 mb-2">Noticia #1</h3>
-                            <p class="text-muted mb-0">Breve descripción acerca de la noticia</p>
+                            <?php echo imprimirTitu_Noti1(1); ?>
+                            <br>
+                            <?php echo imprimirDes_Noti1(1); ?>
                             <br>
                             <br>    
                             <button type="button" class="btn btn-primary btn-xl js-scroll-trigger" data-toggle='modal' data-target='#noticia1'>Ver Noticia</button>
@@ -74,8 +81,9 @@
                     <div class="col-lg-4 col-md-6 text-center">
                         <div class="mt-5">
                             <!-- <i class="fas fa-4x fa-book-open text-primary mb-4"></i> -->
-                            <h3 class="h4 mb-2">Noticia #2</h3>
-                            <p class="text-muted mb-0">Breve descripción acerca de la noticia</p>
+                            <?php echo imprimirTitu_Noti1(2); ?>
+                            <br>
+                            <?php echo imprimirDes_Noti1(2); ?>
                             <br>
                             <br>    
                             <button type="button" class="btn btn-primary btn-xl js-scroll-trigger" data-toggle='modal' data-target='#noticia2'>Ver Noticia</button>
@@ -87,8 +95,9 @@
                     <div class="col-lg-4 col-md-6 text-center">
                         <div class="mt-5">
                             <!-- <i class="fas fa-4x fa-balance-scale text-primary mb-4"></i> -->
-                            <h3 class="h4 mb-2">Noticia #3</h3>
-                            <p class="text-muted mb-0">Breve descripción acerca de la noticia</p>
+                            <?php echo imprimirTitu_Noti1(3); ?>
+                            <br>
+                            <?php echo imprimirDes_Noti1(3); ?>
                             <br>
                             <br>    
                             <button type="button" class="btn btn-primary btn-xl js-scroll-trigger" data-toggle='modal' data-target='#noticia3'>Ver Noticia</button>
@@ -151,17 +160,17 @@
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="solicitarLabel">NOTICIA 1</h5>
+                            <?php echo imprimirTi_Noti1(1); ?>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
                         <div class="modal-body">
                             <div class="form-group">
-                                <p class="text-muted mb-0">Aquí iria la información que se extraería de la base de datos acerca de las noticias.</p>
+                                <?php echo imprimirCon_Noti1(1); ?>
                             </div>
-                    </div>      
-                </div>
+                        </div>      
+                    </div>
               </div>
             </div>
         <!--Termina Modal 1-->
@@ -171,17 +180,17 @@
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="solicitarLabel">NOTICIA 2</h5>
+                            <?php echo imprimirTi_Noti1(2); ?>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
                         <div class="modal-body">
                             <div class="form-group">
-                                <p class="text-muted mb-0">Aquí iria la información que se extraería de la base de datos acerca de las noticias.</p>
+                                <?php echo imprimirCon_Noti1(2); ?>
                             </div>
-                    </div>      
-                </div>
+                        </div>     
+                 </div>
               </div>
             </div>
         <!--Termina Modal 2-->
@@ -191,17 +200,17 @@
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="solicitarLabel">NOTICIA 3</h5>
+                            <?php echo imprimirTi_Noti1(3); ?>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
                         <div class="modal-body">
                             <div class="form-group">
-                                <p class="text-muted mb-0">Aquí iria la información que se extraería de la base de datos acerca de las noticias.</p>
+                                <?php echo imprimirCon_Noti1(3); ?>
                             </div>
-                    </div>      
-                </div>
+                        </div>    
+                    </div>
               </div>
             </div>
         <!--Termina Modal 3-->
@@ -313,13 +322,13 @@
             <form action="<?=  $_SERVER['PHP_SELF'] ?>" method="POST" autocomplete="off">
                 <div class="form-group">
                     <textarea name="enunciado" rows="3" cols="40">
-                        Informacion sacada de la base de datos
+                    
                     </textarea>
                 </div>
                 <br>
                 <div class="form-group">
                     <textarea name="descripcion" rows="8" cols="40">
-                        Informacion sacada de la base de datos
+                    
                     </textarea>
                 </div>
                 <div class="modal-footer">

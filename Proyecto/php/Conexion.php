@@ -112,17 +112,7 @@
 
             while ($col = mysqli_fetch_array($r)) {
 
-
-                if ($col == "") {
-
-                    $Tit1 = "No hay titulo de noticia";
-
-                }
-                else{
-                        
                     $Tit1 = $col['Titulo'];
-
-                }
 
             }
 
@@ -138,7 +128,7 @@
             return $impri1;
         }
 
-        //Para titulo del modal 1
+        //Para titulo del modal 
         function imprimirTi_Noti1($id){
 
             $Tit01 = obtenerTitu_Noti1($id);
