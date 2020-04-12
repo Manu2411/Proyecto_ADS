@@ -53,7 +53,8 @@
                     </div>
                     <div class="col-lg-8 align-self-baseline">
                         <?php echo imprimirdescripcion1(1); ?>
-                        <button type="button" class="btn btn-primary btn-xl js-scroll-trigger" data-toggle='modal' data-target='#modifi_enun'>Modificar enunciado</button>
+                        <br>
+                        <a class="btn btn-info  btn-xl js-scroll-trigger" href="CRUD_admin/Enunciados/Opciones_Enunciados.html">Opciones de Enunciados</a>
                     </div>
                 </div>
             </div>
@@ -73,9 +74,7 @@
                             <br>
                             <br>    
                             <button type="button" class="btn btn-primary btn-xl js-scroll-trigger" data-toggle='modal' data-target='#noticia1'>Ver Noticia</button>
-                            <br>
-                            <br>
-                            <button type="button" class="btn btn-primary btn-xl js-scroll-trigger" data-toggle='modal' data-target='#modificar1'>Modificar Noticia</button>
+                           
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 text-center">
@@ -89,7 +88,8 @@
                             <button type="button" class="btn btn-primary btn-xl js-scroll-trigger" data-toggle='modal' data-target='#noticia2'>Ver Noticia</button>
                             <br>
                             <br>
-                            <button type="button" class="btn btn-primary btn-xl js-scroll-trigger" data-toggle='modal' data-target='#modificar2'>Modificar Noticia</button>
+                            <br>
+                            <a class="btn btn-info  btn-xl js-scroll-trigger" href="CRUD_admin/Noticias/Opciones_Noticias.html">Opciones de Noticias</a>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 text-center">
@@ -101,16 +101,14 @@
                             <br>
                             <br>    
                             <button type="button" class="btn btn-primary btn-xl js-scroll-trigger" data-toggle='modal' data-target='#noticia3'>Ver Noticia</button>
-                            <br>
-                            <br>
-                            <button type="button" class="btn btn-primary btn-xl js-scroll-trigger" data-toggle='modal' data-target='#modificar3'>Modificar Noticia</button>
+                            
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-       <!-- 
+       
         <br>
         <section class="page-section bg-primary" id="contact">
             <div class="container">
@@ -136,14 +134,15 @@
                     </div>
                     <br>
                     <div class="col-lg-4 mr-auto text-center">
-                        <a  href="mailto:info@fundacionsirama.org"><i class="fas fa-envelope fa-3x mb-3 text-white" id="links"></i></a> Make sure to change the email address in BOTH the anchor text and the link target below!
+                        <a  href="mailto:info@fundacionsirama.org"><i class="fas fa-envelope fa-3x mb-3 text-white" id="links"></i></a>
                         <div class="text-white-50 mb-4">info@fundacionsirama.org</div>
                         <a class="btn btn-info  btn-xl js-scroll-trigger" href="#">Modificar Correo Electrónico</a>
                     </div>
                 </div>
             </div>
         </section>
- -->        
+
+
         <!-- Bootstrap core JS-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
@@ -214,133 +213,6 @@
               </div>
             </div>
         <!--Termina Modal 3-->
-        <!-- Terminan los modales para ver noticias -->
-
-
-        <!-- Modales para modificar noticias -->
-        <!--Modal 1-->
-<div class="modal fade" id="modificar1" tabindex="-1" role="dialog" aria-labelledby="modificarLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="modificarLabel">Noticia #1</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-            <form action="<?=  $_SERVER['PHP_SELF'] ?>" method="POST" autocomplete="off">
-                <div class="form-group">
-                    <!-- <input type="textarea" class="form-control" id="recipient-name" name="carnet"> -->
-                    <textarea name="info" rows="10" cols="40">
-                        Informacion sacada de la base de datos
-                    </textarea>
-                </div>
-                <div class="modal-footer">
-                    <input type="submit" class="btn btn-success" name="modificar" value="Modificar"/>
-                    <input type="button" class="btn btn-danger" data-dismiss="modal" name="cancelar" value="Cancelar"/>
-                </div>
-            </form>
-        </div>      
-    </div>
-  </div>
-</div>
-  <!--Termina Modal 1-->
-
-  <!--Modal 2-->
-<div class="modal fade" id="modificar2" tabindex="-1" role="dialog" aria-labelledby="modificarLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="modificarLabel">Noticia #3</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-            <form action="<?=  $_SERVER['PHP_SELF'] ?>" method="POST" autocomplete="off">
-                <div class="form-group">
-                    <!-- <input type="textarea" class="form-control" id="recipient-name" name="carnet"> -->
-                    <textarea name="info" rows="10" cols="40">
-                        Informacion sacada de la base de datos
-                    </textarea>
-                </div>
-                <div class="modal-footer">
-                    <input type="submit" class="btn btn-success" name="modificar" value="Modificar"/>
-                    <input type="button" class="btn btn-danger" data-dismiss="modal" name="cancelar" value="Cancelar"/>
-                </div>
-            </form>
-        </div>      
-    </div>
-  </div>
-</div>
-  <!--Termina Modal 2-->
-
-  <!--Modal 3-->
-<div class="modal fade" id="modificar3" tabindex="-1" role="dialog" aria-labelledby="modificarLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="modificarLabel">Noticia #3</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-            <form action="<?=  $_SERVER['PHP_SELF'] ?>" method="POST" autocomplete="off">
-                <div class="form-group">
-                    <!-- <input type="textarea" class="form-control" id="recipient-name" name="carnet"> -->
-                    <textarea name="info" rows="10" cols="40">
-                        Informacion sacada de la base de datos
-                    </textarea>
-                </div>
-                <div class="modal-footer">
-                    <input type="submit" class="btn btn-success" name="modificar" value="Modificar"/>
-                    <input type="button" class="btn btn-danger" data-dismiss="modal" name="cancelar" value="Cancelar"/>
-                </div>
-            </form>
-        </div>      
-    </div>
-  </div>
-</div>
-  <!--Termina Modal 3-->
-  <!-- Terminan los modales para modificar las noticias -->
-
-
-  <!-- Modales para modificar enunciados principales -->
-  <!--Modal 1-->
-<div class="modal fade" id="modifi_enun" tabindex="-1" role="dialog" aria-labelledby="modifi_enunLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="modifi_enunLabel">Enunciado Principal</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-            <form action="<?=  $_SERVER['PHP_SELF'] ?>" method="POST" autocomplete="off">
-                <div class="form-group">
-                    <textarea name="enunciado" rows="3" cols="40">
-                    
-                    </textarea>
-                </div>
-                <br>
-                <div class="form-group">
-                    <textarea name="descripcion" rows="8" cols="40">
-                    
-                    </textarea>
-                </div>
-                <div class="modal-footer">
-                    <input type="submit" class="btn btn-success" name="modificar" value="Modificar"/>
-                    <input type="button" class="btn btn-danger" data-dismiss="modal" name="cancelar" value="Cancelar"/>
-                </div>
-            </form>
-        </div>      
-    </div>
-  </div>
-</div>
-  <!--Termina Modal 1-->
-<!-- Termina modal para modificar el enunciado  -->
+        <!-- Terminan los modales para ver noticias --> 
     </body>
 </html>
