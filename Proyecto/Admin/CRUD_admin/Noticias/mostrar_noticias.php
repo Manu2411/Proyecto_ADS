@@ -47,16 +47,15 @@
 						//Creando variables locales con los datos enviados
 						//desde el formulario de modificación
 						$id = isset($_GET[ 'id' ]) ? trim($_GET[ 'id' ]) : "";
-						$idnoti = isset($_POST[ 'idnoti' ]) ? trim($_POST[ 'idnoti' ]) : "";
 						$titulo = isset($_POST[ 'titulo' ]) ? trim($_POST[ 'titulo' ]) : "";
 						$descripcion = isset($_POST[ 'descripcion' ]) ? trim($_POST[ 'descripcion' ]) : "";
 						$contenido = isset($_POST[ 'contenido' ]) ? trim($_POST[ 'contenido' ]) : "";
-						$estado = isset($_POST[ 'estado' ]) ? trim($_POST[ 'estado' ]) : "";
+						$estado = isset($_POST[ 'estado' ]) ? trim($_POST[ 'estado' ]) : "0";
 						$fecha = isset($_POST[ 'fecha' ]) ? trim($_POST[ 'fecha' ]) : "";
 
 						//Verificando que se hayan ingresado datos
 						//en todos los controles del formulario
-						if (empty($idnoti) || empty($titulo) || empty($descripcion) || empty($contenido) || empty($fecha)) {
+						if (empty($titulo) || empty($descripcion) || empty($contenido) || empty($fecha)) {
 						$msg = "Existen campos en el formulario sin llenar.";
 						$msg .= "Regrese al formulario y llene todos los campos. <br>\n";
 						$msg .= "[<a href=\"modificar.php?id=" . $id . "\">Volver</a>]\n";
@@ -67,7 +66,6 @@
 
 						if (!get_magic_quotes_gpc()) {
 							$id = addslashes($id);
-							$idnoti = intval($idnoti);
 							$titulo = addslashes($titulo);
 							$descripcion = addslashes($descripcion);
 							$contenido = addslashes($contenido);
@@ -78,7 +76,7 @@
 						//Creando la consulta de actualización con los datos
 						//enviados del formulario de modificación de libros
 						
-						$consulta = "update noticias set Id_Noti = " . $idnoti . ",  Titulo = '" . $titulo . "',  Descripcion = '" . $descripcion . "', Contenido = '" . $contenido . "', Estado = '" .$estado . "', Fecha = '" . $fecha . "' WHERE Id_Noti = '" . $id . "'";
+						$consulta = "update noticias set Titulo = '" . $titulo . "',  Descripcion = '" . $descripcion . "', Contenido = '" . $contenido . "', Estado = '" .$estado . "', Fecha = '" . $fecha . "' WHERE Id_Noti = '" . $id . "'";
 
 						//Ejecutando la consulta de actualización
 						$resultc = $db->query($consulta);
@@ -98,7 +96,7 @@
 					$_GET['id'] . "'" ;
 					$resultc = $db->query($consulta);
 					$num_results = $db->affected_rows;
-					echo "se ha eliminado" . $num_results . " noticia de id = " . $_GET[ 'id' ] . "<br>" ;
+					echo "se ha eliminado noticia de id = " . $_GET[ 'id' ] . "<br>" ;
 				}
 
 				//Haciendo una consulta de todos los libros presentes

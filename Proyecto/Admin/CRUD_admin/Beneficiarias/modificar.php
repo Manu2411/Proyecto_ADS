@@ -2,7 +2,7 @@
 	<html lang="es">
 		<head>
 			<meta charset="utf-8" />
-			<title>Modificar un enunciado</title>
+			<title>Modificar datos de una beneficiaria</title>
 
 			<link href = "//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel = "stylesheet" id = "bootstrap-css" >
 			<script src = "//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js" ></script>
@@ -15,7 +15,7 @@
 			<header>
 				<nav class = "navbar navbar-dark bg-primary" >
 				<span class = "navbar-text" >
-				<h1> Modificar Enunciado </h1>
+				<h1> Modificar Datos </h1>
 				</span>
 				</nav>
 			</header>
@@ -39,7 +39,7 @@
 
 						//Haciendo una consulta de todos los libros presentes
 						//en la tabla libros
-						$consulta = " SELECT * FROM enunciados WHERE Id_Enun = '" . $_GET['id'] . "'";
+						$consulta = " SELECT * FROM beneficiarias WHERE Id_Bene = '" . $_GET['id'] . "'";
 
 						//echo $consulta . "<br>\n";
 						//Ejecutando la consulta a través del objeto $db
@@ -50,19 +50,18 @@
 						$row = $resultc->fetch_assoc(); 
 					?>
 
-					<form action = "mostrar_enunciados.php?id= <?php echo $_GET[ 'id' ] ?>" method = "POST" class = "formoidsolid-purple" >
+					<form action = "mostrar_bene.php?id= <?php echo $_GET[ 'id' ] ?>" method = "POST" class = "formoidsolid-purple" >
 						<div class = "element-number form-group" >
 							<label class = "title" ></label>
 							<div class = "item-cont" >
-								<input type = "text" class = "form-control" name = "idenun" value = "<?php echo $row[ 'Id_Enun' ] ?> " 
-								maxlength = "5" title = "No se puede modificar el id del enunciado." class = "large" disabled/> <span class = "icon-place" ></span> 
+								<input type = "text" class = "form-control" name = "idcur" value = "<?php echo $row[ 'Id_Bene' ] ?> " maxlength = "5" title="No se puede modificar el Id de beneficiaria" class = "large" disabled /> <span class = "icon-place" ></span> 
 							</div>
 						</div>
 
 						<div class = "element-name form-group" > 
 							<label class = "title" ></label>
 							<div class = "nameFirst" > 
-								<input class = "form-control" type = "text" name = "titulo" value = "<?php echo $row[ 'Titulo' ] ?> " maxlength = "100" placeholder = "Titulo Enunciado" class = "large" /> 
+								<input class = "form-control" type = "text" name = "nombre" value = "<?php echo $row[ 'Nombre' ] ?> " maxlength = "50" placeholder = "Nombre de Curso" class = "large" /> 
 								<span class = "icon-place" ></span> 
 							</div>
 						</div>
@@ -70,14 +69,14 @@
 						<div class = "element-input form-group" > 
 							<label class = "title" ></label>
 							<div class = "item-cont" > 
-								<input class = "form-control" type = "text" name = "descripcion" value = "<?php echo $row[ 'Descripcion' ] ?> " maxlength = "350" placeholder = "Descripción de Enunciado"class = "large" /> <span class = "icon-place" ></span> 
+								<input class = "form-control" type = "text" name = "opinion" value = "<?php echo $row[ 'Opinion' ] ?> " maxlength = "1500" placeholder = "Opinión de Beneficiaria."class = "large" /> <span class = "icon-place" ></span> 
 							</div>
 						</div>
 
-						<div class = "element-number form-group" > 
+						<div class = "element-input form-group" > 
 							<label class = "title" ></label>
-							<div class = "item-cont" >
-								<input class = "form-control" type = "text" name = "fecha" value = "<?php echo $row[ 'Fecha' ] ?> " maxlength = "10" placeholder = "aaaa-mm-dd" class = "large" /> <span class = "icon-place" ></span> 
+							<div class = "item-cont" > 
+								<input class = "form-control" type = "text" name = "fecha" value = "<?php echo $row[ 'Fecha' ] ?> " maxlength = "50" placeholder = "aaaa-mm-dd"class = "large" /> <span class = "icon-place" ></span> 
 							</div>
 						</div>
 
@@ -87,7 +86,7 @@
 					</form>
 
 						<hr class = "d-lg-none divider" >
-						<a href = "mostrar_enunciados.php?opc=modificar" class = "d-block h3 font-weight-normal"> Volver <br>
+						<a href = "mostrar_bene.php?opc=modificar" class = "d-block h3 font-weight-normal"> Volver <br>
 						<small class = "d-block text-muted text-small" > a la tabla de modificación </small>
 						</a>
 				</article>

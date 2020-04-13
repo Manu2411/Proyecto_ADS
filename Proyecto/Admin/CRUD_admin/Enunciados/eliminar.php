@@ -11,16 +11,16 @@
 		exit ( 0 );
 	}
 
+	echo "<title>Eliminando Enunciado</title>";
+
 	$id = $_GET[ 'id' ];
 	$sql = " SELECT * FROM enunciados WHERE Id_Enun = '" . $id . "'";
 	$result = $db->query($sql);
 	$row = $result->fetch_assoc();
 	$msg = "<script text=\"text/javascript\">\n";
-	$preg = "Deseas eliminar el enunciado de:";
-	$preg .= "Id = " . $row[ 'Id_Enun' ] . ",";
-	$preg .= "Título = " . $row[ 'Titulo' ] . ",";
-	$preg .= "Descripción = " . $row[ 'Descripcion' ] . ",";
-	$preg .= "Fecha = " . $row[ 'Fecha' ] . ".";
+	$preg = "Deseas eliminar el enunciado de: ";
+	$preg .= "Id = " . $row[ 'Id_Enun' ] . ", ";
+	$preg .= "Titulo = " . $row[ 'Titulo' ] . ".";
 	$msg .= "if(confirm(\"" . $preg . "\")){";
 	$msg .= "location.href=\"mostrar_enunciados.php?opc=eliminar&del=s&id=". $id. "\";}";
 	$msg .= "else{location.href=\"mostrar_enunciados.php?opc=eliminar&del=n\";}

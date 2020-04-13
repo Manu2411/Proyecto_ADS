@@ -2,7 +2,7 @@
 	<html lang="es">
 		<head>
 			<meta charset="utf-8" />
-			<title>Modificar un noticia</title>
+			<title>Modificar un curso</title>
 
 			<link href = "//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel = "stylesheet" id = "bootstrap-css" >
 			<script src = "//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js" ></script>
@@ -15,7 +15,7 @@
 			<header>
 				<nav class = "navbar navbar-dark bg-primary" >
 				<span class = "navbar-text" >
-				<h1> Modificar noticia </h1>
+				<h1> Modificar Curso </h1>
 				</span>
 				</nav>
 			</header>
@@ -41,7 +41,7 @@
 
 						//Haciendo una consulta de todos los libros presentes
 						//en la tabla libros
-						$consulta = " SELECT * FROM noticias WHERE Id_Noti = '" . $_GET['id'] . "'";
+						$consulta = " SELECT * FROM cursos WHERE Id_Curso = '" . $_GET['id'] . "'";
 
 						//echo $consulta . "<br>\n";
 						//Ejecutando la consulta a través del objeto $db
@@ -52,19 +52,18 @@
 						$row = $resultc->fetch_assoc(); 
 					?>
 
-					<form action = "mostrar_noticias.php?id= <?php echo $_GET[ 'id' ] ?>" method = "POST" class = "formoidsolid-purple" >
+					<form action = "mostrar_cursos.php?id= <?php echo $_GET[ 'id' ] ?>" method = "POST" class = "formoidsolid-purple" >
 						<div class = "element-number form-group" >
 							<label class = "title" ></label>
 							<div class = "item-cont" >
-								<input type = "text" class = "form-control" name = "idnoti" value = "<?php echo $row[ 'Id_Noti' ] ?> " 
-								maxlength = "5" title = "No se puede modificar el id de la noticia." class = "large" disabled/> <span class = "icon-place" ></span> 
+								<input type = "text" class = "form-control" name = "idcur" value = "<?php echo $row[ 'Id_Curso' ] ?> " maxlength = "5" title="No se puede modificar el Id del Curso" class = "large" disabled /> <span class = "icon-place" ></span> 
 							</div>
 						</div>
 
 						<div class = "element-name form-group" > 
 							<label class = "title" ></label>
 							<div class = "nameFirst" > 
-								<input class = "form-control" type = "text" name = "titulo" value = "<?php echo $row[ 'Titulo' ] ?> " maxlength = "100" placeholder = "Titulo Noticia" class = "large" /> 
+								<input class = "form-control" type = "text" name = "nombre" value = "<?php echo $row[ 'Nombre' ] ?> " maxlength = "50" placeholder = "Nombre de Curso" class = "large" /> 
 								<span class = "icon-place" ></span> 
 							</div>
 						</div>
@@ -72,28 +71,42 @@
 						<div class = "element-input form-group" > 
 							<label class = "title" ></label>
 							<div class = "item-cont" > 
-								<input class = "form-control" type = "text" name = "descripcion" value = "<?php echo $row[ 'Descripcion' ] ?> " maxlength = "350" placeholder = "Descripción de Noticia"class = "large" /> <span class = "icon-place" ></span> 
+								<input class = "form-control" type = "text" name = "descripcion" value = "<?php echo $row[ 'Descripcion' ] ?> " maxlength = "400" placeholder = "Descripción de Curso"class = "large" /> <span class = "icon-place" ></span> 
 							</div>
 						</div>
 
 						<div class = "element-number form-group" > 
 							<label class = "title" ></label>
 							<div class = "item-cont" >
-								<input class = "form-control" type = "text" name = "contenido" value = "<?php echo $row[ 'Contenido' ] ?> " maxlength = "1500" placeholder = "Contenido de Noticia" class = "large" /> <span class = "icon-place" ></span> 
+								<input class = "form-control" type = "text" name = "hora" value = "<?php echo $row[ 'Horario' ] ?> " maxlength = "50" placeholder = "Horario: 8:00 am - 12:00 pm" class = "large" /> <span class = "icon-place" ></span> 
 							</div>
 						</div>
 
-						<div class = "element-number form-group" > 
+						<div class = "element-input form-group" > 
 							<label class = "title" ></label>
-							<div class = "item-cont" >
-								<input class = "form-control" type = "text" name = "estado" value = "<?php echo $row[ 'Estado' ] ?> " maxlength = "1" placeholder = "Estado de Noticia" class = "large" /> <span class = "icon-place" ></span> 
+							<div class = "item-cont" > 
+								<input class = "form-control" type = "text" name = "preci" value = "<?php echo $row[ 'Precio' ] ?> " maxlength = "15" placeholder = "Precio de Curso"class = "large" /> <span class = "icon-place" ></span> 
 							</div>
 						</div>
 
-						<div class = "element-number form-group" > 
+						<div class = "element-input form-group" > 
 							<label class = "title" ></label>
-							<div class = "item-cont" >
-								<input class = "form-control" type = "text" name = "fecha" value = "<?php echo $row[ 'Fecha' ] ?> " maxlength = "10" placeholder = "aaaa-mm-dd" class = "large" /> <span class = "icon-place" ></span> 
+							<div class = "item-cont" > 
+								<input class = "form-control" type = "text" name = "estado" value = "<?php echo $row[ 'Estado' ] ?> " maxlength = "5" placeholder = "Estado de Curso"class = "large" /> <span class = "icon-place" ></span> 
+							</div>
+						</div>
+
+						<div class = "element-input form-group" > 
+							<label class = "title" ></label>
+							<div class = "item-cont" > 
+								<input class = "form-control" type = "text" name = "dura" value = "<?php echo $row[ 'Duracion' ] ?> " maxlength = "20" placeholder = "Duración de Curso"class = "large" /> <span class = "icon-place" ></span> 
+							</div>
+						</div>
+
+						<div class = "element-input form-group" > 
+							<label class = "title" ></label>
+							<div class = "item-cont" > 
+								<input class = "form-control" type = "text" name = "fecha" value = "<?php echo $row[ 'Fecha' ] ?> " maxlength = "400" placeholder = "aaaa-mm-dd"class = "large" /> <span class = "icon-place" ></span> 
 							</div>
 						</div>
 
@@ -103,7 +116,7 @@
 					</form>
 
 						<hr class = "d-lg-none divider" >
-						<a href = "mostrar_noticias.php?opc=modificar" class = "d-block h3 font-weight-normal"> Volver <br>
+						<a href = "mostrar_cursos.php?opc=modificar" class = "d-block h3 font-weight-normal"> Volver <br>
 						<small class = "d-block text-muted text-small" > a la tabla de modificación </small>
 						</a>
 				</article>

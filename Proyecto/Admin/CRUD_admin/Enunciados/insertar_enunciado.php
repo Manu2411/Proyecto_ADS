@@ -82,7 +82,8 @@
 						datos."; 
 						}
 						else {
-							echo "No se pudo agregar el enunciado.";
+							echo "No se pudo agregar el enunciado. \n";
+							echo "Ya existe un registro en la base de datos con el número de Id ingresado.";
 						} 
 
 

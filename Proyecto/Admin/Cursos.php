@@ -18,6 +18,14 @@
         <link rel="stylesheet" type="text/css" href="../css/style_SM.css">
     </head>
     <body id="page-top">
+
+        <?php 
+            // Instanciando el script de conexión
+            include("../php/Conexion.php");
+        ?>
+
+
+
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
             <div class="container">
@@ -30,8 +38,6 @@
                         <li class="nav-item">
                             <a class="nav-link js-scroll-trigger"  href="../Acceso_Admin.html" title="Cerrar Sesión"><i class="fas fa-2x fa-sign-out-alt text-uppercase mb-4"></i></a>
                         </li>
-                        <!-- <li class="nav-item"><a class="nav-link js-scroll-trigger" href="info.html">Acerca de</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" target="_ablank" href="https://secure.squarespace.com/checkout/donate?donatePageId=59b7ab502d83c3863db865cd">DONAR</a></li> -->
                     </ul>
                 </div>
             </div>
@@ -42,12 +48,11 @@
             <div class="container h-100">
                 <div class="row h-100 align-items-center justify-content-center text-center">
                     <div class="col-lg-10 align-self-end">
-                        <h1 class="text-uppercase text-white font-weight-bold">Cursos Activos</h1>
+                        <?php echo imprimirtitulo1(2); ?>
                         <hr class="divider my-4" />
                     </div>
                     <div class="col-lg-8 align-self-baseline">
-                        <p class="text-white-75 font-weight-light mb-5">Impartimos una variedad de cursos para que tu elijas cual te conviene y te gusta más</p>
-                        <button type="button" class="btn btn-primary btn-xl js-scroll-trigger" data-toggle='modal' data-target='#modifi_enun_curso'>Modificar enunciado</button>
+                        <?php echo imprimirdescripcion1(2); ?>
                     </div>
                 </div>
             </div>
@@ -58,75 +63,115 @@
             <div class="container-fluid p-0">
                 <div class="row no-gutters">
                     <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="../img/Cocina.jpg"
-                            ><img class="img-fluid" src="../img/Cocina.jpg" alt="Foto_Curso1" /> <!-- Colocar imagenes de tamaño de 650x350 -->
+                        <a class="portfolio-box" href="../img/Cocina.jpg">
+                            <img class="img-fluid" src="../img/Cocina.jpg" alt="Foto_Curso1" /> <!-- Colocar imagenes de tamaño de 650x350 -->
                             <div class="portfolio-box-caption">
-                                <div class="project-category text-white-50">Cocina</div>
-                                <div class="project-name">Aprenderas a prepara diversos platillos para deleitar a las personas más importantes de tu familia.</div>
-                                <div class="project-name">Horario: 8:00 am - 12:00 pm</div>
-                                <div class="project-name">Precio: 25$</div>
+                                <div class="project-category text-white-50"><?php echo imprimirNombre(1); ?></div>
+                                <div class="project-name"><?php echo imprimirDescrip(1); ?></div>
+                                <div class="project-name"><?php echo imprimirHorario(1); ?></div>
+                                <div class="project-name"><?php echo imprimirPrecio(1); ?></div>
                             </div></a>
                     </div>
                     <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="../img/Postres.jpg"
-                            ><img class="img-fluid" src="../img/Postres.jpg" alt="Foto_Curso2" /> <!-- Colocar imagenes de tamaño de 650x350 -->
+                        <a class="portfolio-box" href="../img/Postres.jpg">
+                            <img class="img-fluid" src="../img/Postres.jpg" alt="Foto_Curso2" /> <!-- Colocar imagenes de tamaño de 650x350 -->
                             <div class="portfolio-box-caption">
-                                <div class="project-category text-white-50">Postres</div>
-                                <div class="project-name">Aprenderas a hacer los mejores postres que jamas habías pensadon en preparar.</div>
-                                <div class="project-name">Horario: 8:00 am - 12:00 pm</div>
-                                <div class="project-name">Precio: 25$</div>
-                            </div></a
-                        >
+                                <div class="project-category text-white-50"><?php echo imprimirNombre(2); ?></div>
+                                <div class="project-name"><?php echo imprimirDescrip(2); ?></div>
+                                <div class="project-name"><?php echo imprimirHorario(2); ?></div>
+                                <div class="project-name"><?php echo imprimirPrecio(2); ?></div>
+                            </div></a>
                     </div>
                     <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="../img/panaderia.png"
-                            ><img class="img-fluid" src="../img/panaderia.png" alt="Foto_Curso3" /> <!-- Colocar imagenes de tamaño de 650x350 -->
+                        <a class="portfolio-box" href="../img/panaderia.png">
+                            <img class="img-fluid" src="../img/panaderia.png" alt="Foto_Curso3" /> <!-- Colocar imagenes de tamaño de 650x350 -->
                             <div class="portfolio-box-caption">
-                                <div class="project-category text-white-50">Panadería</div>
-                                <div class="project-name">Conoce como es el proceso de la  elabaroción del pan que día a día compras para acompañar tus alimentos.</div>
-                                <div class="project-name">Horario: 8:00 am - 12:00 pm</div>
-                                <div class="project-name">Precio: 25$</div>
-                            </div></a
-                        >
+                                <div class="project-category text-white-50"><?php echo imprimirNombre(3); ?></div>
+                                <div class="project-name"><?php echo imprimirDescrip(3); ?></div>
+                                <div class="project-name"><?php echo imprimirHorario(3); ?></div>
+                                <div class="project-name"><?php echo imprimirPrecio(3); ?></div>
+                            </div></a>
                     </div>
                     <div class="col-lg-4 col-sm-6">
                         <a class="portfolio-box" href="../img/Artesanias.jpg">
                             <img class="img-fluid" src="../img/Artesanias.jpg" alt="Foto_Curso4" /> <!-- Colocar imagenes de tamaño de 650x350 -->
                             <div class="portfolio-box-caption">
-                                <div class="project-category text-white-50">Artesanias</div>
-                                <div class="project-name">Crea fabulosos diseños con materiales que para algunos son "basura" y deja impactadas a todas las personas que vean tu trabajo.</div>
-                                <div class="project-name">Horario: 8:00 am - 12:00 pm</div>
-                                <div class="project-name">Precio: 25$</div>
-                            </div></a
-                        >
+                            <div class="project-category text-white-50"><?php echo imprimirNombre(4); ?></div>
+                            <div class="project-name"><?php echo imprimirDescrip(4); ?></div>
+                                <div class="project-name"><?php echo imprimirHorario(4); ?></div>
+                                <div class="project-name"><?php echo imprimirPrecio(4); ?></div>
+                            </div></a>
                     </div>
                     <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="../img/Belleza.jpg"
-                            ><img class="img-fluid" src="../img/Belleza.jpg" alt="Foto_Curso5" /> <!-- Colocar imagenes de tamaño de 650x350 -->
+                        <a class="portfolio-box" href="../img/Belleza.jpg">
+                            <img class="img-fluid" src="../img/Belleza.jpg" alt="Foto_Curso5" /> <!-- Colocar imagenes de tamaño de 650x350 -->
                             <div class="portfolio-box-caption">
-                                <div class="project-category text-white-50">Belleza</div>
-                                <div class="project-name">Aprende la forma de ayudar a tus amigas y conocidas en mejorar su apariencia, para cualquier evento que tengan.</div>
-                                <div class="project-name">Horario: 8:00 am - 12:00 pm</div>
-                                <div class="project-name">Precio: 25$</div>
-                            </div></a
-                        >
+                                <div class="project-category text-white-50"><?php echo imprimirNombre(5); ?></div>
+                                <div class="project-name"><?php echo imprimirDescrip(5); ?></div>
+                                <div class="project-name"><?php echo imprimirHorario(5); ?></div>
+                                <div class="project-name"><?php echo imprimirPrecio(5); ?></div>
+                            </div></a>
                     </div>
                     <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="../img/Manualidades.png"
-                            ><img class="img-fluid" src="../img/Manualidades.png" alt="Foto_Curso6" /> <!-- Colocar imagenes de tamaño de 650x350 -->
+                        <a class="portfolio-box" href="../img/Manualidades.png">
+                            <img class="img-fluid" src="../img/Manualidades.png" alt="Foto_Curso6" /> <!-- Colocar imagenes de tamaño de 650x350 -->
                             <div class="portfolio-box-caption p-3">
-                                <div class="project-category text-white-50">Manualidades</div>
-                                <div class="project-name">Adquiere habilidades para la elaboración de cualquier tipo de idea que se te venga a la cabeza.</div>
-                                <div class="project-name">Horario: 8:00 am - 12:00 pm</div>
-                                <div class="project-name">Precio: 25$</div>
-                            </div></a
-                        >
+                                <div class="project-category text-white-50"><?php imprimirNombre(6); ?></div>
+                                <div class="project-name"><?php echo imprimirDescrip(6); ?></div>
+                                <div class="project-name"><?php echo imprimirHorario(6); ?></div>
+                                <div class="project-name"><?php echo imprimirPrecio(6); ?></div>
+                            </div></a>
                     </div>
                 </div>
             </div>
         </section>
+
         <br>
         <br>
+
+        <div class="container text-center">
+            <a class="btn btn-info btn-xl" href="CRUD_admin/Cursos/Opciones_Cursos.html">Opciones de Cursos</a>
+        </div>
+        
+        <br>
+        <br>
+        <!-- Call to action section-->
+        <section class="page-section bg-dark text-white">
+            <div class="container text-center">
+                <h2 class="mb-4">Puedes descargar el formulario de inscripcion!</h2>
+                <a class="btn btn-light btn-xl" href="#">Descargar Ahora!</a>
+            </div>
+        </section>
+        <br>
+        <!-- Contact section-->
+        <section class="page-section bg-primary" id="contact">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <h2 class="text-white mt-0">CONTÁCTANOS!</h2>
+                        <hr class="divider my-4" />
+                        <p class="text-white mb-4">Ponte en comunicación con nosotros para mayor información sobre los cursos, voluntariado o cualquier otra cosa que quieras saber.</p>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <div class="row">
+                    <div class="col-lg-4 ml-auto text-center">
+                        <a ><i class="fas fa-phone fa-3x mb-3 text-white" id="links"></i></a>
+                        <div class="text-white-50 mb-4">(+503) 2516-8518</div>
+                    </div>
+                    <div class="col-lg-4 mr-auto text-center">
+                        <a  href="https://www.facebook.com/fundacionsirama.org/?epa=SEARCH_BOX" target="_ablank"><i class="fab fa-facebook-f fa-3x mb-3 text-white" id="links"></i></a>
+                        <div class="text-white-50 mb-4">Fundación Siramá</div>
+                    </div>
+                    <br>
+                    <div class="col-lg-4 mr-auto text-center">
+                        <a  href="mailto:info@fundacionsirama.org"><i class="fas fa-envelope fa-3x mb-3 text-white" id="links"></i></a><!-- Make sure to change the email address in BOTH the anchor text and the link target below!-->
+                        <div class="text-white-50 mb-4">info@fundacionsirama.org</div>
+                    </div>
+                </div>
+            </div>
+        </section>
        
         
         <!-- Bootstrap core JS-->
@@ -138,41 +183,5 @@
         <!-- Core theme JS-->
         <script src="../js/scripts.js"></script>
 
-
-        <!-- Modales para modificar enunciados principales -->
-  <!--Modal 1-->
-<div class="modal fade" id="modifi_enun_curso" tabindex="-1" role="dialog" aria-labelledby="modifi_enunLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="modifi_enunLabel">Enunciado Principal</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-            <form action="<?=  $_SERVER['PHP_SELF'] ?>" method="POST" autocomplete="off">
-                <div class="form-group">
-                    <textarea name="enunciado" rows="3" cols="40">
-                        Informacion sacada de la base de datos
-                    </textarea>
-                </div>
-                <br>
-                <div class="form-group">
-                    <textarea name="descripcion" rows="8" cols="40">
-                        Informacion sacada de la base de datos
-                    </textarea>
-                </div>
-                <div class="modal-footer">
-                    <input type="submit" class="btn btn-success" name="modificar" value="Modificar"/>
-                    <input type="button" class="btn btn-danger" data-dismiss="modal" name="cancelar" value="Cancelar"/>
-                </div>
-            </form>
-        </div>      
-    </div>
-  </div>
-</div>
-  <!--Termina Modal 1-->
-<!-- Termina modal para modificar el enunciado  -->
     </body>
 </html>

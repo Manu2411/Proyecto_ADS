@@ -18,6 +18,12 @@
         <link rel="stylesheet" type="text/css" href="../css/style_SM.css">
     </head>
     <body id="page-top">
+
+        <?php 
+            //Instanciando el script de conexión
+            include("../php/Conexion.php");
+        ?>
+
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
             <div class="container">
@@ -44,8 +50,6 @@
                     </div>
                     <div class="col-lg-8 align-self-baseline">
                         <p class="text-white-75 font-weight-light mb-5">Desde de nuestros inicios hemos brindado a las mujeres salvadoreñas nuestro apoyo para que puedan obtener una formación integral y así ser una persona de bien en la sociedad.</p>
-
-                        <button type="button" class="btn btn-primary btn-xl js-scroll-trigger" data-toggle='modal' data-target='#modifi_enun_curso'>Modificar enunciado</button>
                     </div>
                 </div>
             </div>
@@ -101,8 +105,8 @@
                         <a class="portfolio-box" href="../assets/img/img-funda/Benef.png"
                             ><img class="img-fluid" src="../assets/img/img-funda/Benef.png" alt="" />
                             <div class="portfolio-box-caption">
-                                <div class="project-category text-white-50">Nombre-Beneficiada</div>
-                                <div class="project-name">Palabras de ella acerca de Siramá</div>
+                                <div class="project-category text-white-50"><?php echo imprimirBeneName(1); ?></div>
+                                <div class="project-name"><?php echo imprimirOpinion(1); ?></div>
                             </div></a
                         >
                     </div>
@@ -154,8 +158,46 @@
                 </div>
             </div>
         </section>
+
         <br>
         <br>
+
+        <div class="container text-center">
+            <a class="btn btn-info btn-xl" href="CRUD_admin/Beneficiarias/Opciones_Bene.html">Opciones de Beneficiarias</a>
+        </div>
+
+        <br>
+        <br>
+
+        <!-- Contact section-->
+        <section class="page-section bg-primary" id="contact">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <h2 class="text-white mt-0">CONTÁCTANOS!</h2>
+                        <hr class="divider my-4" />
+                        <p class="text-white mb-4">Ponte en comunicación con nosotros para mayor información sobre los cursos, voluntariado o cualquier otra cosa que quieras saber.</p>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <div class="row">
+                    <div class="col-lg-4 ml-auto text-center">
+                        <a ><i class="fas fa-phone fa-3x mb-3 text-white" id="links"></i></a>
+                        <div class="text-white-50 mb-4">(+503) 2516-8518</div>
+                    </div>
+                    <div class="col-lg-4 mr-auto text-center">
+                        <a  href="https://www.facebook.com/fundacionsirama.org/?epa=SEARCH_BOX" target="_ablank"><i class="fab fa-facebook-f fa-3x mb-3 text-white" id="links"></i></a>
+                        <div class="text-white-50 mb-4">Fundación Siramá</div>
+                    </div>
+                    <br>
+                    <div class="col-lg-4 mr-auto text-center">
+                        <a  href="mailto:info@fundacionsirama.org"><i class="fas fa-envelope fa-3x mb-3 text-white" id="links"></i></a><!-- Make sure to change the email address in BOTH the anchor text and the link target below!-->
+                        <div class="text-white-50 mb-4">info@fundacionsirama.org</div>
+                    </div>
+                </div>
+            </div>
+        </section>
         <!-- Bootstrap core JS-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
