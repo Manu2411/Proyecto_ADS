@@ -64,6 +64,8 @@
 						//la base de datos con la que se trabajará
 						@$db = new mysqli( 'localhost' , 'root' , '' , 'sirama', "3308");
 
+						// @$db = new mysqli('localhost','root','','sirama'); <-- Utilizar esta si no funciona la de arriba
+
 						//Establecer el conjunto de caracteres a utf8
 						$db->set_charset( "utf8" );
 

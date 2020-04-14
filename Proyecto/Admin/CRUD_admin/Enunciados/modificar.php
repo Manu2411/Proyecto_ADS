@@ -27,6 +27,8 @@
 						//a la base de datos
 						@$db = new mysqli( 'localhost' , 'root' , '' , 'sirama', "3308" );
 
+						// @$db = new mysqli('localhost','root','','sirama'); <-- Utilizar esta si no funciona la de arriba
+
 						if (mysqli_connect_errno()) {
 							$msgerror = "Error: no se puede conectar a la base de datos";
 							$msgerror .= "Contacte con soporte para resolver el problema";

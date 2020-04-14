@@ -12,7 +12,7 @@
         
         //sentencia mysql y validación
         $q = mysqli_connect($server, $user, $pass, $basededatos, "3308") or die ("No se pudo establecer coexión al servidor: " . mysqli_error());
-
+        
         // $q = mysqli_connect($server, $user, $pass, $basededatos) or die ("No se pudo establecer coexión al servidor: " . mysqli_error()); // <-- Utilizar esta si no funciona la conexion que esta arriba.
         
         return $q;

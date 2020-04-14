@@ -85,7 +85,6 @@ CREATE TABLE IF NOT EXISTS `Cursos` (
   `Precio` varchar(15) NOT NULL,
   `Estado` char(5) NOT NULL,
   `Duracion` varchar(20) NOT NULL,
-  `Imagen` varchar(20) NULL,
   `Fecha` date NOT NULL,
   PRIMARY KEY (`Id_Curso`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -94,13 +93,13 @@ CREATE TABLE IF NOT EXISTS `Cursos` (
 -- Volcado de datos para la tabla `Cursos`
 --
 
-INSERT INTO `Cursos` (`Id_Curso`, `Nombre`, `Descripcion`, `Horario`, `Precio`, `Estado`, `Duracion`, `Imagen`, `Fecha`) VALUES
-(1, 'COCINA', 'Aprenderas a preparar diversos platillos para deleitar a las personas más importantes de tu familia.', 'Horario: 8:00 am - 1:00 pm', '$25', '1', '3 Meses', 'Vacio', '2020-02-15'),
-(2, 'POSTRES', 'Aprenderas a hacer los mejores postres que jamas habías pensado en prepara.', 'Horario: 8:00 am - 12:00 pm', '$45', '1', '4 Meses', 'Vacio', '2020-01-22'),
-(3, 'PANADERÍA', 'Conoce el proceso de la elaboración del pan que día a día compras para acompañar tus alimentos.', 'Horario: 8:00 am - 12:00 pm', '$35', '1', '2 Meses', 'Vacio', '2020-02-17'),
-(4, 'ARTESANIAS', 'Crea fabulosos diseños con materiales que para algunos son "basura" y deja impactadas a todas las personas que vean tu trabajo.', 'Horario: 10:00 am - 12:00 pm', '$20', '1', '2 Meses', 'Vacio', '2020-02-27'),
-(5, 'BELLEZA', 'Aprende la forma de ayudar a tus amigas y conocidas en mejorar su apariencia, para cualquier evento que tengan.', 'Horario: 8:00 am - 12:00 pm', '$55', '1', '4 Meses', 'Vacio', '2020-02-14'),
-(6, 'MANUALIDADES', 'Adquiere habilidades para la elaboración de cualquier tipo de idea que se te venga a la cabeza.', 'Horario: 8:00 am - 11:00 pm', '$35', '1', '2 Meses', 'Vacio', '2020-02-01');
+INSERT INTO `Cursos` (`Id_Curso`, `Nombre`, `Descripcion`, `Horario`, `Precio`, `Estado`, `Duracion`, `Fecha`) VALUES
+(1, 'COCINA', 'Aprenderas a preparar diversos platillos para deleitar a las personas más importantes de tu familia.', 'Horario: 8:00 am - 1:00 pm', '$25', '1', '3 Meses', '2020-02-15'),
+(2, 'POSTRES', 'Aprenderas a hacer los mejores postres que jamas habías pensado en prepara.', 'Horario: 8:00 am - 12:00 pm', '$45', '1', '4 Meses', '2020-01-22'),
+(3, 'PANADERÍA', 'Conoce el proceso de la elaboración del pan que día a día compras para acompañar tus alimentos.', 'Horario: 8:00 am - 12:00 pm', '$35', '1', '2 Meses', '2020-02-17'),
+(4, 'ARTESANIAS', 'Crea fabulosos diseños con materiales que para algunos son "basura" y deja impactadas a todas las personas que vean tu trabajo.', 'Horario: 10:00 am - 12:00 pm', '$20', '1', '2 Meses', '2020-02-27'),
+(5, 'BELLEZA', 'Aprende la forma de ayudar a tus amigas y conocidas en mejorar su apariencia, para cualquier evento que tengan.', 'Horario: 8:00 am - 12:00 pm', '$55', '1', '4 Meses', '2020-02-14'),
+(6, 'MANUALIDADES', 'Adquiere habilidades para la elaboración de cualquier tipo de idea que se te venga a la cabeza.', 'Horario: 8:00 am - 11:00 pm', '$35', '1', '2 Meses', '2020-02-01');
 
 -- --------------------------------------------------------
 
@@ -112,7 +111,6 @@ CREATE TABLE IF NOT EXISTS `Beneficiarias` (
   `Id_Bene` int(5) NOT NULL,
   `Nombre` varchar(30) NOT NULL,
   `Opinion` varchar(75) NOT NULL,
-  `Foto` varchar(20) NULL,
   `Fecha` date NOT NULL,
   PRIMARY KEY (`Id_Bene`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
@@ -121,8 +119,8 @@ CREATE TABLE IF NOT EXISTS `Beneficiarias` (
 -- Volcado de datos para la tabla `Beneficiarias`
 --
 
-INSERT INTO `Beneficiarias` (`Id_Bene`, `Nombre`, `Opinion`, `Foto`, `Fecha`) VALUES
-(1, 'Gabriela Montes', 'Haber hecho el curso de cocina en Siramá me ha ayudado mucho porque ahora poseo diferentes aptitudes que puedo poner en práctica en el campo laboral.', 'Vacio', '2020-03-28');
+INSERT INTO `Beneficiarias` (`Id_Bene`, `Nombre`, `Opinion`, `Fecha`) VALUES
+(1, 'Gabriela Montes', 'Haber hecho el curso de cocina en Siramá me ha ayudado mucho porque ahora poseo diferentes aptitudes que puedo poner en práctica en el campo laboral.', '2020-03-28');
 
 --
 -- Estructura de tabla para la tabla `Usuarios`
@@ -143,7 +141,8 @@ CREATE TABLE IF NOT EXISTS `Usuarios` (
 --
 
 INSERT INTO `Usuarios` (`Id_Usu`, `Nombres`, `Apellidos`, `Cargo`, `Clave`, `Usuario`) VALUES
-('AD01', 'Manuel', 'Hurtado', 'Jefe Sistemas', '12345', 'Admin');
+('AD01', 'Manuel', 'Hurtado', 'Jefe Sistemas', '12345', 'Admin'),
+('AD02', 'Alex', 'Mata', 'Asistente', '54321', 'Alex');
 
 -- --------------------------------------------------------
 
