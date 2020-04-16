@@ -19,6 +19,14 @@
     </head>
     <body id="page-top">
 
+        <?php
+			session_start();
+
+			if (!isset($_SESSION["usuario"])) {
+				header("location:../Acceso_Admin.html");
+			}
+        ?>
+
         <?php 
             // Instanciando el script de conexión
             include("../php/Conexion.php");
@@ -36,7 +44,10 @@
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="cursos.php">Cursos</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="Beneficiarias.php">Beneficiarias</a></li>
                         <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger"  href="../Acceso_Admin.html" title="Cerrar Sesión"><i class="fas fa-2x fa-sign-out-alt text-uppercase mb-4"></i></a>
+                            <a class="nav-link js-scroll-trigger"  href="../php/CierreSesion.php" title="Cerrar Sesión"><i class="fas fa-2x fa-sign-out-alt text-uppercase mb-4"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <p class="nav-link js-scroll-trigger"  title="<?php echo "Usuario: " . $_SESSION["usuario"];?> "><i class="fas fa-2x fa-user text-uppercase mb-4"></i></p>
                         </li>
                     </ul>
                 </div>
@@ -130,7 +141,7 @@
         <br>
 
         <div class="container text-center">
-            <a class="btn btn-info btn-xl" href="CRUD_admin/Cursos/Opciones_Cursos.html">Opciones de Cursos</a>
+            <a class="btn btn-info btn-xl" href="CRUD_admin/Cursos/Opciones_Cursos.php">Opciones de Cursos</a>
         </div>
         
         <br>

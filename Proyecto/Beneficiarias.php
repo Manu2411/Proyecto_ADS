@@ -22,7 +22,6 @@
         <?php
             //Haciendo referencia al script de conexion
             include("php/Conexion.php");
-
         ?>
 
         <!-- Navigation-->

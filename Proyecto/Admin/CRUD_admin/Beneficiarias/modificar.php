@@ -12,6 +12,14 @@
 		</head>
 
 		<body class="container">
+		<?php
+			session_start();
+
+			if (!isset($_SESSION["usuario"])) {
+				header("location:../../../Acceso_Admin.html");
+			}
+		?>
+		
 			<header>
 				<nav class = "navbar navbar-dark bg-primary" >
 				<span class = "navbar-text" >

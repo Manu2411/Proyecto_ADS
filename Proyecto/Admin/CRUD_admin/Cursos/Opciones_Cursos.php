@@ -11,6 +11,13 @@
 		</head>
 
 		<body class="container">
+			<?php
+				session_start();
+
+				if (!isset($_SESSION["usuario"])) {
+					header("location:../../../Acceso_Admin.html");
+				}
+			?>
 				<header>
 					<nav class = "navbar navbar-dark bg-primary" >
 					<span class = "navbar-text" >
@@ -30,7 +37,7 @@
 					
 						<div class = "col-md-3" id = "dos" >
                             <a class = "btn btn-block btn-lg btn-warning" data-toggle = "modal" data-target = "#mymodal"
-                            href = "nuevocurso.html" target = "_self" title = "Nueva noticia" >
+                            href = "nuevocurso.php" target = "_self" title = "Nueva noticia" >
 							<img class = "icon" src = "img/icon-new.png" ><br>
 							<span class = "texto_grande" > Nuevo curso </span>
 							</a>

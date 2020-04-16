@@ -56,7 +56,6 @@
                     </div>
                     <div class="col-lg-8 align-self-baseline">
                         <?php echo imprimirdescripcion1(1); ?>
-                        <!-- <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Find Out More</a> -->
                     </div>
                 </div>
             </div>

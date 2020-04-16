@@ -1,3 +1,11 @@
+<?php
+	session_start();
+
+	if (!isset($_SESSION["usuario"])) {
+	header("location:../../../Acceso_Admin.html");
+	}
+?>
+
 <?php 
 	@$db = new mysqli( 'localhost' , 'root' , '' , 'sirama', '3308' );
 

@@ -19,6 +19,14 @@
     </head>
     <body id="page-top">
         <?php
+			session_start();
+
+			if (!isset($_SESSION["usuario"])) {
+				header("location:../Acceso_Admin.html");
+			}
+        ?>
+        
+        <?php
             include("../php/Conexion.php");
 
         ?>
@@ -33,10 +41,11 @@
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="Cursos.php" title="Cursos">Cursos</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="Beneficiarias.php" title="Beneficiarias">Beneficiarias</a></li>
                         <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger"  href="../Acceso_Admin.html" title="Cerrar Sesión"><i class="fas fa-2x fa-sign-out-alt text-uppercase mb-4"></i></a>
+                            <a class="nav-link js-scroll-trigger"  href="../php/CierreSesion.php" title="Cerrar Sesión"><i class="fas fa-2x fa-sign-out-alt text-uppercase mb-4"></i></a>
                         </li>
-                        <!--                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="info.html">Acerca de</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" target="_ablank" href="https://secure.squarespace.com/checkout/donate?donatePageId=59b7ab502d83c3863db865cd">DONAR</a></li> -->
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger" href="#" title="<?php echo "Usuario: " . $_SESSION["usuario"];?> "><i class="fas fa-2x fa-user text-uppercase mb-4"></i></a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -54,7 +63,7 @@
                     <div class="col-lg-8 align-self-baseline">
                         <?php echo imprimirdescripcion1(1); ?>
                         <br>
-                        <a class="btn btn-info  btn-xl js-scroll-trigger" href="CRUD_admin/Enunciados/Opciones_Enunciados.html">Opciones de Enunciados</a>
+                        <a class="btn btn-info  btn-xl js-scroll-trigger" href="CRUD_admin/Enunciados/Opciones_Enunciados.php">Opciones de Enunciados</a>
                     </div>
                 </div>
             </div>
@@ -89,7 +98,7 @@
                             <br>
                             <br>
                             <br>
-                            <a class="btn btn-info  btn-xl js-scroll-trigger" href="CRUD_admin/Noticias/Opciones_Noticias.html">Opciones de Noticias</a>
+                            <a class="btn btn-info  btn-xl js-scroll-trigger" href="CRUD_admin/Noticias/Opciones_Noticias.php">Opciones de Noticias</a>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 text-center">
@@ -125,18 +134,15 @@
                     <div class="col-lg-4 ml-auto text-center">
                         <a ><i class="fas fa-phone fa-3x mb-3 text-white" id="links"></i></a>
                         <div class="text-white-50 mb-4">(+503) 2516-8518</div>
-                         <a class="btn btn-info  btn-xl js-scroll-trigger" href="#">Modificar número telefónico</a>
                     </div>
                     <div class="col-lg-4 mr-auto text-center">
                         <a  href="https://www.facebook.com/fundacionsirama.org/?epa=SEARCH_BOX" target="_ablank"><i class="fab fa-facebook-f fa-3x mb-3 text-white" id="links"></i></a>
                         <div class="text-white-50 mb-4">Fundación Siramá</div>
-                        <a class="btn btn-info  btn-xl js-scroll-trigger" href="#">Modificar cuenta de facebook</a>
                     </div>
                     <br>
                     <div class="col-lg-4 mr-auto text-center">
                         <a  href="mailto:info@fundacionsirama.org"><i class="fas fa-envelope fa-3x mb-3 text-white" id="links"></i></a>
                         <div class="text-white-50 mb-4">info@fundacionsirama.org</div>
-                        <a class="btn btn-info  btn-xl js-scroll-trigger" href="#">Modificar Correo Electrónico</a>
                     </div>
                 </div>
             </div>

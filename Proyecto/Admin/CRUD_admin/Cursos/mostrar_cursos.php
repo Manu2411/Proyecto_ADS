@@ -20,6 +20,14 @@
 
 		<body class="container">
 			<?php
+				session_start();
+
+				if (!isset($_SESSION["usuario"])) {
+					header("location:../../../Acceso_Admin.html");
+				}
+			?>
+
+			<?php
 				//Creando una nueva instancia del objeto de conexión
 				//a la base de datos
 
@@ -191,7 +199,7 @@
 				echo "</table>";
 				?>
 				<hr class = "d-lg-none divider" >
-				<a href = "Opciones_Cursos.html" class = "d-block h3
+				<a href = "Opciones_Cursos.php" class = "d-block h3
 				font-weight-normal" > Regresar <br>
 				<small class = "d-block text-muted
 				text-small" > Menu </small>

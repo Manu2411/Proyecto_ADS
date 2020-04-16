@@ -19,29 +19,29 @@
     }
 
      //Verificacion del usuario y redireccionamiento a la pagina principal
-    function ingresar($usuario, $password){
-        $con = conectar();
+    // function ingresar($usuario, $password){
+    //     $con = conectar();
             
-        $q = "select * from usuarios where Clave='$password'";
-        $r = mysqli_query($con, $q);
-        $existentes = mysqli_num_rows($r);
-        if($existentes>0){
-            while($columna = mysqli_fetch_array($r)){
-                $pass = $columna['Clave'];
-            }
+    //     $q = "select * from usuarios where Clave='$password'";
+    //     $r = mysqli_query($con, $q);
+    //     $existentes = mysqli_num_rows($r);
+    //     if($existentes>0){
+    //         while($columna = mysqli_fetch_array($r)){
+    //             $pass = $columna['Clave'];
+    //         }
             
-            if($password == $pass){
-                header('Location: ../Admin/Principal.php');
-                echo "Bienvenido";
-            }
-            else{
-                echo "Contraseña incorrecta";
-            }
-        }
-        else{
-            echo "Contraseña incorrecta";
-        }
-    }
+    //         if($password == $pass){
+    //             header('Location: ../Admin/Principal.php');
+    //             echo "Bienvenido";
+    //         }
+    //         else{
+    //             echo "Contraseña incorrecta";
+    //         }
+    //     }
+    //     else{
+    //         echo "Contraseña incorrecta";
+    //     }
+    // }
     
     /* Aqui comienza para la extraccion de datos para el index */
 

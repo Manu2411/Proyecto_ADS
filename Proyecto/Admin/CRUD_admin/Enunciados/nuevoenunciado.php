@@ -2,7 +2,7 @@
 	<html lang="es">
 		<head>
 			<meta charset="utf-8" />
-			<title>Nueva Noticia</title>
+			<title>Nuevo Enunciado</title>
 
 			<link href = "//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel = "stylesheet" id = "bootstrap-css" >
 			<script src = "//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js" ></script>
@@ -20,21 +20,29 @@
 		</head>
 
 		<body class="container">
+		<?php
+			session_start();
+
+			if (!isset($_SESSION["usuario"])) {
+				header("location:../../../Acceso_Admin.html");
+			}
+		?>
+		
 			<header>
 				<nav class = "navbar navbar-dark bg-primary" >
 				<span class = "navbar-text" >
-				<h1> Nueva Noticia </h1>
+				<h1> Nuevo Enunciado </h1>
 				</span>
 				</nav>
 			</header>
 
 			<section>
 				<article >
-					<form action = "insertar_noticia.php" method = "POST" >
+					<form action = "insertar_enunciado.php" method = "POST" >
 						<div class = "element-number form-group" >
 							<label class = "title" ></label>
 							<div class = "item-cont" >
-								<input type = "text" name = "noti_id" placeholder = "Id Noticia" maxlength = "5" class = "form-control" />
+								<input type = "text" name = "enun_id" placeholder = "Id Enunciado" maxlength = "5" class = "form-control" />
 								<span class = "icon-place" ></span>
 							</div>
 						</div>
@@ -42,7 +50,7 @@
 						<div class = "element-name form-group" >
 							<label class = "title" ></label>
 							<div class = "nameFirst" >
-								<input type = "text" name = "titu" placeholder = "Titulo de Noticia" maxlength = "100" class = "form-control" />
+								<input type = "text" name = "titu" placeholder = "Titulo de enunciado" maxlength = "100" class = "form-control" />
 								<span class = "icon-place" ></span>
 							</div>
 						</div>
@@ -50,23 +58,7 @@
 						<div class = "element-input form-group" >
 							<label class = "title" ></label>
 							<div class = "item-cont" >
-								<input type = "text" name = "descrip" placeholder = "Descripción de Noticia" maxlength = "350" class = "form-control" />
-								<span class = "icon-place" ></span>
-							</div>
-						</div>
-
-						<div class = "element-number form-group" >
-							<label class = "title" ></label>
-							<div class = "item-cont" >
-								<input type = "text" name = "conte" placeholder = "Contenido de Noticia" maxlength = "1500" class = "form-control" />
-								<span class = "icon-place" ></span>
-							</div>
-						</div>
-
-						<div class = "element-number form-group" >
-							<label class = "title" ></label>
-							<div class = "item-cont" >
-								<input type = "text" name = "estad" placeholder = "Estado de Noticia" maxlength = "1" class = "form-control" />
+								<input type = "text" name = "descrip" placeholder = "Descripción de enunciado" maxlength = "350" class = "form-control" />
 								<span class = "icon-place" ></span>
 							</div>
 						</div>
@@ -84,7 +76,7 @@
 					</form>
 
 					<hr class = "d-lg-none divider" >
-					<a href = "Opciones_Noticias.html" class = "d-block h3 font-weight-normal" > Regresar <br>
+					<a href = "Opciones_Enunciados.php" class = "d-block h3 font-weight-normal" > Regresar <br>
 						<small class = "d-block text-muted text-small" > Menu </small>
 					</a>
 				</article>

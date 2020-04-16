@@ -15,6 +15,14 @@
 		</head>
 
 		<body class="container">
+			<?php
+				session_start();
+
+				if (!isset($_SESSION["usuario"])) {
+					header("location:../../../Acceso_Admin.html");
+				}
+			?>
+			
 			<header>
 				<nav class = "navbar navbar-dark bg-primary" >
 					<span class = "navbar-text" >
@@ -38,7 +46,7 @@
 						if (empty($id) || empty($titulo) || empty($descri) || empty($fecha)) {
 							$msg = "Existen campos en el formulario sin llenar. ";
 							$msg .= "Regrese al formulario y llene todos los campos. <br />\n";
-							$msg .= "[<a href=\"nuevoenunciado.html\">Volver</a>]\n";
+							$msg .= "[<a href=\"nuevoenunciado.php\">Volver</a>]\n";
 
 							echo $msg;
 							exit (0);
@@ -67,11 +75,6 @@
 							exit (0);
 						}
 
-						
-						// $consulta = "INSERT INTO libros (isbn, autor, titulo, precio)
-						// ";
-						// $consulta .= "VALUES ('" . $isbn . "', '" . $autor . "', '" .
-						// $titulo . "', " . $precio . ")";
 
 						$consulta = "INSERT INTO enunciados (Id_Enun, Titulo, Descripcion, Fecha)";
 						$consulta .= "VALUES (". $id . ", '" . $titulo . "', '" .  $descri . "', '" . $fecha . "')";
@@ -97,13 +100,13 @@
 					<section class = "m-b-30 m-t-30" >
 						<div class = "row pager" >
 							<div class = "col-md-6 text-left" >
-								<a href = "Opciones_Enunciados.html" class = "d-block h3 font-weight-normal" > Regresar <br>
+								<a href = "Opciones_Enunciados.php" class = "d-block h3 font-weight-normal" > Regresar <br>
 								<small class = "d-block text-muted text-small" > Menu </small>
 								</a>
 							</div>
 							
 							<div class = "col-md-6 text-right" >
-								<a href = "nuevoenunciado.html" class = "d-block h3 font-weight-normal" >
+								<a href = "nuevoenunciado.php" class = "d-block h3 font-weight-normal" >
 								Agregar <br>
 								<small class = "d-block text-muted text-small" > Otro enunciado </small>
 								</a>

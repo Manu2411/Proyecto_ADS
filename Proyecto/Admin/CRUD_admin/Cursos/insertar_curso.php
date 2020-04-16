@@ -15,6 +15,13 @@
 		</head>
 
 		<body class="container">
+		<?php
+			session_start();
+
+			if (!isset($_SESSION["usuario"])) {
+				header("location:../../../Acceso_Admin.html");
+			}
+        ?>
 			<header>
 				<nav class = "navbar navbar-dark bg-primary" >
 					<span class = "navbar-text" >
@@ -43,7 +50,7 @@
 							empty($precio) || empty($duracion) || empty($fecha)) {
 							$msg = "Existen campos en el formulario sin llenar. ";
 							$msg .= "Regrese al formulario y llene todos los campos. <br />\n";
-							$msg .= "[<a href=\"nuevocurso.html\">Volver</a>]\n";
+							$msg .= "[<a href=\"nuevocurso.php\">Volver</a>]\n";
 
 							echo $msg;
 							exit (0);
@@ -101,13 +108,13 @@
 					<section class = "m-b-30 m-t-30" >
 						<div class = "row pager" >
 							<div class = "col-md-6 text-left" >
-								<a href = "Opciones_Cursos.html" class = "d-block h3 font-weight-normal" > Regresar <br>
+								<a href = "Opciones_Cursos.php" class = "d-block h3 font-weight-normal" > Regresar <br>
 								<small class = "d-block text-muted text-small" > Menu </small>
 								</a>
 							</div>
 							
 							<div class = "col-md-6 text-right" >
-								<a href = "nuevocurso.html" class = "d-block h3 font-weight-normal" >
+								<a href = "nuevocurso.php" class = "d-block h3 font-weight-normal" >
 								Agregar <br>
 								<small class = "d-block text-muted text-small" > Otro curso </small>
 								</a>

@@ -131,7 +131,7 @@
         <section class="page-section bg-dark text-white">
             <div class="container text-center">
                 <h2 class="mb-4">Puedes descargar el formulario de inscripcion!</h2>
-                <a class="btn btn-light btn-xl" href="#">Descargar Ahora!</a>
+                <a class="btn btn-light btn-xl" href="pdf/solicitud.pdf" target="_blank">Descargar Ahora!</a>
             </div>
         </section>
         <br>

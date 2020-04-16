@@ -2,7 +2,7 @@
 	<html lang="es">
 		<head>
 			<meta charset="utf-8" />
-			<title>Nuevo Curso</title>
+			<title>Nueva Noticia</title>
 
 			<link href = "//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel = "stylesheet" id = "bootstrap-css" >
 			<script src = "//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js" ></script>
@@ -20,21 +20,30 @@
 		</head>
 
 		<body class="container">
+
+		<?php
+			session_start();
+
+			if (!isset($_SESSION["usuario"])) {
+				header("location:../../../Acceso_Admin.html");
+			}
+        ?>
+				
 			<header>
 				<nav class = "navbar navbar-dark bg-primary" >
 				<span class = "navbar-text" >
-				<h1> Nuevo Curso</h1>
+				<h1> Nueva Noticia </h1>
 				</span>
 				</nav>
 			</header>
 
 			<section>
 				<article >
-					<form action = "insertar_curso.php" method = "POST" >
+					<form action = "insertar_noticia.php" method = "POST" >
 						<div class = "element-number form-group" >
 							<label class = "title" ></label>
 							<div class = "item-cont" >
-								<input type = "text" name = "cur_id" placeholder = "Id Curso" maxlength = "5" class = "form-control" />
+								<input type = "text" name = "noti_id" placeholder = "Id Noticia" maxlength = "5" class = "form-control" />
 								<span class = "icon-place" ></span>
 							</div>
 						</div>
@@ -42,7 +51,7 @@
 						<div class = "element-name form-group" >
 							<label class = "title" ></label>
 							<div class = "nameFirst" >
-								<input type = "text" name = "name" placeholder = "Nombre de Curso" maxlength = "50" class = "form-control" />
+								<input type = "text" name = "titu" placeholder = "Titulo de Noticia" maxlength = "100" class = "form-control" />
 								<span class = "icon-place" ></span>
 							</div>
 						</div>
@@ -50,7 +59,7 @@
 						<div class = "element-input form-group" >
 							<label class = "title" ></label>
 							<div class = "item-cont" >
-								<input type = "text" name = "descrip" placeholder = "Descripción de Curso" maxlength = "400" class = "form-control" />
+								<input type = "text" name = "descrip" placeholder = "Descripción de Noticia" maxlength = "350" class = "form-control" />
 								<span class = "icon-place" ></span>
 							</div>
 						</div>
@@ -58,7 +67,7 @@
 						<div class = "element-number form-group" >
 							<label class = "title" ></label>
 							<div class = "item-cont" >
-								<input type = "text" name = "time" placeholder = "Horario: 8:00 am - 12:00 pm" maxlength = "50" class = "form-control" />
+								<input type = "text" name = "conte" placeholder = "Contenido de Noticia" maxlength = "1500" class = "form-control" />
 								<span class = "icon-place" ></span>
 							</div>
 						</div>
@@ -66,7 +75,7 @@
 						<div class = "element-number form-group" >
 							<label class = "title" ></label>
 							<div class = "item-cont" >
-								<input type = "text" name = "price" placeholder = "Precio de Curso" maxlength = "15" class = "form-control" />
+								<input type = "text" name = "estad" placeholder = "Estado de Noticia" maxlength = "1" class = "form-control" />
 								<span class = "icon-place" ></span>
 							</div>
 						</div>
@@ -74,33 +83,18 @@
 						<div class = "element-number form-group" >
 							<label class = "title" ></label>
 							<div class = "item-cont" >
-								<input type = "text" name = "estado" placeholder = "Estado de Curso" maxlength = "5" class = "form-control" />
+								<input type = "text" name = "fecha" placeholder = "aaaa-mm-dd" maxlength = "30" class = "form-control" />
 								<span class = "icon-place" ></span>
 							</div>
 						</div>
 
-						<div class = "element-number form-group" >
-							<label class = "title" ></label>
-							<div class = "item-cont" >
-								<input type = "text" name = "dura" placeholder = "Duración de Curso" maxlength = "20" class = "form-control" />
-								<span class = "icon-place" ></span>
-							</div>
-						</div>
-
-						<div class = "element-number form-group" >
-							<label class = "title" ></label>
-							<div class = "item-cont" >
-								<input type = "text" name = "fecha" placeholder = "aaaa-mm-dd" maxlength = "50" class = "form-control" />
-								<span class = "icon-place" ></span>
-							</div>
-						</div>
-
-						<input class = "btn btn-primary " type = "submit" name = "enviar" value = "Agregar" />
+						<input class = "btn btn-primary " type = "submit"
+						name = "enviar" value = "Agregar" />
 					</form>
 
 					<hr class = "d-lg-none divider" >
-					<a href = "Opciones_Cursos.html" class = "d-block h3 font-weight-normal" > Regresar <br>
-						<small class = "d-block text-muted text-small" > Menu </small>
+					<a href = "Opciones_Noticias.php" class = "d-block h3 font-weight-normal" > Regresar <br>
+						<small class = "d-block text-muted text-small" > Menú </small>
 					</a>
 				</article>
 			</section>

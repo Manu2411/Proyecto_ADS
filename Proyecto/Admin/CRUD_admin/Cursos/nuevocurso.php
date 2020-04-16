@@ -2,7 +2,7 @@
 	<html lang="es">
 		<head>
 			<meta charset="utf-8" />
-			<title>Ingreso datos de beneficiaria</title>
+			<title>Nuevo Curso</title>
 
 			<link href = "//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel = "stylesheet" id = "bootstrap-css" >
 			<script src = "//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js" ></script>
@@ -20,21 +20,29 @@
 		</head>
 
 		<body class="container">
+			<?php
+				session_start();
+
+				if (!isset($_SESSION["usuario"])) {
+					header("location:../../../Acceso_Admin.html");
+				}
+			?>
+
 			<header>
 				<nav class = "navbar navbar-dark bg-primary" >
 				<span class = "navbar-text" >
-				<h1> Nueva Beneficiaria</h1>
+				<h1> Nuevo Curso</h1>
 				</span>
 				</nav>
 			</header>
 
 			<section>
 				<article >
-					<form action = "insertar_bene.php" method = "POST" >
+					<form action = "insertar_curso.php" method = "POST" >
 						<div class = "element-number form-group" >
 							<label class = "title" ></label>
 							<div class = "item-cont" >
-								<input type = "text" name = "bene_id" placeholder = "Id Beneficiaria" maxlength = "5" class = "form-control" />
+								<input type = "text" name = "cur_id" placeholder = "Id Curso" maxlength = "5" class = "form-control" />
 								<span class = "icon-place" ></span>
 							</div>
 						</div>
@@ -42,7 +50,7 @@
 						<div class = "element-name form-group" >
 							<label class = "title" ></label>
 							<div class = "nameFirst" >
-								<input type = "text" name = "name" placeholder = "Nombre de Beneficiaria" maxlength = "50" class = "form-control" />
+								<input type = "text" name = "name" placeholder = "Nombre de Curso" maxlength = "50" class = "form-control" />
 								<span class = "icon-place" ></span>
 							</div>
 						</div>
@@ -50,7 +58,39 @@
 						<div class = "element-input form-group" >
 							<label class = "title" ></label>
 							<div class = "item-cont" >
-								<input type = "text" name = "opi" placeholder = "Opinion de Beneficiaria" maxlength = "1500" class = "form-control" />
+								<input type = "text" name = "descrip" placeholder = "Descripción de Curso" maxlength = "400" class = "form-control" />
+								<span class = "icon-place" ></span>
+							</div>
+						</div>
+
+						<div class = "element-number form-group" >
+							<label class = "title" ></label>
+							<div class = "item-cont" >
+								<input type = "text" name = "time" placeholder = "Horario: 8:00 am - 12:00 pm" maxlength = "50" class = "form-control" />
+								<span class = "icon-place" ></span>
+							</div>
+						</div>
+
+						<div class = "element-number form-group" >
+							<label class = "title" ></label>
+							<div class = "item-cont" >
+								<input type = "text" name = "price" placeholder = "Precio de Curso" maxlength = "15" class = "form-control" />
+								<span class = "icon-place" ></span>
+							</div>
+						</div>
+
+						<div class = "element-number form-group" >
+							<label class = "title" ></label>
+							<div class = "item-cont" >
+								<input type = "text" name = "estado" placeholder = "Estado de Curso" maxlength = "5" class = "form-control" />
+								<span class = "icon-place" ></span>
+							</div>
+						</div>
+
+						<div class = "element-number form-group" >
+							<label class = "title" ></label>
+							<div class = "item-cont" >
+								<input type = "text" name = "dura" placeholder = "Duración de Curso" maxlength = "20" class = "form-control" />
 								<span class = "icon-place" ></span>
 							</div>
 						</div>
@@ -67,7 +107,7 @@
 					</form>
 
 					<hr class = "d-lg-none divider" >
-					<a href = "Opciones_Bene.html" class = "d-block h3 font-weight-normal" > Regresar <br>
+					<a href = "Opciones_Cursos.php" class = "d-block h3 font-weight-normal" > Regresar <br>
 						<small class = "d-block text-muted text-small" > Menu </small>
 					</a>
 				</article>

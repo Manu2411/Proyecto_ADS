@@ -12,6 +12,14 @@
 		</head>
 
 		<body class="container">
+		<?php
+			session_start();
+
+			if (!isset($_SESSION["usuario"])) {
+				header("location:../../../Acceso_Admin.html");
+			}
+        ?>
+
 			<header>
 				<nav class = "navbar navbar-dark bg-primary" >
 				<span class = "navbar-text" >
@@ -23,6 +31,7 @@
 			<section>
 				<article> 
 					<?php
+
 						//Creando una nueva instancia del objeto de conexión
 						//a la base de datos
 						@$db = new mysqli( 'localhost' , 'root' , '' , 'sirama', "3308" );

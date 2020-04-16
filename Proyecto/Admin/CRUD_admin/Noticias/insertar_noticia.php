@@ -15,6 +15,15 @@
 		</head>
 
 		<body class="container">
+
+		<?php
+			session_start();
+
+			if (!isset($_SESSION["usuario"])) {
+				header("location:../../../Acceso_Admin.html");
+			}
+		?>
+		
 			<header>
 				<nav class = "navbar navbar-dark bg-primary" >
 					<span class = "navbar-text" >
@@ -40,7 +49,7 @@
 						if (empty($id) || empty($titulo) || empty($descri) || empty($conte) || empty($fecha)) {
 							$msg = "Existen campos en el formulario sin llenar. ";
 							$msg .= "Regrese al formulario y llene todos los campos. <br />\n";
-							$msg .= "[<a href=\"nuevanoticia.html\">Volver</a>]\n";
+							$msg .= "[<a href=\"nuevanoticia.php\">Volver</a>]\n";
 
 							echo $msg;
 							exit (0);
@@ -95,13 +104,13 @@
 					<section class = "m-b-30 m-t-30" >
 						<div class = "row pager" >
 							<div class = "col-md-6 text-left" >
-								<a href = "Opciones_Noticias.html" class = "d-block h3 font-weight-normal" > Regresar <br>
+								<a href = "Opciones_Noticias.php" class = "d-block h3 font-weight-normal" > Regresar <br>
 								<small class = "d-block text-muted text-small" > Menu </small>
 								</a>
 							</div>
 							
 							<div class = "col-md-6 text-right" >
-								<a href = "nuevanoticia.html" class = "d-block h3 font-weight-normal" >
+								<a href = "nuevanoticia.php" class = "d-block h3 font-weight-normal" >
 								Agregar <br>
 								<small class = "d-block text-muted text-small" > Otra noticia </small>
 								</a>

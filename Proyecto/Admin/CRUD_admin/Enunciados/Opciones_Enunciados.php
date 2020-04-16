@@ -2,7 +2,7 @@
 	<html lang="es">
 		<head>
 			<meta charset="utf-8" />
-			<title>Gestión de Beneficiarias</title>
+			<title>Gestión de enunciados</title>
 
 			<link href = "//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel = "stylesheet" id ="bootstrap-css" >
 			<script src = "//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js" ></script>
@@ -11,10 +11,18 @@
 		</head>
 
 		<body class="container">
+		<?php
+			session_start();
+
+			if (!isset($_SESSION["usuario"])) {
+				header("location:../../../Acceso_Admin.html");
+			}
+        ?>
+
 				<header>
 					<nav class = "navbar navbar-dark bg-primary" >
 					<span class = "navbar-text" >
-					<h1> Gestión de Beneficiarias</h1>
+					<h1> Gestión de Enunciados </h1>
 					</span>
 					</nav>
 				</header>
@@ -23,31 +31,31 @@
 					<div id = "menubuttons" >
 						<div class = "col-md-3" id = "uno" >
 							<a class = "btn btn-block btn-lg btn-success" data-toggle = "modal" data-target = "#mymodal"
-							href = "../../Beneficiarias.php#portfolio" target = "_self" title = "Página Principal Administrador" >
+							href = "../../Principal.php" target = "_self" title = "Principal" >
 							<img class = "icon" src = "img/icon-home.png" ><br>
 							<span class = "texto_grande" > Principal </span></a>
 						</div>
 					
 						<div class = "col-md-3" id = "dos" >
-                            <a class = "btn btn-block btn-lg btn-warning" data-toggle = "modal" data-target = "#mymodal"
-                            href = "nuevabeneficiaria.html" target = "_self" title = "Nueva noticia" >
+                            <a class = "btn btn-block btn-lg btn-warning" data-toggle = "modal" data-target = "#mymodal" 
+                            href = "nuevoenunciado.php" target = "_self" title = "Nueva noticia" >
 							<img class = "icon" src = "img/icon-new.png" ><br>
-							<span class = "texto_grande" > Nueva Beneficiaria </span>
+							<span class = "texto_grande" > Nuevo enunciado </span>
 							</a>
 						</div>
 
 						<div class = "col-md-3" id = "cuatro" >
-                            <a class = "btn btn-block btn-lg btn-primary" data-toggle = "modal" data-target = "#mymodal"
-                             href = "mostrar_bene.php?opc=modificar" target = "_self" title = "Modificar noticia" >
+                            <a class = "btn btn-block btn-lg btn-primary" data-toggle = "modal" data-target = "#mymodal" 
+                            href = "mostrar_enunciados.php?opc=modificar" target = "_self" title = "Modificar noticia" >
 							<img class = "icon" src = "img/icon-edit.png" ><br>
-							<span class = "texto_grande" > Modificar datos </span>
+							<span class = "texto_grande" > Modificar enunciado </span>
 							</a>
 						</div>
 
 						<div class = "col-md-3" id = "cinco" >
-							<a class = "btn btn-block btn-lg btn-danger" href = "mostrar_bene.php?opc=eliminar" target ="_self" title = "Eliminar noticia" >
+							<a class = "btn btn-block btn-lg btn-danger" href = "mostrar_enunciados.php?opc=eliminar" target ="_self" title = "Eliminar noticia" >
 							<img class = "icon" src = "img/icon-trash.png" ><br>
-							<span class = "texto_grande" > Eliminar Beneficiaria </span>
+							<span class = "texto_grande" > Eliminar enunciado </span>
 							</a>
 						</div>
 
