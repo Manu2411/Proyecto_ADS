@@ -30,9 +30,9 @@ USE `Sirama`;
 
 CREATE TABLE IF NOT EXISTS `Noticias` (
   `Id_Noti` int(5) NOT NULL,
-  `Titulo` varchar(25) NOT NULL,
-  `Descripcion` varchar(30) NOT NULL,
-  `Contenido` varchar(75) NOT NULL,
+  `Titulo` varchar(150) NOT NULL,
+  `Descripcion` varchar(450) NOT NULL,
+  `Contenido` varchar(1500) NOT NULL,
   `Estado` char(5) NOT NULL,
   `Fecha` date NOT NULL,
   PRIMARY KEY (`Id_Noti`)
@@ -55,8 +55,8 @@ INSERT INTO `Noticias` (`Id_Noti`, `Titulo`, `Descripcion`, `Contenido`, `Estado
 
 CREATE TABLE IF NOT EXISTS `Enunciados` (
   `Id_Enun` int(5) NOT NULL,
-  `Titulo` varchar(30) NOT NULL,
-  `Descripcion` Varchar(30) NOT NULL,
+  `Titulo` varchar(150) NOT NULL,
+  `Descripcion` Varchar(1500) NOT NULL,
   `Fecha` date NOT NULL,
   PRIMARY KEY (`Id_Enun`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -79,8 +79,8 @@ INSERT INTO `Enunciados` (`Id_Enun`, `Titulo`, `Descripcion`, `Fecha`) VALUES
 
 CREATE TABLE IF NOT EXISTS `Cursos` (
   `Id_Curso` int(5) NOT NULL,
-  `Nombre` varchar(25) NOT NULL,
-  `Descripcion` varchar(50) NOT NULL,
+  `Nombre` varchar(70) NOT NULL,
+  `Descripcion` varchar(1500) NOT NULL,
   `Horario` varchar(25) NOT NULL,
   `Precio` varchar(15) NOT NULL,
   `Estado` char(5) NOT NULL,
@@ -109,8 +109,8 @@ INSERT INTO `Cursos` (`Id_Curso`, `Nombre`, `Descripcion`, `Horario`, `Precio`, 
 
 CREATE TABLE IF NOT EXISTS `Beneficiarias` (
   `Id_Bene` int(5) NOT NULL,
-  `Nombre` varchar(30) NOT NULL,
-  `Opinion` varchar(75) NOT NULL,
+  `Nombre` varchar(50) NOT NULL,
+  `Opinion` varchar(1500) NOT NULL,
   `Fecha` date NOT NULL,
   PRIMARY KEY (`Id_Bene`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
