@@ -81,7 +81,7 @@ CREATE TABLE IF NOT EXISTS `Cursos` (
   `Id_Curso` int(5) NOT NULL,
   `Nombre` varchar(70) NOT NULL,
   `Descripcion` varchar(1500) NOT NULL,
-  `Horario` varchar(25) NOT NULL,
+  `Horario` varchar(75) NOT NULL,
   `Precio` varchar(15) NOT NULL,
   `Estado` char(5) NOT NULL,
   `Duracion` varchar(20) NOT NULL,

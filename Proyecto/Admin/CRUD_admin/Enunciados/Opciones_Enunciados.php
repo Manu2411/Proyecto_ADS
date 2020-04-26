@@ -4,7 +4,8 @@
 			<meta charset="utf-8" />
 			<title>Gestión de enunciados</title>
 
-			<link href = "//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel = "stylesheet" id ="bootstrap-css" >
+			<link href = "//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel = "stylesheet" id ="bootstrap-css" />
+			<link href = "css/style.css" rel = "stylesheet" />
 			<script src = "//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js" ></script>
 			<script src = "//code.jquery.com/jquery-1.11.1.min.js" ></script>
 			<script src = "js/modernizr.custom.lis.js" ></script>
@@ -29,35 +30,35 @@
 
 				<div>
 					<div id = "menubuttons" >
-						<div class = "col-md-3" id = "uno" >
+						<div class = "col-md-6" id = "uno" >
 							<a class = "btn btn-block btn-lg btn-success" data-toggle = "modal" data-target = "#mymodal"
 							href = "../../Principal.php" target = "_self" title = "Principal" >
 							<img class = "icon" src = "img/icon-home.png" ><br>
 							<span class = "texto_grande" > Principal </span></a>
 						</div>
 					
-						<div class = "col-md-3" id = "dos" >
+						<!-- <div class = "col-md-3" id = "dos" >
                             <a class = "btn btn-block btn-lg btn-warning" data-toggle = "modal" data-target = "#mymodal" 
                             href = "nuevoenunciado.php" target = "_self" title = "Nueva noticia" >
 							<img class = "icon" src = "img/icon-new.png" ><br>
 							<span class = "texto_grande" > Nuevo enunciado </span>
 							</a>
-						</div>
+						</div> -->
 
-						<div class = "col-md-3" id = "cuatro" >
+						<div class = "col-md-6" id = "cuatro" >
                             <a class = "btn btn-block btn-lg btn-primary" data-toggle = "modal" data-target = "#mymodal" 
-                            href = "mostrar_enunciados.php?opc=modificar" target = "_self" title = "Modificar noticia" >
+                            href = "mostrar_enunciados.php?opc=modificar" target = "_self" title = "Modificar Enunciado" >
 							<img class = "icon" src = "img/icon-edit.png" ><br>
 							<span class = "texto_grande" > Modificar enunciado </span>
 							</a>
 						</div>
 
-						<div class = "col-md-3" id = "cinco" >
+						<!-- <div class = "col-md-3" id = "cinco" >
 							<a class = "btn btn-block btn-lg btn-danger" href = "mostrar_enunciados.php?opc=eliminar" target ="_self" title = "Eliminar noticia" >
 							<img class = "icon" src = "img/icon-trash.png" ><br>
 							<span class = "texto_grande" > Eliminar enunciado </span>
 							</a>
-						</div>
+						</div> -->
 
 					</div>
 				</div>
