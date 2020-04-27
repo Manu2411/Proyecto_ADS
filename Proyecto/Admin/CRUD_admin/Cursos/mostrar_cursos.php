@@ -2,7 +2,7 @@
 	<html lang="es">
 		<head>
 			<meta charset="utf-8" /> 
-			<title>Cursos en base de datos</title>
+			<title>Registro de Cursos</title>
 
 			<link href = "//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel = "stylesheet" id ="bootstrap-css" >
 			<script src = "//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js" ></script>
@@ -61,12 +61,14 @@
 						$hora = isset($_POST[ 'hora' ]) ? trim($_POST[ 'hora' ]) : "";
 						$precio = isset($_POST[ 'preci' ]) ? trim($_POST[ 'preci' ]) : "";
 						$esta = isset($_POST[ 'estado' ]) ? trim($_POST[ 'estado' ]) : "";
+						$pla = isset($_POST[ 'place' ]) ? trim($_POST[ 'place' ]) : "";
 						$dura = isset($_POST[ 'dura' ]) ? trim($_POST[ 'dura' ]) : "";
 						$fecha = isset($_POST[ 'fecha' ]) ? trim($_POST[ 'fecha' ]) : "";
 
 						//Verificando que se hayan ingresado datos
 						//en todos los controles del formulario
-						if (empty($name) || empty($descri) || empty($hora) || empty($precio) || empty($dura) || empty($fecha)) {
+						if (empty($name) || empty($descri) || empty($hora) || empty($precio) || empty($dura) ||
+						 	empty($fecha) || empty($pla)) {
 						$msg = "Existen campos en el formulario sin llenar.";
 						$msg .= "Regrese al formulario y llene todos los campos. <br>\n";
 						$msg .= "[<a href=\"modificar.php?id=" . $id . "\">Volver</a>]\n";
@@ -82,6 +84,7 @@
 							$hora = addslashes($hora);
 							$precio = addslashes($precio);
 							$esta = addslashes($esta);
+							$pla = addslashes($pla);
 							$dura = addslashes($dura);
 							$fecha = addslashes($fecha);
 						}
@@ -89,7 +92,8 @@
 						//Creando la consulta de actualización con los datos
 						//enviados del formulario de modificación de libros
 						
-						$consulta = "update cursos set Nombre = '" . $name . "',  Descripcion = '" . $descri . "', Horario = '" . $hora . "', Precio = '" . $precio . "', Estado = '" . $esta . "', Duracion = '" . $dura . "', Fecha = '" . $fecha . "' WHERE Id_Curso = '" . $id . "'"; 
+						$consulta = "update cursos set Nombre = '" . $name . "',  Descripcion = '" . $descri . "', Horario = '" . $hora . "', Precio = '" . $precio . "', Estado = '" . $esta . 
+									"', Duracion = '" . $dura . "', Fecha = '" . $fecha . "', lugar_curso = " . $pla . "' WHERE Id_Curso = '" . $id . "'";
 
 						//Ejecutando la consulta de actualización
 						$resultc = $db->query($consulta);
@@ -130,16 +134,13 @@
 				<col class=\"descri\">
 				</colgroup>
 				<colgroup>
-				<col class=\"hora\">
-				</colgroup>
-				<colgroup>
 				<col class=\"precio\">
 				</colgroup>
 				<colgroup>
 				<col class=\"esta\">
 				</colgroup>
 				<colgroup>
-				<col class=\"dura\">
+				<col class=\"place\">
 				</colgroup>
 				<colgroup>
 				<col class=\"fecha\">
@@ -152,10 +153,9 @@
 				<th>ID</th>
 				<th>NOMBRE</th>
 				<th>DESCRIPCIÓN</th>
-				<th>HORA</th>
 				<th>PRECIO</th>
 				<th>ESTADO</th>
-				<th>DURACIÓN</th>
+				<th>UBICACIÓN</th>
 				<th>FECHA</th>
 				<th>ACCIÓN</th>
 				</tr>
@@ -170,14 +170,12 @@
 				echo "" . stripslashes($row[ 'Nombre' ]) . "";
 				echo "</td><td scope='col'>";
 				echo "" . stripslashes($row[ 'Descripcion' ]) . "";
-				echo "</td><td scope='col'>";
-				echo "" . stripslashes($row[ 'Horario' ]) . "";
-				echo "</td><td scope='col'>";
-				echo "" . stripslashes($row[ 'Precio' ]) . "";
-				echo "</td><td scope='col'>";
+				echo "</td><td scope='col' class = 'text-center'>";
+				echo "$" . stripslashes($row[ 'Precio' ]) . "";
+				echo "</td><td scope='col' class = 'text-center'>";
 				echo "" . stripslashes($row[ 'Estado' ]) . "";
-				echo "</td><td scope='col'>\n";
-				echo "" . stripslashes($row[ 'Duracion' ]) . "";
+				echo "</td><td scope='col' class = 'text-center'>\n";
+				echo "" . stripslashes($row[ 'lugar_curso' ]) . "";
 				echo "</td><td scope='col'>";
 				echo "" . $row[ 'Fecha' ];
 				echo "</td><td scope='col'>";

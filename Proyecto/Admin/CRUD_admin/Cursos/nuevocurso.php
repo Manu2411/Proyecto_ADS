@@ -66,7 +66,7 @@
 						<div class = "element-number form-group" >
 							<label class = "title" ></label>
 							<div class = "item-cont" >
-								<input type = "text" name = "time" placeholder = "Horario: 8:00 am - 12:00 pm" maxlength = "50" class = "form-control" />
+								<input type = "text" name = "time" placeholder = "8:00 am - 12:00 pm" maxlength = "50" class = "form-control" />
 								<span class = "icon-place" ></span>
 							</div>
 						</div>
@@ -90,6 +90,14 @@
 						<div class = "element-number form-group" >
 							<label class = "title" ></label>
 							<div class = "item-cont" >
+								<input type = "number" min = "1" max = "6" value = "1" name = "ubi" placeholder = "Ubicación Curso" maxlength = "5" class = "form-control" />
+								<span class = "icon-place" ></span>
+							</div>
+						</div>
+
+						<div class = "element-number form-group" >
+							<label class = "title" ></label>
+							<div class = "item-cont" >
 								<input type = "text" name = "dura" placeholder = "Duración de Curso" maxlength = "20" class = "form-control" />
 								<span class = "icon-place" ></span>
 							</div>
@@ -98,7 +106,7 @@
 						<div class = "element-number form-group" >
 							<label class = "title" ></label>
 							<div class = "item-cont" >
-								<input type = "text" name = "fecha" placeholder = "aaaa-mm-dd" maxlength = "50" class = "form-control" />
+								<input type = "date" name = "fecha" placeholder = "aaaa-mm-dd" maxlength = "50" class = "form-control" />
 								<span class = "icon-place" ></span>
 							</div>
 						</div>

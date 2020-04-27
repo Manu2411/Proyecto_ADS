@@ -58,11 +58,13 @@
 						$id = isset($_GET[ 'id' ]) ? trim($_GET[ 'id' ]) : "";
 						$name = isset($_POST[ 'nombre' ]) ? trim($_POST[ 'nombre' ]) : "";
 						$opini = isset($_POST[ 'opinion' ]) ? trim($_POST[ 'opinion' ]) : "";
+						$mood = isset($_POST[ 'estado' ]) ? trim($_POST[ 'estado' ]) : "0";
+						$ubi = isset($_POST[ 'place' ]) ? trim($_POST[ 'place' ]) : "";
 						$fecha = isset($_POST[ 'fecha' ]) ? trim($_POST[ 'fecha' ]) : "";
 
 						//Verificando que se hayan ingresado datos
 						//en todos los controles del formulario
-						if (empty($name) || empty($opini) || empty($fecha)) {
+						if (empty($name) || empty($opini) || empty($fecha) || empty($ubi)) {
 						$msg = "Existen campos en el formulario sin llenar.";
 						$msg .= "Regrese al formulario y llene todos los campos. <br>\n";
 						$msg .= "[<a href=\"modificar.php?id=" . $id . "\">Volver</a>]\n";
@@ -75,13 +77,16 @@
 							$id = addslashes($id);
 							$name = addslashes($name);
 							$opini = addslashes($opini);
+							$mood = addslashes($mood);
+							$ubi = addslashes($ubi);
 							$fecha = addslashes($fecha);
 						}
 
 						//Creando la consulta de actualización con los datos
 						//enviados del formulario de modificación de libros
 						
-						$consulta = "update beneficiarias set Nombre = '" . $name . "', Opinion = '" . $opini . "', Fecha = '" . $fecha . "' WHERE Id_Bene = '" . $id . "'"; 
+						$consulta = "update beneficiarias set Nombre = '" . $name . "', Opinion = '" . $opini . "', Fecha = '"
+									. $fecha . "', Estado = '" . $mood . "', ubicacion_bene = '" . $ubi . "' WHERE Id_Bene = '" . $id . "'"; 
 
 						//Ejecutando la consulta de actualización
 						$resultc = $db->query($consulta);
@@ -122,6 +127,12 @@
 				<col class=\"opini\">
 				</colgroup>
 				<colgroup>
+				<col class=\"esta\">
+				</colgroup>
+				<colgroup>
+				<col class=\"place\">
+				</colgroup>
+				<colgroup>
 				<col class=\"fecha\">
 				</colgroup>
 				<colgroup>
@@ -132,6 +143,8 @@
 				<th>ID</th>
 				<th>NOMBRE</th>
 				<th>OPINIÓN</th>
+				<th>ESTADO</th>
+				<th>UBICACIÓN</th>
 				<th>FECHA</th>
 				<th>ACCIÓN</th>
 				</tr>
@@ -146,6 +159,10 @@
 				echo "" . stripslashes($row[ 'Nombre' ]) . "";
 				echo "</td><td scope='col'>";
 				echo "" . stripslashes($row[ 'Opinion' ]) . "";
+				echo "</td><td scope='col' class = 'text-center'>";
+				echo "" . stripslashes($row[ 'Estado' ]) . "";
+				echo "</td><td scope='col' class = 'text-center'>";
+				echo "" . stripslashes($row[ 'ubicacion_bene' ]) . "";
 				echo "</td><td scope='col'>";
 				echo "" . $row[ 'Fecha' ];
 				echo "</td><td scope='col'>";

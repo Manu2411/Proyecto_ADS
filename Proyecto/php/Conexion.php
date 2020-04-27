@@ -17,31 +17,6 @@
         
         return $q;
     }
-
-     //Verificacion del usuario y redireccionamiento a la pagina principal
-    // function ingresar($usuario, $password){
-    //     $con = conectar();
-            
-    //     $q = "select * from usuarios where Clave='$password'";
-    //     $r = mysqli_query($con, $q);
-    //     $existentes = mysqli_num_rows($r);
-    //     if($existentes>0){
-    //         while($columna = mysqli_fetch_array($r)){
-    //             $pass = $columna['Clave'];
-    //         }
-            
-    //         if($password == $pass){
-    //             header('Location: ../Admin/Principal.php');
-    //             echo "Bienvenido";
-    //         }
-    //         else{
-    //             echo "Contraseña incorrecta";
-    //         }
-    //     }
-    //     else{
-    //         echo "Contraseña incorrecta";
-    //     }
-    // }
     
     /* Aqui comienza para la extraccion de datos para el index */
 
@@ -106,7 +81,7 @@
         function obtenerTitu_Noti1($IdNot){
             $cone = conectar();
 
-            $q = "select Titulo from noticias Where Id_Noti = '$IdNot'";
+            $q = "select Titulo from noticias Where lugar_noti = '$IdNot' && estado = '1' ";
 
             $r = mysqli_query($cone, $q);
 
@@ -142,7 +117,7 @@
         function obtenerDes_Noti1($IdNot){
             $cone = conectar();
 
-            $q = "select Descripcion from noticias Where Id_Noti = '$IdNot'";
+            $q = "select Descripcion from noticias Where lugar_noti = '$IdNot' && estado = '1' ";
 
             $r = mysqli_query($cone, $q);
 
@@ -166,7 +141,7 @@
         function obtenerCon_Noti1($IdNot){
             $cone = conectar();
 
-            $q = "select Contenido from noticias Where Id_Noti = '$IdNot'";
+            $q = "select Contenido from noticias Where lugar_noti = '$IdNot' && estado = '1' ";
 
             $r = mysqli_query($cone, $q);
 
@@ -198,7 +173,7 @@
 
             $cone = conectar();
 
-            $q = "select Nombre FROM cursos WHERE Id_Curso = '$IdNom'";
+            $q = "select Nombre FROM cursos WHERE lugar_curso = '$IdNom' && Estado = '1'";
 
             $r = mysqli_query($cone, $q);
 
@@ -225,7 +200,7 @@
 
             $cone = conectar();
 
-            $q = "select Descripcion FROM cursos WHERE Id_Curso = '$IdCurso'";
+            $q = "select Descripcion FROM cursos WHERE lugar_curso = '$IdCurso' && Estado = '1'";
 
             $r = mysqli_query($cone, $q);
 
@@ -252,7 +227,7 @@
 
             $cone = conectar();
 
-            $q = "select Horario FROM cursos WHERE Id_Curso = '$IdCurso'";
+            $q = "select Horario FROM cursos WHERE lugar_curso = '$IdCurso' && Estado = '1'";
 
             $r = mysqli_query($cone, $q);
 
@@ -279,7 +254,7 @@
 
             $cone = conectar();
 
-            $q = "select Precio FROM cursos WHERE Id_Curso = '$IdCurso'";
+            $q = "select Precio FROM cursos WHERE lugar_curso = '$IdCurso' && Estado = '1'";
 
             $r = mysqli_query($cone, $q);
 
@@ -310,7 +285,7 @@
 
             $cone = conectar();
 
-            $q = "select Nombre FROM beneficiarias WHERE Id_Bene = '$IdBene'";
+            $q = "select Nombre FROM beneficiarias WHERE ubicacion_bene = '$IdBene' && Estado = '1'";
 
             $r = mysqli_query($cone, $q);
 
@@ -336,7 +311,7 @@
 
             $cone = conectar();
 
-            $q = "select Opinion FROM beneficiarias WHERE Id_Bene = '$IdBene'";
+            $q = "select Opinion FROM beneficiarias WHERE ubicacion_bene = '$IdBene' && Estado = '1'";
 
             $r = mysqli_query($cone, $q);
 

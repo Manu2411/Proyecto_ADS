@@ -83,7 +83,15 @@
 						<div class = "element-number form-group" >
 							<label class = "title" ></label>
 							<div class = "item-cont" >
-								<input type = "text" name = "fecha" placeholder = "aaaa-mm-dd" maxlength = "30" class = "form-control" />
+								<input type = "text" name = "lugar" placeholder = "Ubicación Noticia (1, 2 ó 3)" maxlength = "1" class = "form-control" />
+								<span class = "icon-place" ></span>
+							</div>
+						</div>
+
+						<div class = "element-number form-group" >
+							<label class = "title" ></label>
+							<div class = "item-cont" >
+								<input type = "date" name = "fecha" placeholder = "aaaa-mm-dd" maxlength = "30" class = "form-control" />
 								<span class = "icon-place" ></span>
 							</div>
 						</div>

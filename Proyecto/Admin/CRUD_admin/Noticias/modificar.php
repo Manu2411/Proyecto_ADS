@@ -60,6 +60,7 @@
 						//Obteniendo el número de registros devueltos
 						$num_results = $resultc->num_rows;
 						$row = $resultc->fetch_assoc(); 
+						
 					?>
 
 					<form action = "mostrar_noticias.php?id= <?php echo $_GET[ 'id' ] ?>" method = "POST" class = "formoidsolid-purple" >
@@ -103,7 +104,14 @@
 						<div class = "element-number form-group" > 
 							<label class = "title" ></label>
 							<div class = "item-cont" >
-								<input class = "form-control" type = "text" name = "fecha" value = "<?php echo $row[ 'Fecha' ] ?> " maxlength = "10" placeholder = "aaaa-mm-dd" class = "large" /> <span class = "icon-place" ></span> 
+								<input class = "form-control" type = "text" name = "ubi" value = "<?php echo $row[ 'lugar_noti' ] ?> " maxlength = "1" placeholder = "Ubicación de Noticia [1, 2 ó 3]" class = "large" /> <span class = "icon-place" ></span> 
+							</div>
+						</div>
+
+						<div class = "element-number form-group" > 
+							<label class = "title" ></label>
+							<div class = "item-cont" >
+								<input class = "form-control" type = "date" name = "fecha" value = "<?php echo $row[ 'Fecha' ] ?> " maxlength = "10" placeholder = "aaaa-mm-dd" class = "large" /> <span class = "icon-place" ></span> 
 							</div>
 						</div>
 

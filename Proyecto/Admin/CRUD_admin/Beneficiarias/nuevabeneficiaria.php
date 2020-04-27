@@ -63,10 +63,26 @@
 							</div>
 						</div>
 
+						<div class = "element-input form-group" >
+							<label class = "title" ></label>
+							<div class = "item-cont" >
+								<input type = "text" name = "esta" placeholder = "Estado de Beneficiaria" maxlength = "5" class = "form-control" />
+								<span class = "icon-place" ></span>
+							</div>
+						</div>
+
+						<div class = "element-input form-group" >
+							<label class = "title" ></label>
+							<div class = "item-cont" >
+								<input type = "number" name = "lugar" placeholder = "Ubicación de Beneficiaria" min = "1" max = "6" value = "1" class = "form-control" />
+								<span class = "icon-place" ></span>
+							</div>
+						</div>
+
 						<div class = "element-number form-group" >
 							<label class = "title" ></label>
 							<div class = "item-cont" >
-								<input type = "text" name = "fecha" placeholder = "aaaa-mm-dd" maxlength = "50" class = "form-control" />
+								<input type = "date" name = "fecha" placeholder = "AAAA-MM-DD" maxlength = "50" class = "form-control" />
 								<span class = "icon-place" ></span>
 							</div>
 						</div>

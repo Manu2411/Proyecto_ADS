@@ -39,11 +39,13 @@
 						$id = trim($_POST[ 'bene_id' ]);
 						$name = trim($_POST[ 'name' ]);
 						$opin = trim($_POST[ 'opi' ]);
+						$estado = trim($_POST[ 'esta' ]);
+						$place = trim($_POST[ 'lugar' ]);
 						$fecha = trim($_POST[ 'fecha' ]);
 
 						//Verificando que se hayan ingresado datos
 						//en todos los controles del formulario
-						if (empty($id) || empty($name) || empty($opin) || empty($fecha)) {
+						if (empty($id) || empty($name) || empty($opin) || empty($fecha) || empty($place)) {
 							$msg = "Existen campos en el formulario sin llenar. ";
 							$msg .= "Regrese al formulario y llene todos los campos. <br />\n";
 							$msg .= "[<a href=\"nuevabeneficiaria.php\">Volver</a>]\n";
@@ -56,6 +58,8 @@
 							$id = intval($id);
 							$name = addslashes($name);
 							$opin = addslashes($opin);
+							$estado = addslashes($estado);
+							$place = addslashes($place);
 							$fecha = addslashes($fecha);
 						}
 
@@ -75,17 +79,16 @@
 							exit (0);
 						}
 
-						$consulta = "INSERT INTO beneficiarias (Id_Bene, Nombre, Opinion, Fecha)";
-						$consulta .= "VALUES (". $id . ", '" . $name . "', '" .  $opin . "', '" .  $fecha . "')";
+						$consulta = "INSERT INTO beneficiarias (Id_Bene, Nombre, Opinion, Fecha, Estado, ubicacion_bene)";
+						$consulta .= "VALUES (". $id . ", '" . $name . "', '" .  $opin . "', '" .  $fecha . "', '" . $estado . "', '" . $place . "')";
 
 
 						$resultc = $db->query($consulta);
 						if($resultc){
-						echo $db->affected_rows . " beneficiaria agregada a la base de
-						datos."; 
+						echo $db->affected_rows . " beneficiaria agregada a la base de datos."; 
 						}
 						else {
-							echo "No se pudo agregar el curso.";
+							echo "No se pudo agregar la beneficiaria.";
 							echo "Ya existe un registro en la base de datos con el número de Id ingresado.";
 						}	
 

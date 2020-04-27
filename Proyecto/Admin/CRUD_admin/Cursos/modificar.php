@@ -85,7 +85,7 @@
 						<div class = "element-number form-group" > 
 							<label class = "title" ></label>
 							<div class = "item-cont" >
-								<input class = "form-control" type = "text" name = "hora" value = "<?php echo $row[ 'Horario' ] ?> " maxlength = "50" placeholder = "Horario: 8:00 am - 12:00 pm" class = "large" /> <span class = "icon-place" ></span> 
+								<input class = "form-control" type = "text" name = "hora" value = "<?php echo $row[ 'Horario' ] ?> " maxlength = "50" placeholder = "Horario Curso: 8:00 am - 12:00 pm" class = "large" /> <span class = "icon-place" ></span> 
 							</div>
 						</div>
 
@@ -106,6 +106,13 @@
 						<div class = "element-input form-group" > 
 							<label class = "title" ></label>
 							<div class = "item-cont" > 
+								<input class = "form-control" type = "text" name = "place" value = "<?php echo $row[ 'lugar_curso' ] ?> " maxlength = "5" placeholder = "Ubicación de Curso"class = "large" /> <span class = "icon-place" ></span> 
+							</div>
+						</div>
+
+						<div class = "element-input form-group" > 
+							<label class = "title" ></label>
+							<div class = "item-cont" > 
 								<input class = "form-control" type = "text" name = "dura" value = "<?php echo $row[ 'Duracion' ] ?> " maxlength = "20" placeholder = "Duración de Curso"class = "large" /> <span class = "icon-place" ></span> 
 							</div>
 						</div>
@@ -113,7 +120,7 @@
 						<div class = "element-input form-group" > 
 							<label class = "title" ></label>
 							<div class = "item-cont" > 
-								<input class = "form-control" type = "text" name = "fecha" value = "<?php echo $row[ 'Fecha' ] ?> " maxlength = "400" placeholder = "aaaa-mm-dd"class = "large" /> <span class = "icon-place" ></span> 
+								<input class = "form-control" type = "date" name = "fecha" value = "<?php echo $row[ 'Fecha' ] ?> " maxlength = "400" placeholder = "aaaa-mm-dd"class = "large" /> <span class = "icon-place" ></span> 
 							</div>
 						</div>
 

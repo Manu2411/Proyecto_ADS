@@ -2,7 +2,7 @@
 	<html lang="es">
 		<head>
 			<meta charset="utf-8" /> 
-			<title>Noticias Ingresadas</title>
+			<title>Registro de Noticias</title>
 
 			<link href = "//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel = "stylesheet" id ="bootstrap-css" >
 			<script src = "//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js" ></script>
@@ -50,7 +50,7 @@
 				$db->set_charset( "utf8" );
 
 				//Si se ha llamado esta página desde el formulario
-				//para modificar libros ejecutar primero la actualización
+				//para modificar noticias ejecutar primero la actualización
 				//del registro
 
 				if (isset($_POST[ 'guardar' ])) {
@@ -61,11 +61,13 @@
 						$descripcion = isset($_POST[ 'descripcion' ]) ? trim($_POST[ 'descripcion' ]) : "";
 						$contenido = isset($_POST[ 'contenido' ]) ? trim($_POST[ 'contenido' ]) : "";
 						$estado = isset($_POST[ 'estado' ]) ? trim($_POST[ 'estado' ]) : "0";
+						$ubica = isset($_POST['ubi']) ? trim($_POST['ubi']) : "0";
 						$fecha = isset($_POST[ 'fecha' ]) ? trim($_POST[ 'fecha' ]) : "";
 
 						//Verificando que se hayan ingresado datos
 						//en todos los controles del formulario
-						if (empty($titulo) || empty($descripcion) || empty($contenido) || empty($fecha)) {
+						if (empty($titulo) || empty($descripcion) || empty($contenido) || empty($fecha) || 
+							empty($ubica)) {
 						$msg = "Existen campos en el formulario sin llenar.";
 						$msg .= "Regrese al formulario y llene todos los campos. <br>\n";
 						$msg .= "[<a href=\"modificar.php?id=" . $id . "\">Volver</a>]\n";
@@ -80,13 +82,14 @@
 							$descripcion = addslashes($descripcion);
 							$contenido = addslashes($contenido);
 							$estado = addslashes($estado);
+							$ubica = addslashes($ubica);
 							$fecha = addslashes($fecha);
 						}
 
 						//Creando la consulta de actualización con los datos
 						//enviados del formulario de modificación de libros
 						
-						$consulta = "update noticias set Titulo = '" . $titulo . "',  Descripcion = '" . $descripcion . "', Contenido = '" . $contenido . "', Estado = '" .$estado . "', Fecha = '" . $fecha . "' WHERE Id_Noti = '" . $id . "'";
+						$consulta = "update noticias set Titulo = '" . $titulo . "',  Descripcion = '" . $descripcion . "', Contenido = '" . $contenido . "', Estado = '" . $estado . "', Fecha = '" . $fecha . "', lugar_noti = '" . $ubica .  "' WHERE Id_Noti = '" . $id . "'";
 
 						//Ejecutando la consulta de actualización
 						$resultc = $db->query($consulta);
@@ -133,6 +136,9 @@
 				<col class=\"esta\">
 				</colgroup>
 				<colgroup>
+				<col class=\"lugar\">
+				</colgroup>
+				<colgroup>
 				<col class=\"fecha\">
 				</colgroup>
 				<colgroup>
@@ -145,6 +151,7 @@
 				<th>DESCRIPCIÓN</th>
 				<th>CONTENIDO</th>
 				<th>ESTADO</th>
+				<th>UBICACIÓN</th>
 				<th>FECHA</th>
 				<th>ACCIÓN</th>
 				</tr>
@@ -161,8 +168,10 @@
 				echo "" . stripslashes($row[ 'Descripcion' ]) . "";
 				echo "</td><td scope='col'>";
 				echo "" . $row[ 'Contenido' ];
-				echo "</td><td scope='col'>";
+				echo "</td><td scope='col' class='text-center'>";
 				echo "" . $row[ 'Estado' ];
+				echo "</td><td scope='col' class='text-center'>";
+				echo "" . $row[ 'lugar_noti' ];
 				echo "</td><td scope='col'>";
 				echo "" . $row[ 'Fecha' ];
 				echo "</td><td scope='col'>";

@@ -51,7 +51,7 @@
 						//en la tabla libros
 						$consulta = " SELECT * FROM beneficiarias WHERE Id_Bene = '" . $_GET['id'] . "'";
 
-						//echo $consulta . "<br>\n";
+						
 						//Ejecutando la consulta a través del objeto $db
 						$resultc = $db->query($consulta);
 
@@ -86,7 +86,21 @@
 						<div class = "element-input form-group" > 
 							<label class = "title" ></label>
 							<div class = "item-cont" > 
-								<input class = "form-control" type = "text" name = "fecha" value = "<?php echo $row[ 'Fecha' ] ?> " maxlength = "50" placeholder = "aaaa-mm-dd"class = "large" /> <span class = "icon-place" ></span> 
+								<input class = "form-control" type = "text" name = "estado" value = "<?php echo $row[ 'Estado' ] ?> " maxlength = "5" placeholder = "Estado de Beneficiaria."class = "large" /> <span class = "icon-place" ></span> 
+							</div>
+						</div>
+
+						<div class = "element-input form-group" > 
+							<label class = "title" ></label>
+							<div class = "item-cont" > 
+								<input class = "form-control" type = "text" name = "place" value = "<?php echo $row[ 'ubicacion_bene' ] ?> " maxlength = "5" placeholder = "Ubicación de Beneficiaria."class = "large" /> <span class = "icon-place" ></span> 
+							</div>
+						</div>
+
+						<div class = "element-input form-group" > 
+							<label class = "title" ></label>
+							<div class = "item-cont" > 
+								<input class = "form-control" type = "date" name = "fecha" value = "<?php echo $row[ 'Fecha' ] ?> " maxlength = "70" placeholder = "aaaa-mm-dd"class = "large" /> <span class = "icon-place" ></span> 
 							</div>
 						</div>
 

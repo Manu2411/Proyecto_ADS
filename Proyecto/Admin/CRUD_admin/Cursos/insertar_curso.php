@@ -41,13 +41,14 @@
 						$hora = trim($_POST[ 'time' ]);
 						$precio = trim($_POST[ 'price' ]);
 						$estado = trim($_POST[ 'estado' ]);
+						$lugar = trim($_POST['ubi']);
 						$duracion = trim($_POST[ 'dura' ]);
 						$fecha = trim($_POST[ 'fecha' ]);
 
 						//Verificando que se hayan ingresado datos
 						//en todos los controles del formulario
 						if (empty($id) || empty($name) || empty($descri) || empty($hora) ||
-							empty($precio) || empty($duracion) || empty($fecha)) {
+							empty($precio) || empty($duracion) || empty($fecha) || empty($lugar)) {
 							$msg = "Existen campos en el formulario sin llenar. ";
 							$msg .= "Regrese al formulario y llene todos los campos. <br />\n";
 							$msg .= "[<a href=\"nuevocurso.php\">Volver</a>]\n";
@@ -63,6 +64,7 @@
 							$hora = addslashes($hora);
 							$precio = addslashes($precio);
 							$estado = addslashes($estado);
+							$lugar = addslashes($lugar);
 							$duracion = addslashes($duracion);
 							$fecha = addslashes($fecha);
 						}
@@ -83,14 +85,13 @@
 							exit (0);
 						}
 
-						$consulta = "INSERT INTO cursos (Id_Curso, Nombre, Descripcion, Horario, Precio, Estado, Duracion, Fecha)";
-						$consulta .= "VALUES (". $id . ", '" . $name . "', '" .  $descri . "', '" . $hora . "', '" .  $precio . "', '" .  $estado . "', '" .  $duracion . "', '" .  $fecha . "')";
-
+						$consulta = "INSERT INTO cursos (Id_Curso, Nombre, Descripcion, Horario, Precio, Estado, Duracion, Fecha, lugar_curso)";
+						$consulta .= "VALUES (". $id . ", '" . $name . "', '" .  $descri . "', '" . $hora . "', '" .  $precio . "', '" .  $estado . "', '" . 
+												 $duracion . "', '" .  $fecha . "', '" . $lugar . "')";
 
 						$resultc = $db->query($consulta);
 						if($resultc){
-						echo $db->affected_rows . " curso agregada a la base de
-						datos."; 
+						echo $db->affected_rows . " curso agregado a la base de datos correctamente."; 
 						}
 						else {
 							echo "No se pudo agregar el curso. \n";

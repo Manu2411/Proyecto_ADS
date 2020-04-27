@@ -1,12 +1,4 @@
 <?php
-	// include("Conexion.php");
-
-	// //validación del modal: Login
-	// if(isset($_POST['ingresar'])){
-	// 	$usuario = isset($_POST['usuario']) ? $_POST['usuario'] : null;
-	// 	$password = isset($_POST['password']) ? $_POST['password'] : null;
-	// 	ingresar($usuario, $password);		
-	// }
 
 	try {
 		$base = new PDO("mysql:host=localhost:3308; dbname=sirama" , "root", "");
@@ -35,7 +27,7 @@
 
 			$_SESSION["usuario"] = $_POST["usuario"];
 
-			header("location:../Admin/Principal.php");
+			header("location:Principal.php");
 		}
 		else{
 			header("location:../Acceso_Admin.html");

@@ -38,7 +38,7 @@
 					
 						<div class = "col-md-3" id = "dos" >
                             <a class = "btn btn-block btn-lg btn-warning" data-toggle = "modal" data-target = "#mymodal"
-                            href = "nuevocurso.php" target = "_self" title = "Nueva noticia" >
+                            href = "nuevocurso.php" target = "_self" title = "Nuevo Curso" >
 							<img class = "icon" src = "img/icon-new.png" ><br>
 							<span class = "texto_grande" > Nuevo curso </span>
 							</a>
@@ -46,14 +46,15 @@
 
 						<div class = "col-md-3" id = "cuatro" >
                             <a class = "btn btn-block btn-lg btn-primary" data-toggle = "modal" data-target = "#mymodal" 
-                            href = "mostrar_cursos.php?opc=modificar" target = "_self" title = "Modificar noticia" >
+                            href = "mostrar_cursos.php?opc=modificar" target = "_self" title = "Modificar Curso" >
 							<img class = "icon" src = "img/icon-edit.png" ><br>
 							<span class = "texto_grande" > Modificar curso </span>
 							</a>
 						</div>
 
 						<div class = "col-md-3" id = "cinco" >
-							<a class = "btn btn-block btn-lg btn-danger" href = "mostrar_cursos.php?opc=eliminar" target ="_self" title = "Eliminar noticia" >
+							<a class = "btn btn-block btn-lg btn-danger" href = "mostrar_cursos.php?opc=eliminar" 
+							target ="_self" title = "Eliminar Curso" >
 							<img class = "icon" src = "img/icon-trash.png" ><br>
 							<span class = "texto_grande" > Eliminar curso </span>
 							</a>

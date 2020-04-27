@@ -42,11 +42,13 @@
 						$descri = trim($_POST[ 'descrip' ]);
 						$conte = trim($_POST[ 'conte' ]);
 						$esta = trim($_POST[ 'estad' ] ? $_POST['estad'] : 0);
+						$place = trim($_POST['lugar']);
 						$fecha = trim($_POST[ 'fecha' ]);
 
 						//Verificando que se hayan ingresado datos
 						//en todos los controles del formulario
-						if (empty($id) || empty($titulo) || empty($descri) || empty($conte) || empty($fecha)) {
+						if (empty($id) || empty($titulo) || empty($descri) || empty($conte) || empty($fecha) || 
+							empty($place)) {
 							$msg = "Existen campos en el formulario sin llenar. ";
 							$msg .= "Regrese al formulario y llene todos los campos. <br />\n";
 							$msg .= "[<a href=\"nuevanoticia.php\">Volver</a>]\n";
@@ -61,6 +63,7 @@
 							$descri = addslashes($descri);
 							$conte = addslashes($conte);
 							$esta = addslashes($esta);
+							$place = addslashes($place);
 							$fecha = addslashes($fecha);
 						}
 
@@ -80,8 +83,9 @@
 							exit (0);
 						}
 
-						$consulta = "INSERT INTO noticias (Id_Noti, Titulo, Descripcion, Contenido, Estado, Fecha)";
-						$consulta .= "VALUES (". $id . ", '" . $titulo . "', '" .  $descri . "', '" . $conte . "', '" . $esta ."', '" . $fecha . "')";
+						$consulta = "INSERT INTO noticias (Id_Noti, Titulo, Descripcion, Contenido, Estado, Fecha, lugar_noti)";
+						$consulta .= "VALUES (". $id . ", '" . $titulo . "', '" .  $descri . "', '" . $conte . "', '" . $esta . "', '"
+											   . $fecha . "', '" . $place . "')";
 
 						$resultc = $db->query($consulta);
 						if($resultc){
