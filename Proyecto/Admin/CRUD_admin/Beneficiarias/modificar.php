@@ -60,7 +60,7 @@
 						$row = $resultc->fetch_assoc(); 
 					?>
 
-					<form action = "mostrar_bene.php?id= <?php echo $_GET[ 'id' ] ?>" method = "POST" class = "formoidsolid-purple" >
+					<form action = "mostrar_bene.php?id= <?php echo $_GET[ 'id' ] ?>" method = "POST" enctype = "multipart/form-data" class = "formoidsolid-purple" >
 						<div class = "element-number form-group" >
 							<label class = "title" ></label>
 							<div class = "item-cont" >
@@ -101,6 +101,13 @@
 							<label class = "title" ></label>
 							<div class = "item-cont" > 
 								<input class = "form-control" type = "date" name = "fecha" value = "<?php echo $row[ 'Fecha' ] ?> " maxlength = "70" placeholder = "aaaa-mm-dd"class = "large" /> <span class = "icon-place" ></span> 
+							</div>
+						</div>
+
+						<div class = "element-input form-group" > 
+							<label class = "title" ></label>
+							<div class = "item-cont" > 
+								<input class = "form-control" type = "file" name = "foto" size = "20" class = "large" /> <span class = "icon-place" ></span> 
 							</div>
 						</div>
 

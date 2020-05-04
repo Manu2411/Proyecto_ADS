@@ -38,7 +38,7 @@
 
 			<section>
 				<article >
-					<form action = "insertar_bene.php" method = "POST" >
+					<form action = "insertar_bene.php" method = "POST" enctype = "multipart/form-data">
 						<div class = "element-number form-group" >
 							<label class = "title" ></label>
 							<div class = "item-cont" >
@@ -83,6 +83,14 @@
 							<label class = "title" ></label>
 							<div class = "item-cont" >
 								<input type = "date" name = "fecha" placeholder = "AAAA-MM-DD" maxlength = "50" class = "form-control" />
+								<span class = "icon-place" ></span>
+							</div>
+						</div>
+
+						<div class = "element-number form-group" >
+							<label class = "title" ></label>
+							<div class = "item-cont" >
+								<input type = "file" name = "photo" class = "form-control" />
 								<span class = "icon-place" ></span>
 							</div>
 						</div>

@@ -2,7 +2,7 @@
 	<html lang="es">
 		<head>
 			<meta charset="utf-8" /> 
-			<title>Beneficiarias en base de datos</title>
+			<title>Registro de Beneficiarias</title>
 
 			<link href = "//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel = "stylesheet" id ="bootstrap-css" >
 			<script src = "//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js" ></script>
@@ -62,6 +62,51 @@
 						$ubi = isset($_POST[ 'place' ]) ? trim($_POST[ 'place' ]) : "";
 						$fecha = isset($_POST[ 'fecha' ]) ? trim($_POST[ 'fecha' ]) : "";
 
+						// Recibiendo los datos del Banner
+						$nombre = $_FILES['foto']['name'];
+						$tipo = $_FILES['foto']['type'];
+						$tamano = $_FILES['foto']['size'];
+
+						/* Comprobando que lo seleccionado es una imagen y el tamaño de esta */
+
+						if ($nombre == "" && $tipo = "" && $tamano == "") {
+							$msg = "Debe de seleccionar una imagen para el curso. ";
+							$msg .= " Se permiten imágenes de tipo: (jpg, jpeg ó png) <br>\n";
+							$msg .= "[<a href=\"modificar.php?id=" . $id . "\">Volver</a>]\n";
+						} else {
+							if ($tamano <= 4000000) {
+								if ($tipo == 'image/jpg' || $tipo == 'image/png' || $tipo == 'image/jpeg') {
+	
+									//Ruta de la carpeta destino en servidor
+									$destino = $_SERVER['DOCUMENT_ROOT'] . '/Proyecto_ADS/Proyecto/img/Beneficiarias/';
+	
+									//Movemos la imagen del directorio temporal al directorio elegido
+									move_uploaded_file($_FILES['foto']['tmp_name'], $destino.$nombre);
+	
+								}else {
+	
+									$msg = "Formato de imagen incorrecto. ";
+									$msg .= " Solo se permiten imágenes de tipo: (jpg, jpeg ó png) <br>\n";
+									$msg .= "[<a href=\"modificar.php?id=" . $id . "\">Volver</a>]\n";
+	
+									echo $msg;
+									exit ( 0 );
+	
+								}
+							} else {
+	
+								$msg = "Tamaño de imagen demasiado grande. ";
+								$msg .= " Solo se permiten imágenes de tamaño igual ó menor a 4MB. <br>\n";
+								$msg .= "[<a href=\"modificar.php?id=" . $id . "\">Volver</a>]\n";
+	
+								echo $msg;
+								exit ( 0 );
+	
+							}
+						}
+
+						/* Finaliza la comprobación de tipo y el tamaño de la imagen */
+
 						//Verificando que se hayan ingresado datos
 						//en todos los controles del formulario
 						if (empty($name) || empty($opini) || empty($fecha) || empty($ubi)) {
@@ -86,7 +131,7 @@
 						//enviados del formulario de modificación de libros
 						
 						$consulta = "update beneficiarias set Nombre = '" . $name . "', Opinion = '" . $opini . "', Fecha = '"
-									. $fecha . "', Estado = '" . $mood . "', ubicacion_bene = '" . $ubi . "' WHERE Id_Bene = '" . $id . "'"; 
+									. $fecha . "', Estado = '" . $mood . "', ubicacion_bene = '" . $ubi . "', Foto = '" . $nombre . "' WHERE Id_Bene = '" . $id . "'"; 
 
 						//Ejecutando la consulta de actualización
 						$resultc = $db->query($consulta);
@@ -133,6 +178,9 @@
 				<col class=\"place\">
 				</colgroup>
 				<colgroup>
+				<col class=\"foto\">
+				</colgroup>
+				<colgroup>
 				<col class=\"fecha\">
 				</colgroup>
 				<colgroup>
@@ -145,6 +193,7 @@
 				<th>OPINIÓN</th>
 				<th>ESTADO</th>
 				<th>UBICACIÓN</th>
+				<th>FOTO</th>
 				<th>FECHA</th>
 				<th>ACCIÓN</th>
 				</tr>
@@ -163,6 +212,8 @@
 				echo "" . stripslashes($row[ 'Estado' ]) . "";
 				echo "</td><td scope='col' class = 'text-center'>";
 				echo "" . stripslashes($row[ 'ubicacion_bene' ]) . "";
+				echo "</td><td scope='col'>";
+				echo "" . $row[ 'Foto' ];
 				echo "</td><td scope='col'>";
 				echo "" . $row[ 'Fecha' ];
 				echo "</td><td scope='col'>";

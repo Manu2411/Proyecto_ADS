@@ -45,10 +45,53 @@
 						$duracion = trim($_POST[ 'dura' ]);
 						$fecha = trim($_POST[ 'fecha' ]);
 
+						
+						// Recibiendo los datos del Banner
+						$nombre = $_FILES['image']['name'];
+						$tipo = $_FILES['image']['type'];
+						$tamano = $_FILES['image']['size'];
+
+						/* Comprobando que lo seleccionado es una imagen y el tamaño de esta */
+
+						if ($tamano <= 4000000) {
+							if ($tipo == 'image/jpg' || $tipo == 'image/png' || $tipo == 'image/jpeg') {
+
+								//Ruta de la carpeta destino en servidor
+								$destino = $_SERVER['DOCUMENT_ROOT'] . '/Proyecto_ADS/Proyecto/img/Cursos/';
+
+								//Movemos la imagen del directorio temporal al directorio elegido
+								move_uploaded_file($_FILES['image']['tmp_name'], $destino.$nombre);
+
+							}else {
+
+								$msg = "Formato de imagen incorrecto. ";
+								$msg .= " Solo se permiten imágenes de tipo: (jpg, jpeg ó png) <br>\n";
+								$msg .= "[<a href=\"nuevocurso.php\">Volver</a>]\n";
+
+								echo $msg;
+								exit ( 0 );
+
+							}
+						} else {
+
+							$msg = "Tamaño de imagen demasiado grande. ";
+							$msg .= " Solo se permiten imágenes de tamaño igual ó menor a 1MB. <br>\n";
+							$msg .= "[<a href=\"nuevocurso.php\">Volver</a>]\n";
+
+							echo $msg;
+							exit ( 0 );
+
+						}
+
+						/* Finaliza la comprobación de tipo y el tamaño de la imagen */
+
+
+
 						//Verificando que se hayan ingresado datos
 						//en todos los controles del formulario
 						if (empty($id) || empty($name) || empty($descri) || empty($hora) ||
-							empty($precio) || empty($duracion) || empty($fecha) || empty($lugar)) {
+							empty($precio) || empty($duracion) || empty($fecha) || empty($lugar)
+							|| empty($nombre)) {
 							$msg = "Existen campos en el formulario sin llenar. ";
 							$msg .= "Regrese al formulario y llene todos los campos. <br />\n";
 							$msg .= "[<a href=\"nuevocurso.php\">Volver</a>]\n";
@@ -85,9 +128,9 @@
 							exit (0);
 						}
 
-						$consulta = "INSERT INTO cursos (Id_Curso, Nombre, Descripcion, Horario, Precio, Estado, Duracion, Fecha, lugar_curso)";
+						$consulta = "INSERT INTO cursos (Id_Curso, Nombre, Descripcion, Horario, Precio, Estado, Duracion, Fecha, lugar_curso, Imagen)";
 						$consulta .= "VALUES (". $id . ", '" . $name . "', '" .  $descri . "', '" . $hora . "', '" .  $precio . "', '" .  $estado . "', '" . 
-												 $duracion . "', '" .  $fecha . "', '" . $lugar . "')";
+												 $duracion . "', '" .  $fecha . "', '" . $lugar . "', '". $nombre . "')";
 
 						$resultc = $db->query($consulta);
 						if($resultc){

@@ -113,8 +113,8 @@
             <div class="container-fluid p-0">
                 <div class="row no-gutters">
                     <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="../assets/img/img-funda/Benef.png"
-                            ><img class="img-fluid" src="../assets/img/img-funda/Benef.png" alt="" />
+                        <a class="portfolio-box" href="/Proyecto_ADS/Proyecto/img/Beneficiarias/<?php echo imprimirPhoto(1); ?>"
+                            ><img class="img-fluid" src="/Proyecto_ADS/Proyecto/img/Beneficiarias/<?php echo imprimirPhoto(1); ?>" alt="" />
                             <div class="portfolio-box-caption">
                                 <div class="project-category text-white-50"><?php echo imprimirBeneName(1); ?></div>
                                 <div class="project-name"><?php echo imprimirOpinion(1); ?></div>
@@ -122,47 +122,47 @@
                         >
                     </div>
                     <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="../assets/img/img-funda/Benef.png"
-                            ><img class="img-fluid" src="../assets/img/img-funda/Benef.png" alt="" />
+                        <a class="portfolio-box" href="/Proyecto_ADS/Proyecto/img/Beneficiarias/<?php echo imprimirPhoto(1); ?>"
+                            ><img class="img-fluid" src="/Proyecto_ADS/Proyecto/img/Beneficiarias/<?php echo imprimirPhoto(1); ?>" alt="" />
                             <div class="portfolio-box-caption">
-                                <div class="project-category text-white-50">Nombre-Beneficiada</div>
-                                <div class="project-name">Palabras de ella acerca de Siramá</div>
+                                <div class="project-category text-white-50"><?php echo imprimirBeneName(1); ?></div>
+                                <div class="project-name"><?php echo imprimirOpinion(1); ?></div>
                             </div></a
                         >
                     </div>
                     <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="../assets/img/img-funda/Benef.png"
-                            ><img class="img-fluid" src="../assets/img/img-funda/Benef.png" alt="" />
+                        <a class="portfolio-box" href="/Proyecto_ADS/Proyecto/img/Beneficiarias/<?php echo imprimirPhoto(1); ?>"
+                            ><img class="img-fluid" src="/Proyecto_ADS/Proyecto/img/Beneficiarias/<?php echo imprimirPhoto(1); ?>" alt="" />
                             <div class="portfolio-box-caption">
-                                <div class="project-category text-white-50">Nombre-Beneficiada</div>
-                                <div class="project-name">Palabras de ella acerca de Siramá</div>
+                                <div class="project-category text-white-50"><?php echo imprimirBeneName(1); ?></div>
+                                <div class="project-name"><?php echo imprimirOpinion(1); ?></div>
                             </div></a
                         >
                     </div>
                     <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="../assets/img/img-funda/Benef.png"
-                            ><img class="img-fluid" src="../assets/img/img-funda/Benef.png" alt="" />
+                        <a class="portfolio-box" href="/Proyecto_ADS/Proyecto/img/Beneficiarias/<?php echo imprimirPhoto(1); ?>"
+                            ><img class="img-fluid" src="/Proyecto_ADS/Proyecto/img/Beneficiarias/<?php echo imprimirPhoto(1); ?>" alt="" />
                             <div class="portfolio-box-caption">
-                                <div class="project-category text-white-50">Nombre-Beneficiada</div>
-                                <div class="project-name">Palabras de ella acerca de Siramá</div>
+                                <div class="project-category text-white-50"><?php echo imprimirBeneName(1); ?></div>
+                                <div class="project-name"><?php echo imprimirOpinion(1); ?></div>
                             </div></a
                         >
                     </div>
                     <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="../assets/img/img-funda/Benef.png"
-                            ><img class="img-fluid" src="../assets/img/img-funda/Benef.png" alt="" />
+                        <a class="portfolio-box" href="/Proyecto_ADS/Proyecto/img/Beneficiarias/<?php echo imprimirPhoto(1); ?>"
+                            ><img class="img-fluid" src="/Proyecto_ADS/Proyecto/img/Beneficiarias/<?php echo imprimirPhoto(1); ?>" alt="" />
                             <div class="portfolio-box-caption">
-                                <div class="project-category text-white-50">Nombre-Beneficiada</div>
-                                <div class="project-name">Palabras de ella acerca de Siramá</div>
+                                <div class="project-category text-white-50"><?php echo imprimirBeneName(1); ?></div>
+                                <div class="project-name"><?php echo imprimirOpinion(1); ?></div>
                             </div></a
                         >
                     </div>
                     <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="../assets/img/img-funda/Benef.png"
-                            ><img class="img-fluid" src="../assets/img/img-funda/Benef.png" alt="" />
+                        <a class="portfolio-box" href="/Proyecto_ADS/Proyecto/img/Beneficiarias/<?php echo imprimirPhoto(1); ?>"
+                            ><img class="img-fluid" src="/Proyecto_ADS/Proyecto/img/Beneficiarias/<?php echo imprimirPhoto(1); ?>" alt="" />
                             <div class="portfolio-box-caption p-3">
-                                <div class="project-category text-white-50">Nombre-Beneficiada</div>
-                                <div class="project-name">Palabras de ella acerca de Siramá</div>
+                                <div class="project-category text-white-50"><?php echo imprimirBeneName(1); ?></div>
+                                <div class="project-name"><?php echo imprimirOpinion(1); ?></div>
                             </div></a
                         >
                     </div>

@@ -38,7 +38,7 @@
 
 			<section>
 				<article >
-					<form action = "insertar_curso.php" method = "POST" >
+					<form action = "insertar_curso.php" method = "POST" enctype = "multipart/form-data">
 						<div class = "element-number form-group" >
 							<label class = "title" ></label>
 							<div class = "item-cont" >
@@ -107,6 +107,14 @@
 							<label class = "title" ></label>
 							<div class = "item-cont" >
 								<input type = "date" name = "fecha" placeholder = "aaaa-mm-dd" maxlength = "50" class = "form-control" />
+								<span class = "icon-place" ></span>
+							</div>
+						</div>
+
+						<div class = "element-number form-group" >
+							<label class = "title" ></label>
+							<div class = "item-cont" >
+								<input type = file name = "image" size = "20" class = "form-control" />
 								<span class = "icon-place" ></span>
 							</div>
 						</div>

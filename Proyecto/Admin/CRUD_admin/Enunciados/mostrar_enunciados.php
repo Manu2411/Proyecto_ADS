@@ -2,7 +2,7 @@
 	<html lang="es">
 		<head>
 			<meta charset="utf-8" /> 
-			<title>Enunciados en base de datos</title>
+			<title>Registro de Enunciados</title>
 
 			<link href = "//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel = "stylesheet" id ="bootstrap-css" >
 			<script src = "//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js" ></script>
@@ -13,7 +13,7 @@
 		<header>
 			<nav class = "navbar navbar-dark bg-primary" >
 			<span class = "navbar-text" >
-			<h1> Enunciados disponibles </h1>
+			<h1> Enunciados Registrados </h1>
 			</span>
 			</nav>
 		</header>
@@ -60,6 +60,8 @@
 						$descripcion = isset($_POST[ 'descripcion' ]) ? trim($_POST[ 'descripcion' ]) : "";
 						$fecha = isset($_POST[ 'fecha' ]) ? trim($_POST[ 'fecha' ]) : "";
 
+
+						
 						//Verificando que se hayan ingresado datos
 						//en todos los controles del formulario
 						if (empty($titulo) || empty($descripcion) || empty($fecha)) {
@@ -81,7 +83,8 @@
 						//Creando la consulta de actualización con los datos
 						//enviados del formulario de modificación de libros
 						
-						$consulta = "update enunciados set  Titulo = '" . $titulo . "',  Descripcion = '" . $descripcion . "', Fecha = '" . $fecha . "' WHERE Id_Enun = '" . $id . "'";
+						$consulta = "update enunciados set  Titulo = '" . $titulo . "',  Descripcion = '" . $descripcion . 
+									"', Fecha = '" . $fecha . "' WHERE Id_Enun = '" . $id . "'";
 
 						//Ejecutando la consulta de actualización
 						$resultc = $db->query($consulta);

@@ -43,6 +43,45 @@
 						$place = trim($_POST[ 'lugar' ]);
 						$fecha = trim($_POST[ 'fecha' ]);
 
+						// Recibiendo los datos del Banner
+						$nombre = $_FILES['photo']['name'];
+						$tipo = $_FILES['photo']['type'];
+						$tamano = $_FILES['photo']['size'];
+
+						/* Comprobando que lo seleccionado es una imagen y el tamaño de esta */
+
+						if ($tamano <= 4000000) {
+							if ($tipo == 'image/jpg' || $tipo == 'image/png' || $tipo == 'image/jpeg') {
+
+								//Ruta de la carpeta destino en servidor
+								$destino = $_SERVER['DOCUMENT_ROOT'] . '/Proyecto_ADS/Proyecto/img/Beneficiarias/';
+
+								//Movemos la imagen del directorio temporal al directorio elegido
+								move_uploaded_file($_FILES['photo']['tmp_name'], $destino.$nombre);
+
+							}else {
+
+								$msg = "Formato de imagen incorrecto. ";
+								$msg .= " Solo se permiten imágenes de tipo: (jpg, jpeg ó png) <br>\n";
+								$msg .= "[<a href=\"nuevabeneficiaria.php\">Volver</a>]\n";
+
+								echo $msg;
+								exit ( 0 );
+
+							}
+						} else {
+
+							$msg = "Tamaño de imagen demasiado grande. ";
+							$msg .= " Solo se permiten imágenes de tamaño igual ó menor a 4MB. <br>\n";
+							$msg .= "[<a href=\"nuevabeneficiaria.php\">Volver</a>]\n";
+
+							echo $msg;
+							exit ( 0 );
+
+						}
+
+						/* Finaliza la comprobación de tipo y el tamaño de la imagen */
+
 						//Verificando que se hayan ingresado datos
 						//en todos los controles del formulario
 						if (empty($id) || empty($name) || empty($opin) || empty($fecha) || empty($place)) {
@@ -79,8 +118,8 @@
 							exit (0);
 						}
 
-						$consulta = "INSERT INTO beneficiarias (Id_Bene, Nombre, Opinion, Fecha, Estado, ubicacion_bene)";
-						$consulta .= "VALUES (". $id . ", '" . $name . "', '" .  $opin . "', '" .  $fecha . "', '" . $estado . "', '" . $place . "')";
+						$consulta = "INSERT INTO beneficiarias (Id_Bene, Nombre, Opinion, Fecha, Estado, ubicacion_bene, Foto)";
+						$consulta .= "VALUES (". $id . ", '" . $name . "', '" .  $opin . "', '" .  $fecha . "', '" . $estado . "', '" . $place . "', '" . $nombre . "')";
 
 
 						$resultc = $db->query($consulta);

@@ -71,6 +71,32 @@
         }
 
     //Finaliza codigo para Descripcion enunciado
+
+    //Banner Enunciado
+        function obtenerBanner($Id_Enun){
+            $con = conectar();
+
+            $q = "Select Banner From enunciados Where Id_Enun = '$Id_Enun'";
+
+            $re =  mysqli_query($con, $q);
+
+            while ($colum = mysqli_fetch_array($re)) {
+                $Ban = $colum['Banner'];
+            }
+
+            return $Ban;
+        }
+
+        function imprimirBanner($Id_Enun){
+
+            $Bann = obtenerBanner($Id_Enun);
+
+            $impri = $Bann;
+
+            return $impri;
+        }
+
+    //Finaliza código para Banner enunciado
     
 
     //Codigo de extraccion de NOTICIAS 
@@ -275,6 +301,32 @@
         }
         // Final de las funciones para Precio del curso
 
+        //Imagen Curso
+            function obtenerImg($IdCurso){
+                $con = conectar();
+
+                $q = "select Imagen FROM cursos WHERE lugar_curso = '$IdCurso' && Estado = '1'";
+
+                $re =  mysqli_query($con, $q);
+
+                while ($colum = mysqli_fetch_array($re)) {
+                    $Img = $colum['Imagen'];
+                }
+
+                return $Img;
+            }
+
+            function imprimirImg($IdCurso){
+
+                $Image = obtenerImg($IdCurso);
+
+                $impri = $Image;
+
+                return $impri;
+            }
+
+        //Finaliza código para Imagen Curso
+
     /* Aqui finaliza la extraccion de datos para la página de cursos*/
 
 
@@ -331,6 +383,32 @@
             return $impri;
         }
         // Final de las funciones para Opinion de la Beneficiaria
+
+        //Foto Bene
+            function obtenerFoto($IdBene){
+                $con = conectar();
+
+                $q = "select Foto FROM beneficiarias WHERE ubicacion_bene = '$IdBene' && Estado = '1'";
+
+                $re =  mysqli_query($con, $q);
+
+                while ($colum = mysqli_fetch_array($re)) {
+                    $Pic = $colum['Foto'];
+                }
+
+                return $Pic;
+            }
+
+            function imprimirPhoto($IdBene){
+
+                $Pictu = obtenerFoto($IdBene);
+
+                $impri = $Pictu;
+
+                return $impri;
+            }
+
+        //Finaliza código para Foto Bene
 
     /* Aqui finaliza la extraccion de datos para la página de Beneficiarias*/
 ?>

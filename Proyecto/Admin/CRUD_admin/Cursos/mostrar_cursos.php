@@ -65,10 +65,56 @@
 						$dura = isset($_POST[ 'dura' ]) ? trim($_POST[ 'dura' ]) : "";
 						$fecha = isset($_POST[ 'fecha' ]) ? trim($_POST[ 'fecha' ]) : "";
 
+
+						// Recibiendo los datos del Banner
+						$nombre = $_FILES['img']['name'];
+						$tipo = $_FILES['img']['type'];
+						$tamano = $_FILES['img']['size'];
+
+						/* Comprobando que lo seleccionado es una imagen y el tamaño de esta */
+
+						if ($nombre == "" && $tipo = "" && $tamano == "") {
+							$msg = "Debe de seleccionar una imagen para el curso. ";
+							$msg .= " Se permiten imágenes de tipo: (jpg, jpeg ó png) <br>\n";
+							$msg .= "[<a href=\"modificar.php?id=" . $id . "\">Volver</a>]\n";
+						} else {
+							if ($tamano <= 4000000) {
+								if ($tipo == 'image/jpg' || $tipo == 'image/png' || $tipo == 'image/jpeg') {
+	
+									//Ruta de la carpeta destino en servidor
+									$destino = $_SERVER['DOCUMENT_ROOT'] . '/Proyecto_ADS/Proyecto/img/Cursos/';
+	
+									//Movemos la imagen del directorio temporal al directorio elegido
+									move_uploaded_file($_FILES['img']['tmp_name'], $destino.$nombre);
+	
+								}else {
+	
+									$msg = "Formato de imagen incorrecto. ";
+									$msg .= " Solo se permiten imágenes de tipo: (jpg, jpeg ó png) <br>\n";
+									$msg .= "[<a href=\"modificar.php?id=" . $id . "\">Volver</a>]\n";
+	
+									echo $msg;
+									exit ( 0 );
+	
+								}
+							} else {
+	
+								$msg = "Tamaño de imagen demasiado grande. ";
+								$msg .= " Solo se permiten imágenes de tamaño igual ó menor a 1MB. <br>\n";
+								$msg .= "[<a href=\"modificar.php?id=" . $id . "\">Volver</a>]\n";
+	
+								echo $msg;
+								exit ( 0 );
+	
+							}
+						}
+
+						/* Finaliza la comprobación de tipo y el tamaño de la imagen */
+
 						//Verificando que se hayan ingresado datos
 						//en todos los controles del formulario
 						if (empty($name) || empty($descri) || empty($hora) || empty($precio) || empty($dura) ||
-						 	empty($fecha) || empty($pla)) {
+						 	empty($fecha) || empty($pla) || empty($nombre)) {
 						$msg = "Existen campos en el formulario sin llenar.";
 						$msg .= "Regrese al formulario y llene todos los campos. <br>\n";
 						$msg .= "[<a href=\"modificar.php?id=" . $id . "\">Volver</a>]\n";
@@ -93,7 +139,7 @@
 						//enviados del formulario de modificación de libros
 						
 						$consulta = "update cursos set Nombre = '" . $name . "',  Descripcion = '" . $descri . "', Horario = '" . $hora . "', Precio = '" . $precio . "', Estado = '" . $esta . 
-									"', Duracion = '" . $dura . "', Fecha = '" . $fecha . "', lugar_curso = " . $pla . "' WHERE Id_Curso = '" . $id . "'";
+									"', Duracion = '" . $dura . "', Fecha = '" . $fecha . "', lugar_curso = '" . $pla . "', Imagen = '" . $nombre . "' WHERE Id_Curso = '" . $id . "'";
 
 						//Ejecutando la consulta de actualización
 						$resultc = $db->query($consulta);
@@ -134,13 +180,13 @@
 				<col class=\"descri\">
 				</colgroup>
 				<colgroup>
-				<col class=\"precio\">
-				</colgroup>
-				<colgroup>
 				<col class=\"esta\">
 				</colgroup>
 				<colgroup>
 				<col class=\"place\">
+				</colgroup>
+				<colgroup>
+				<col class=\"img\">
 				</colgroup>
 				<colgroup>
 				<col class=\"fecha\">
@@ -153,9 +199,9 @@
 				<th>ID</th>
 				<th>NOMBRE</th>
 				<th>DESCRIPCIÓN</th>
-				<th>PRECIO</th>
 				<th>ESTADO</th>
 				<th>UBICACIÓN</th>
+				<th>IMAGEN</th>
 				<th>FECHA</th>
 				<th>ACCIÓN</th>
 				</tr>
@@ -171,11 +217,11 @@
 				echo "</td><td scope='col'>";
 				echo "" . stripslashes($row[ 'Descripcion' ]) . "";
 				echo "</td><td scope='col' class = 'text-center'>";
-				echo "$" . stripslashes($row[ 'Precio' ]) . "";
-				echo "</td><td scope='col' class = 'text-center'>";
 				echo "" . stripslashes($row[ 'Estado' ]) . "";
-				echo "</td><td scope='col' class = 'text-center'>\n";
+				echo "</td><td scope='col' class = 'text-center'>";
 				echo "" . stripslashes($row[ 'lugar_curso' ]) . "";
+				echo "</td><td scope='col'>\n";
+				echo "" . stripslashes($row[ 'Imagen' ]) . "";
 				echo "</td><td scope='col'>";
 				echo "" . $row[ 'Fecha' ];
 				echo "</td><td scope='col'>";
