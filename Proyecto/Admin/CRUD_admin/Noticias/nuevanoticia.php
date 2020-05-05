@@ -9,6 +9,10 @@
 			<script src = "//code.jquery.com/jquery-1.11.1.min.js" ></script>
 			<link rel = "stylesheet" href = "css/links.css" />
 			<link rel="stylesheet" type="text/css" href="css/validacion.css">
+
+			<!-- Icono de la fundación -->
+			<link rel = "icon" href = "../../../img/Icono/Logo.ico" />
+
 			<script type="text/javascript" src="js/validar_id.js"></script>
 			<script type="text/javascript" src="js/validar_mood.js"></script>
 			<script type="text/javascript" src="js/validar_place.js"></script>

@@ -12,6 +12,9 @@
 
 			<!-- <link rel="stylesheet" href="css/libros.css" /> -->
 			<script src = "js/modernizr.custom.lis.js" ></script>
+
+			<!-- Icono de la fundación -->
+			<link rel = "icon" href = "../../../img/Icono/Logo.ico" />
 		</head>
 
 		<body class="container">

@@ -16,6 +16,9 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="../css/style_curso.css" rel="stylesheet" />
         <link rel="stylesheet" type="text/css" href="../css/style_SM.css">
+
+        <!-- Icono de la fundación -->
+			<link rel = "icon" href = "../img/Icono/Logo.ico" />
     </head>
     <body id="page-top">
 

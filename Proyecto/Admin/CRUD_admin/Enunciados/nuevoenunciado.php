@@ -17,6 +17,9 @@
 					document.getElementsByTagName( "head" )[ 0 ].appendChild(e);
 				} 
 			</script>
+
+			<!-- Icono de la fundación -->
+			<link rel = "icon" href = "../../img/Icono/Logo.ico" />
 		</head>
 
 		<body class="container">

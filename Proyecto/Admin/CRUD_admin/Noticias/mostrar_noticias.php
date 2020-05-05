@@ -8,6 +8,9 @@
 			<script src = "//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js" ></script>
 			<script src = "//code.jquery.com/jquery-1.11.1.min.js" ></script>
 			<script src = "js/modernizr.custom.lis.js" ></script>
+
+			<!-- Icono de la fundación -->
+			<link rel = "icon" href = "../../../img/Icono/Logo.ico" />
 		</head>
 
 		<header>
