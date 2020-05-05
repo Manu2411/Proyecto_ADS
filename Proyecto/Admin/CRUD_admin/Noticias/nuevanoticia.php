@@ -8,6 +8,10 @@
 			<script src = "//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js" ></script>
 			<script src = "//code.jquery.com/jquery-1.11.1.min.js" ></script>
 			<link rel = "stylesheet" href = "css/links.css" />
+			<link rel="stylesheet" type="text/css" href="css/validacion.css">
+			<script type="text/javascript" src="js/validar_id.js"></script>
+			<script type="text/javascript" src="js/validar_mood.js"></script>
+			<script type="text/javascript" src="js/validar_place.js"></script>
 			<script src = "//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" ></script>
 			<script type = "text/javascript" >
 				if ( typeof jQuery === 'undefined' ) {
@@ -43,8 +47,8 @@
 						<div class = "element-number form-group" >
 							<label class = "title" ></label>
 							<div class = "item-cont" >
-								<input type = "text" name = "noti_id" placeholder = "Id Noticia" maxlength = "5" class = "form-control" />
-								<span class = "icon-place" ></span>
+								<input type = "text" name = "noti_id" id = "idNoti" placeholder = "Id Noticia" maxlength = "5" class = "form-control" />
+								<span class = "icon-place" id = "numbersOnly">Ingrese solo números enteros y mayores a cero.</span>
 							</div>
 						</div>
 
@@ -75,16 +79,16 @@
 						<div class = "element-number form-group" >
 							<label class = "title" ></label>
 							<div class = "item-cont" >
-								<input type = "text" name = "estad" placeholder = "Estado de Noticia" maxlength = "1" class = "form-control" />
-								<span class = "icon-place" ></span>
+								<input type = "text" name = "estad" id="mood" placeholder = "Estado de Noticia" maxlength = "1" class = "form-control" />
+								<span class = "icon-place" id="checkmood">Solo se aceptan valores de 0 ó 1</span>
 							</div>
 						</div>
 
 						<div class = "element-number form-group" >
 							<label class = "title" ></label>
 							<div class = "item-cont" >
-								<input type = "text" name = "lugar" placeholder = "Ubicación Noticia (1, 2 ó 3)" maxlength = "1" class = "form-control" />
-								<span class = "icon-place" ></span>
+								<input type = "number" name = "lugar" placeholder = "Ubicación Noticia" min = "1" max = "3" value = "1" id = "place" class = "form-control" />
+								<span class = "icon-place" id = "noWrite" >No se permite la escritura.</span>
 							</div>
 						</div>
 

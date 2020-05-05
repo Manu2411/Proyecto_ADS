@@ -125,7 +125,7 @@
 						</div>
 
 						<div class = "element-input form-group" > 
-							<label class = "title" ></label>
+							<label class = "title" >SUGERENCIA: Solamente insertar imágenes de tamaño de 650x350</label>
 							<div class = "item-cont" > 
 								<input class = "form-control" type = "file" name = "img" class = "large" /> <span class = "icon-place" ></span> 
 							</div>

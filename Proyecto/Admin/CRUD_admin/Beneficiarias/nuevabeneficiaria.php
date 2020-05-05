@@ -8,6 +8,10 @@
 			<script src = "//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js" ></script>
 			<script src = "//code.jquery.com/jquery-1.11.1.min.js" ></script>
 			<link rel = "stylesheet" href = "css/links.css" />
+			<link rel="stylesheet" type="text/css" href="css/validacion.css">
+			<script type="text/javascript" src="js/validar_id.js"></script>
+			<script type="text/javascript" src="js/validar_mood.js"></script>
+			<script type="text/javascript" src="js/validar_place.js"></script>
 			<script src = "//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" ></script>
 			<script type = "text/javascript" >
 				if ( typeof jQuery === 'undefined' ) {
@@ -42,8 +46,8 @@
 						<div class = "element-number form-group" >
 							<label class = "title" ></label>
 							<div class = "item-cont" >
-								<input type = "text" name = "bene_id" placeholder = "Id Beneficiaria" maxlength = "5" class = "form-control" />
-								<span class = "icon-place" ></span>
+								<input type = "text" name = "bene_id" id = "Id" placeholder = "Id Beneficiaria" maxlength = "5" class = "form-control" />
+								<span class = "icon-place" id = "numbersOnly" >Ingrese solo números enteros y mayores a cero.</span>
 							</div>
 						</div>
 
@@ -66,16 +70,16 @@
 						<div class = "element-input form-group" >
 							<label class = "title" ></label>
 							<div class = "item-cont" >
-								<input type = "text" name = "esta" placeholder = "Estado de Beneficiaria" maxlength = "5" class = "form-control" />
-								<span class = "icon-place" ></span>
+								<input type = "text" name = "esta" id = "mood" placeholder = "Estado de Beneficiaria" maxlength = "5" class = "form-control" />
+								<span class = "icon-place" id="checkmood">Solo se aceptan valores de 0 ó 1</span>
 							</div>
 						</div>
 
 						<div class = "element-input form-group" >
 							<label class = "title" ></label>
 							<div class = "item-cont" >
-								<input type = "number" name = "lugar" placeholder = "Ubicación de Beneficiaria" min = "1" max = "6" value = "1" class = "form-control" />
-								<span class = "icon-place" ></span>
+								<input type = "number" name = "lugar" id = "place" placeholder = "Ubicación de Beneficiaria" min = "1" max = "6" value = "1" class = "form-control" />
+								<span class = "icon-place" id = "noWrite" >No se permite la escritura.</span>
 							</div>
 						</div>
 
@@ -88,7 +92,7 @@
 						</div>
 
 						<div class = "element-number form-group" >
-							<label class = "title" ></label>
+							<label class = "title" >SUGERENCIA: Solamente insertar fotos de tamaño de 650x350</label>
 							<div class = "item-cont" >
 								<input type = "file" name = "photo" class = "form-control" />
 								<span class = "icon-place" ></span>

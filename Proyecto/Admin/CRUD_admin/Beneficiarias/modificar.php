@@ -105,7 +105,7 @@
 						</div>
 
 						<div class = "element-input form-group" > 
-							<label class = "title" ></label>
+							<label class = "title" >SUGERENCIA: Solamente insertar fotos de tamaño de 650x350</label>
 							<div class = "item-cont" > 
 								<input class = "form-control" type = "file" name = "foto" size = "20" class = "large" /> <span class = "icon-place" ></span> 
 							</div>

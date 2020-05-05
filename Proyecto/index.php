@@ -114,7 +114,7 @@
         <!-- Title section-->
         <section class="page-section bg-primary" id="services">
             <div class="container">
-                <h2 class="text-center mt-0 text-white">UBICACIONES DE LA FUNDACION</h2>
+                <h2 class="text-center mt-0 text-white">UBICACIONES DE LA FUNDACIÓN</h2>
                 <hr class="divider light my-4" />
             </div>
         </section>
@@ -123,8 +123,8 @@
             <div class="container-fluid p-0">
                 <div class="row no-gutters">
                     <div class="col-lg-6 col-sm-6">
-                        <a class="portfolio-box" href="assets/img/img-funda/Mapa_PI.png"
-                            ><img class="img-fluid" src="assets/img/img-funda/Mapa_PI.png" alt="" />
+                        <a class="portfolio-box" href="img/Mapa_PI.png"
+                            ><img class="img-fluid" src="img/Mapa_PI.png" alt="Imagen Ubicación Parque Infantil" />
                             <div class="portfolio-box-caption">
                                 <div class="project-category text-white-50">Ubicación #1</div>
                                 <div class="project-name">Parque Infantil, S.S</div>
@@ -132,8 +132,8 @@
                         >
                     </div>
                     <div class="col-lg-6 col-sm-6">
-                        <a class="portfolio-box" href="assets/img/img-funda/Mapa_P.png"
-                            ><img class="img-fluid" src="assets/img/img-funda/Mapa_P.png" alt="" />
+                        <a class="portfolio-box" href="img/Mapa_P.png"
+                            ><img class="img-fluid" src="img/Mapa_P.png" alt="Imagen Ubicación Bosques Prusia" />
                             <div class="portfolio-box-caption">
                                 <div class="project-category text-white-50">Ubicación #2</div>
                                 <div class="project-name">Bosques de Prusia, Soyapango</div>
