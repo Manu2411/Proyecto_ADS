@@ -52,7 +52,7 @@
                     </div>
                     <div class="col-lg-8 align-self-baseline">
                         <?php echo imprimirdescripcion1(2); ?>
-                        <a class="btn btn-primary btn-xl js-scroll-trigger" href="#portfolio">Saber más..</a>
+                        <a class="btn btn-primary btn-xl js-scroll-trigger" href="#portfolio">Conocer los cursos...</a>
                     </div>
                 </div>
             </div>

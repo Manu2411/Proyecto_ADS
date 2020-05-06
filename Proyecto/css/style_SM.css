@@ -19,3 +19,26 @@ body {
 #foot {
 	background:  #566573;
 }
+
+#style_block {
+	background-color: #808b96;
+	
+}
+
+#style_parra {
+	color: floralwhite;
+	font:Bold 11pt sans-serif;
+	text-align: center;
+	letter-spacing: 0.3px;
+}
+
+#style_link {
+	color: floralwhite;
+	font:Bold 11pt sans-serif;
+	text-align: center;
+}
+
+#style_link:hover {
+	color: #ff7043;
+	text-decoration: none;
+}

@@ -44,11 +44,22 @@
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="Principal.php">Principal</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="Cursos.php">Cursos</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="Beneficiarias.php">Beneficiarias</a></li>
-                        <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger"  href="../php/CierreSesion.php" title="Cerrar Sesión"><i class="fas fa-2x fa-sign-out-alt text-uppercase mb-4"></i></a>
-                        </li>
-                        <li class="nav-item">
-                            <p class="nav-link js-scroll-trigger"  title="<?php echo "Usuario: " . $_SESSION["usuario"];?> "><i class="fas fa-2x fa-user text-uppercase mb-4"></i></p>
+                        <li class = "nav-item dropdown">
+                        <a class="nav-link js-scroll-trigger dropdown-toggle" data-toggle="dropdown">Administrador
+                        <span class="caret"></span></a>
+                            <ul class = "dropdown-menu" id = "style_block">
+                                <li class="nav-item">
+                                    <a class="nav-item" id = "style_link"  href="#" title="Nuevo Usuario"> <i class="fas fa-2x fa-user-plus"></i> Usuario Nuevo</a>
+                                </li>
+                                <br>
+                                <li class="nav-item">
+                                    <a class="nav-item" id = "style_link"  href="../php/CierreSesion.php" title="Cerrar Sesión"> <i class="fas fa-2x fa-sign-out-alt"></i> Cerrar Sesión</a>
+                                </li>
+                                <hr>
+                                <li class="nav-item">
+                                    <p class="nav-item" id = "style_parra"> <i class="fas fa-2x fa-user"></i> <?php echo "Usuario: " . $_SESSION["usuario"];?></p>
+                                </li>
+                            </ul>
                         </li>
                     </ul>
                 </div>
@@ -125,47 +136,47 @@
                         >
                     </div>
                     <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="/Proyecto_ADS/Proyecto/img/Beneficiarias/<?php echo imprimirPhoto(1); ?>"
-                            ><img class="img-fluid" src="/Proyecto_ADS/Proyecto/img/Beneficiarias/<?php echo imprimirPhoto(1); ?>" alt="" />
+                        <a class="portfolio-box" href="/Proyecto_ADS/Proyecto/img/Beneficiarias/<?php echo imprimirPhoto(2); ?>"
+                            ><img class="img-fluid" src="/Proyecto_ADS/Proyecto/img/Beneficiarias/<?php echo imprimirPhoto(2); ?>" alt="" />
                             <div class="portfolio-box-caption">
-                                <div class="project-category text-white-50"><?php echo imprimirBeneName(1); ?></div>
-                                <div class="project-name"><?php echo imprimirOpinion(1); ?></div>
+                                <div class="project-category text-white-50"><?php echo imprimirBeneName(2); ?></div>
+                                <div class="project-name"><?php echo imprimirOpinion(2); ?></div>
                             </div></a
                         >
                     </div>
                     <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="/Proyecto_ADS/Proyecto/img/Beneficiarias/<?php echo imprimirPhoto(1); ?>"
-                            ><img class="img-fluid" src="/Proyecto_ADS/Proyecto/img/Beneficiarias/<?php echo imprimirPhoto(1); ?>" alt="" />
+                        <a class="portfolio-box" href="/Proyecto_ADS/Proyecto/img/Beneficiarias/<?php echo imprimirPhoto(3); ?>"
+                            ><img class="img-fluid" src="/Proyecto_ADS/Proyecto/img/Beneficiarias/<?php echo imprimirPhoto(3); ?>" alt="" />
                             <div class="portfolio-box-caption">
-                                <div class="project-category text-white-50"><?php echo imprimirBeneName(1); ?></div>
-                                <div class="project-name"><?php echo imprimirOpinion(1); ?></div>
+                                <div class="project-category text-white-50"><?php echo imprimirBeneName(3); ?></div>
+                                <div class="project-name"><?php echo imprimirOpinion(3); ?></div>
                             </div></a
                         >
                     </div>
                     <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="/Proyecto_ADS/Proyecto/img/Beneficiarias/<?php echo imprimirPhoto(1); ?>"
-                            ><img class="img-fluid" src="/Proyecto_ADS/Proyecto/img/Beneficiarias/<?php echo imprimirPhoto(1); ?>" alt="" />
+                        <a class="portfolio-box" href="/Proyecto_ADS/Proyecto/img/Beneficiarias/<?php echo imprimirPhoto(4); ?>"
+                            ><img class="img-fluid" src="/Proyecto_ADS/Proyecto/img/Beneficiarias/<?php echo imprimirPhoto(4); ?>" alt="" />
                             <div class="portfolio-box-caption">
-                                <div class="project-category text-white-50"><?php echo imprimirBeneName(1); ?></div>
-                                <div class="project-name"><?php echo imprimirOpinion(1); ?></div>
+                                <div class="project-category text-white-50"><?php echo imprimirBeneName(4); ?></div>
+                                <div class="project-name"><?php echo imprimirOpinion(4); ?></div>
                             </div></a
                         >
                     </div>
                     <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="/Proyecto_ADS/Proyecto/img/Beneficiarias/<?php echo imprimirPhoto(1); ?>"
-                            ><img class="img-fluid" src="/Proyecto_ADS/Proyecto/img/Beneficiarias/<?php echo imprimirPhoto(1); ?>" alt="" />
+                        <a class="portfolio-box" href="/Proyecto_ADS/Proyecto/img/Beneficiarias/<?php echo imprimirPhoto(5); ?>"
+                            ><img class="img-fluid" src="/Proyecto_ADS/Proyecto/img/Beneficiarias/<?php echo imprimirPhoto(5); ?>" alt="" />
                             <div class="portfolio-box-caption">
-                                <div class="project-category text-white-50"><?php echo imprimirBeneName(1); ?></div>
-                                <div class="project-name"><?php echo imprimirOpinion(1); ?></div>
+                                <div class="project-category text-white-50"><?php echo imprimirBeneName(5); ?></div>
+                                <div class="project-name"><?php echo imprimirOpinion(5); ?></div>
                             </div></a
                         >
                     </div>
                     <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="/Proyecto_ADS/Proyecto/img/Beneficiarias/<?php echo imprimirPhoto(1); ?>"
-                            ><img class="img-fluid" src="/Proyecto_ADS/Proyecto/img/Beneficiarias/<?php echo imprimirPhoto(1); ?>" alt="" />
+                        <a class="portfolio-box" href="/Proyecto_ADS/Proyecto/img/Beneficiarias/<?php echo imprimirPhoto(6); ?>"
+                            ><img class="img-fluid" src="/Proyecto_ADS/Proyecto/img/Beneficiarias/<?php echo imprimirPhoto(6); ?>" alt="" />
                             <div class="portfolio-box-caption p-3">
-                                <div class="project-category text-white-50"><?php echo imprimirBeneName(1); ?></div>
-                                <div class="project-name"><?php echo imprimirOpinion(1); ?></div>
+                                <div class="project-category text-white-50"><?php echo imprimirBeneName(6); ?></div>
+                                <div class="project-name"><?php echo imprimirOpinion(6); ?></div>
                             </div></a
                         >
                     </div>

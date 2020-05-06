@@ -1,3 +1,10 @@
+<?php
+	if (isset($_POST['access'])) {
+		$usu = $_POST['usuario'];
+		$pass = $_POST['password'];
+	}
+?>
+
 <!DOCTYPE html>
 	<html lang="es">
 		<head>
@@ -15,7 +22,7 @@
 		<body>
 			<div class="box">
 				<h1>BIENVENIDO</h1>
-				<form action="Admin/Verificacion_Usuario.php" method="POST" onsubmit="return validar();">
+				<form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST" onsubmit="return validar();">
 					<div class="inputBox">
 						<input type="text" id="user" name="usuario" required>
 						<label>USUARIO</label>
@@ -25,9 +32,9 @@
 						<label>CONTRASEÑA</label>
 					</div>
 					<div class="center">
-						<input type="submit" value="INGRESAR">	
+						<input type="submit" name = "access" value="INGRESAR">	
 					</div>
-					
+					<?php include("Admin/Verificacion_Usuario.php"); ?> 
 				</form>
 			</div>
 		</body>

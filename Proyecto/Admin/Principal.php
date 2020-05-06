@@ -43,11 +43,22 @@
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="Principal.php" title="Página Principal">Principal</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="Cursos.php" title="Cursos">Cursos</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="Beneficiarias.php" title="Beneficiarias">Beneficiarias</a></li>
-                        <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger"  href="../php/CierreSesion.php" title="Cerrar Sesión"><i class="fas fa-2x fa-sign-out-alt text-uppercase mb-4"></i></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger" href="#" title="<?php echo "Usuario: " . $_SESSION["usuario"];?> "><i class="fas fa-2x fa-user text-uppercase mb-4"></i></a>
+                        <li class = "nav-item dropdown">
+                        <a class="nav-link js-scroll-trigger dropdown-toggle" data-toggle="dropdown">Administrador
+                        <span class="caret"></span></a>
+                            <ul class = "dropdown-menu" id = "style_block">
+                                <li class="nav-item">
+                                    <a class="nav-item" id = "style_link"  href="#" title="Nuevo Usuario"> <i class="fas fa-2x fa-user-plus"></i> Usuario Nuevo</a>
+                                </li>
+                                <br>
+                                <li class="nav-item">
+                                    <a class="nav-item" id = "style_link"  href="../php/CierreSesion.php" title="Cerrar Sesión"> <i class="fas fa-2x fa-sign-out-alt"></i> Cerrar Sesión</a>
+                                </li>
+                                <hr>
+                                <li class="nav-item">
+                                    <p class="nav-item" id = "style_parra"> <i class="fas fa-2x fa-user"></i> <?php echo "Usuario: " . $_SESSION["usuario"];?></p>
+                                </li>
+                            </ul>
                         </li>
                     </ul>
                 </div>

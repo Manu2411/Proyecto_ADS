@@ -64,7 +64,7 @@
                         <h2 class="text-white mt-0">BENEFICIARIAS</h2>
                         <hr class="divider light my-4" />
                         <p class="text-white-50 mb-4">Anualmente buscamos beneficiar a 1,000 mujeres provenientes de diferentes zonas del departamento de San Salvador; el cual es fuertemente golpeado por la violencia de las pandillas en El Salvador. Las mujeres viven en entornos de violencia día a día, en el año 2017, cerró con un promedio de 11 homicidios al día. En El Salvador hubo 3,954 asesinatos durante el pasado año. Es una realidad difícil que solo puede enfrentarse con apoyo de instituciones de carácter social como nuestra Fundación.</p>
-                        <a class="btn btn-light btn-xl js-scroll-trigger" href="#portfolio">Leer más...</a>
+                        <a class="btn btn-light btn-xl js-scroll-trigger" href="#information">Leer más...</a>
                     </div>
                 </div>
             </div>
@@ -113,47 +113,47 @@
                         >
                     </div>
                     <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="/Proyecto_ADS/Proyecto/img/Beneficiarias/<?php echo imprimirPhoto(1); ?>"
-                            ><img class="img-fluid" src="/Proyecto_ADS/Proyecto/img/Beneficiarias/<?php echo imprimirPhoto(1); ?>" alt="" />
+                        <a class="portfolio-box" href="/Proyecto_ADS/Proyecto/img/Beneficiarias/<?php echo imprimirPhoto(2); ?>"
+                            ><img class="img-fluid" src="/Proyecto_ADS/Proyecto/img/Beneficiarias/<?php echo imprimirPhoto(2); ?>" alt="" />
                             <div class="portfolio-box-caption">
-                                <div class="project-category text-white-50"><?php echo imprimirBeneName(1); ?></div>
-                                <div class="project-name"><?php echo imprimirOpinion(1); ?></div>
+                                <div class="project-category text-white-50"><?php echo imprimirBeneName(2); ?></div>
+                                <div class="project-name"><?php echo imprimirOpinion(2); ?></div>
                             </div></a
                         >
                     </div>
                     <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="/Proyecto_ADS/Proyecto/img/Beneficiarias/<?php echo imprimirPhoto(1); ?>"
-                            ><img class="img-fluid" src="/Proyecto_ADS/Proyecto/img/Beneficiarias/<?php echo imprimirPhoto(1); ?>" alt="" />
+                        <a class="portfolio-box" href="/Proyecto_ADS/Proyecto/img/Beneficiarias/<?php echo imprimirPhoto(3); ?>"
+                            ><img class="img-fluid" src="/Proyecto_ADS/Proyecto/img/Beneficiarias/<?php echo imprimirPhoto(3); ?>" alt="" />
                             <div class="portfolio-box-caption">
-                                <div class="project-category text-white-50"><?php echo imprimirBeneName(1); ?></div>
-                                <div class="project-name"><?php echo imprimirOpinion(1); ?></div>
+                                <div class="project-category text-white-50"><?php echo imprimirBeneName(3); ?></div>
+                                <div class="project-name"><?php echo imprimirOpinion(3); ?></div>
                             </div></a
                         >
                     </div>
                     <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="/Proyecto_ADS/Proyecto/img/Beneficiarias/<?php echo imprimirPhoto(1); ?>"
-                            ><img class="img-fluid" src="/Proyecto_ADS/Proyecto/img/Beneficiarias/<?php echo imprimirPhoto(1); ?>" alt="" />
+                        <a class="portfolio-box" href="/Proyecto_ADS/Proyecto/img/Beneficiarias/<?php echo imprimirPhoto(4); ?>"
+                            ><img class="img-fluid" src="/Proyecto_ADS/Proyecto/img/Beneficiarias/<?php echo imprimirPhoto(4); ?>" alt="" />
                             <div class="portfolio-box-caption">
-                                <div class="project-category text-white-50"><?php echo imprimirBeneName(1); ?></div>
-                                <div class="project-name"><?php echo imprimirOpinion(1); ?></div>
+                                <div class="project-category text-white-50"><?php echo imprimirBeneName(4); ?></div>
+                                <div class="project-name"><?php echo imprimirOpinion(4); ?></div>
                             </div></a
                         >
                     </div>
                     <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="/Proyecto_ADS/Proyecto/img/Beneficiarias/<?php echo imprimirPhoto(1); ?>"
-                            ><img class="img-fluid" src="/Proyecto_ADS/Proyecto/img/Beneficiarias/<?php echo imprimirPhoto(1); ?>" alt="" />
+                        <a class="portfolio-box" href="/Proyecto_ADS/Proyecto/img/Beneficiarias/<?php echo imprimirPhoto(5); ?>"
+                            ><img class="img-fluid" src="/Proyecto_ADS/Proyecto/img/Beneficiarias/<?php echo imprimirPhoto(5); ?>" alt="" />
                             <div class="portfolio-box-caption">
-                                <div class="project-category text-white-50"><?php echo imprimirBeneName(1); ?></div>
-                                <div class="project-name"><?php echo imprimirOpinion(1); ?></div>
+                                <div class="project-category text-white-50"><?php echo imprimirBeneName(5); ?></div>
+                                <div class="project-name"><?php echo imprimirOpinion(5); ?></div>
                             </div></a
                         >
                     </div>
                     <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="/Proyecto_ADS/Proyecto/img/Beneficiarias/<?php echo imprimirPhoto(1); ?>"
-                            ><img class="img-fluid" src="/Proyecto_ADS/Proyecto/img/Beneficiarias/<?php echo imprimirPhoto(1); ?>" alt="" />
+                        <a class="portfolio-box" href="/Proyecto_ADS/Proyecto/img/Beneficiarias/<?php echo imprimirPhoto(6); ?>"
+                            ><img class="img-fluid" src="/Proyecto_ADS/Proyecto/img/Beneficiarias/<?php echo imprimirPhoto(6); ?>" alt="" />
                             <div class="portfolio-box-caption p-3">
-                                <div class="project-category text-white-50"><?php echo imprimirBeneName(1); ?></div>
-                                <div class="project-name"><?php echo imprimirOpinion(1); ?></div>
+                                <div class="project-category text-white-50"><?php echo imprimirBeneName(6); ?></div>
+                                <div class="project-name"><?php echo imprimirOpinion(6); ?></div>
                             </div></a
                         >
                     </div>

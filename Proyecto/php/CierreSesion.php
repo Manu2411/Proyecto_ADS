@@ -11,7 +11,7 @@
 
 				session_destroy();
 
-				header("location:../Acceso_Admin.html");
+				header("location:../Acceso_Admin.php");
 			?>
 		</body>
 	</html>

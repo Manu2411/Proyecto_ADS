@@ -89,7 +89,7 @@
 						<div class = "element-number form-group" >
 							<label class = "title" ></label>
 							<div class = "item-cont" >
-								<input type = "text" name = "estado" id = "mood" placeholder = "Estado de Curso" maxlength = "5" class = "form-control" />
+								<input type = "text" name = "estado" id = "mood" placeholder = "Estado de Curso" maxlength = "1" class = "form-control" />
 								<span class = "icon-place" id="checkmood">Solo se aceptan valores de 0 ó 1</span>
 							</div>
 						</div>
