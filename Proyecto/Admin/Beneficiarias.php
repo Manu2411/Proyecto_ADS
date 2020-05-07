@@ -26,7 +26,7 @@
 			session_start();
 
 			if (!isset($_SESSION["usuario"])) {
-				header("location:../Acceso_Admin.html");
+				header("location:../Acceso_Admin.php");
 			}
         ?>
 
@@ -49,11 +49,11 @@
                         <span class="caret"></span></a>
                             <ul class = "dropdown-menu" id = "style_block">
                                 <li class="nav-item">
-                                    <a class="nav-item" id = "style_link"  href="#" title="Nuevo Usuario"> <i class="fas fa-2x fa-user-plus"></i> Usuario Nuevo</a>
+                                    <a class="nav-item" id = "style_link"  href="CRUD_admin/Usuarios/Opciones_Usu.php" title="Nuevo Usuario"> <i id = "icono" class="fas fa-2x fa-user-plus"></i> Nuevo Usuario</a>
                                 </li>
                                 <br>
                                 <li class="nav-item">
-                                    <a class="nav-item" id = "style_link"  href="../php/CierreSesion.php" title="Cerrar Sesión"> <i class="fas fa-2x fa-sign-out-alt"></i> Cerrar Sesión</a>
+                                    <a class="nav-item" id = "style_link"  href="../php/CierreSesion.php" title="Cerrar Sesión"> <i id = "icono" class="fas fa-2x fa-sign-out-alt"></i> Cerrar Sesión</a>
                                 </li>
                                 <hr>
                                 <li class="nav-item">
@@ -188,7 +188,7 @@
         <br>
 
         <div class="container text-center">
-            <a class="btn btn-info btn-xl" href="CRUD_admin/Beneficiarias/Opciones_Bene.php">Opciones de Beneficiarias</a>
+            <a class="btn btn-info btn-xl" href="CRUD_admin/Beneficiarias/Opciones_Bene.php">Gestión de Beneficiarias</a>
         </div>
 
         <br>

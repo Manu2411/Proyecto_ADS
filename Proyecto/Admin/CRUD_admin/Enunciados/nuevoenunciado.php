@@ -27,7 +27,7 @@
 			session_start();
 
 			if (!isset($_SESSION["usuario"])) {
-				header("location:../../../Acceso_Admin.html");
+				header("location:../../../Acceso_Admin.php");
 			}
 		?>
 		

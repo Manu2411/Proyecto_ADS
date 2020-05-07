@@ -25,7 +25,7 @@
 			session_start();
 
 			if (!isset($_SESSION["usuario"])) {
-				header("location:../Acceso_Admin.html");
+				header("location:../Acceso_Admin.php");
 			}
         ?>
         
@@ -48,11 +48,11 @@
                         <span class="caret"></span></a>
                             <ul class = "dropdown-menu" id = "style_block">
                                 <li class="nav-item">
-                                    <a class="nav-item" id = "style_link"  href="#" title="Nuevo Usuario"> <i class="fas fa-2x fa-user-plus"></i> Usuario Nuevo</a>
+                                    <a class="nav-item" id = "style_link"  href="CRUD_admin/Usuarios/Opciones_Usu.php" title="Nuevo Usuario"> <i id = "icono" class="fas fa-2x fa-user-plus"></i> Nuevo Usuario</a>
                                 </li>
                                 <br>
                                 <li class="nav-item">
-                                    <a class="nav-item" id = "style_link"  href="../php/CierreSesion.php" title="Cerrar Sesión"> <i class="fas fa-2x fa-sign-out-alt"></i> Cerrar Sesión</a>
+                                    <a class="nav-item" id = "style_link"  href="../php/CierreSesion.php" title="Cerrar Sesión"> <i id = "icono" class="fas fa-2x fa-sign-out-alt"></i> Cerrar Sesión</a>
                                 </li>
                                 <hr>
                                 <li class="nav-item">
@@ -77,7 +77,7 @@
                     <div class="col-lg-8 align-self-baseline">
                         <?php echo imprimirdescripcion1(1); ?>
                         <br>
-                        <a class="btn btn-info  btn-xl js-scroll-trigger" href="CRUD_admin/Enunciados/Opciones_Enunciados.php">Opciones de Enunciados</a>
+                        <a class="btn btn-info  btn-xl js-scroll-trigger" href="CRUD_admin/Enunciados/Opciones_Enunciados.php">Gestión de Enunciados</a>
                     </div>
                 </div>
             </div>
@@ -109,10 +109,6 @@
                             <br>
                             <br>    
                             <button type="button" class="btn btn-primary btn-xl js-scroll-trigger" data-toggle='modal' data-target='#noticia2'>Ver Noticia</button>
-                            <br>
-                            <br>
-                            <br>
-                            <a class="btn btn-info  btn-xl js-scroll-trigger" href="CRUD_admin/Noticias/Opciones_Noticias.php">Opciones de Noticias</a>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 text-center">
@@ -128,11 +124,16 @@
                         </div>
                     </div>
                 </div>
+
+                <br>
+                <br>
+                <div class="container text-center">
+                    <a class="btn btn-info  btn-xl js-scroll-trigger" href="CRUD_admin/Noticias/Opciones_Noticias.php">Gestión de Noticias</a>
+                </div>
             </div>
+
         </section>
 
-       
-        <br>
         <section class="page-section bg-primary" id="contact">
             <div class="container">
                 <div class="row justify-content-center">

@@ -83,7 +83,6 @@
                 <div class="row">
                     <div class="col-lg-4 col-md-6 text-center">
                         <div class="mt-5">
-                            <!-- <i class="fas fa-4x fa-money-bill-alt text-primary mb-4"></i> -->
                             <?php echo imprimirTitu_Noti1(1); ?>
                             <br> 
                             <?php echo imprimirDes_Noti1(1); ?>
@@ -93,7 +92,6 @@
                     </div>
                     <div class="col-lg-4 col-md-6 text-center">
                         <div class="mt-5">
-                            <!-- <i class="fas fa-4x fa-book-open text-primary mb-4"></i> -->
                             <?php echo imprimirTitu_Noti1(2); ?>
                             <br> 
                             <?php echo imprimirDes_Noti1(2); ?>
@@ -103,7 +101,6 @@
                     </div>
                     <div class="col-lg-4 col-md-6 text-center">
                         <div class="mt-5">
-                            <!-- <i class="fas fa-4x fa-balance-scale text-primary mb-4"></i> -->
                             <?php echo imprimirTitu_Noti1(3); ?>
                             <br> 
                             <?php echo imprimirDes_Noti1(3); ?>

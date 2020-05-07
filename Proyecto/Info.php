@@ -70,7 +70,7 @@
                         <h2 class="text-white mt-0">VISIÓN</h2>
                         <hr class="divider light my-4" />
                         <p class="text-white-50 mb-4">Ser una Institución líder que impulsa y desarrolla estrategias para contribuir a la formación y desarrollo integral de la mujer.</p>
-                        <!-- <a class="btn btn-light btn-xl js-scroll-trigger" href="#services">Get Started!</a> -->
+                        
                     </div>
                     <div class="col-lg-8 text-center">
                         <a class="btn btn-light btn-xl js-scroll-trigger" href="#services">Saber más</a>

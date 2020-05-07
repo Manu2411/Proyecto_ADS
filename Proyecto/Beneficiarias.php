@@ -100,7 +100,7 @@
             </div>
         </section>
         <!-- Portfolio section-->
-        <section id="portfolio"> <!-- Todas las imagenes deben de ser de igual tamaño para que no se distorsionen las medidas de los divs -->
+        <section id="portfolio">
             <div class="container-fluid p-0">
                 <div class="row no-gutters">
                     <div class="col-lg-4 col-sm-6">

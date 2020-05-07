@@ -34,6 +34,13 @@
 					<div class="center">
 						<input type="submit" name = "access" value="INGRESAR">	
 					</div>
+
+					<br>
+
+					<div class="center">
+						<a href="Recuperacion/Recupera.php">¿Olvidaste tu contraseña?</a>
+					</div>
+					
 					<?php include("Admin/Verificacion_Usuario.php"); ?> 
 				</form>
 			</div>

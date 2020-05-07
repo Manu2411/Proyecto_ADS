@@ -113,8 +113,7 @@
                                 <div class="project-name"><?php echo imprimirDescrip(5); ?></div>
                                 <div class="project-name">Horario: <?php echo imprimirHorario(5); ?></div>
                                 <div class="project-name">$<?php echo imprimirPrecio(5); ?></div>
-                            </div></a
-                        >
+                            </div></a>
                     </div>
                     <div class="col-lg-4 col-sm-6">
                         <a class="portfolio-box" href="/Proyecto_ADS/Proyecto/img/Cursos/<?php echo imprimirImg(6); ?>"
@@ -124,8 +123,7 @@
                                 <div class="project-name"><?php echo imprimirDescrip(6); ?></div>
                                 <div class="project-name">Horario: <?php echo imprimirHorario(6); ?></div>
                                 <div class="project-name">$<?php echo imprimirPrecio(6); ?></div>
-                            </div></a
-                        >
+                            </div></a>
                     </div>
                 </div>
             </div>

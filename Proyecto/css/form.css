@@ -93,3 +93,13 @@ body {
     font:Bold 12pt sans-serif;
     text-align: center;
 }
+
+.center a {
+    letter-spacing: 2px;
+    color: #03a9f4;
+}
+
+.center a:hover {
+    letter-spacing: 2px;
+    color: #a5dcf8;
+}

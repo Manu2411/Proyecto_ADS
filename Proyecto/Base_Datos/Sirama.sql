@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3308
--- Tiempo de generación: 05-05-2020 a las 20:13:15
+-- Tiempo de generación: 06-05-2020 a las 22:45:55
 -- Versión del servidor: 8.0.18
 -- Versión de PHP: 7.3.12
 
@@ -147,12 +147,13 @@ INSERT INTO `noticias` (`Id_Noti`, `Titulo`, `Descripcion`, `Contenido`, `Estado
 
 DROP TABLE IF EXISTS `usuarios`;
 CREATE TABLE IF NOT EXISTS `usuarios` (
-  `Id_Usu` char(5) NOT NULL,
+  `Id_Usu` int(5) NOT NULL,
   `Nombres` varchar(35) NOT NULL,
   `Apellidos` varchar(35) NOT NULL,
   `Cargo` varchar(50) NOT NULL,
   `Clave` char(32) NOT NULL,
   `Usuario` varchar(40) NOT NULL,
+  `Correo` varchar(75) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`Id_Usu`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
@@ -160,9 +161,9 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
 -- Volcado de datos para la tabla `usuarios`
 --
 
-INSERT INTO `usuarios` (`Id_Usu`, `Nombres`, `Apellidos`, `Cargo`, `Clave`, `Usuario`) VALUES
-('AD01', 'Manuel', 'Hurtado', 'Jefe Sistemas', '12345', 'Admin'),
-('AD02', 'Alex', 'Mata', 'Asistente', '54321', 'Alex');
+INSERT INTO `usuarios` (`Id_Usu`, `Nombres`, `Apellidos`, `Cargo`, `Clave`, `Usuario`, `Correo`) VALUES
+(1, 'Manuel', 'Hurtado', 'Jefe Sistemas', '12345', 'Admin', 'manuhurtado_24@hotmail.com'),
+(2, 'Alex', 'Mata', 'Asistente', '54321', 'Alex', 'alexrobertomata@hotmail.com');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
