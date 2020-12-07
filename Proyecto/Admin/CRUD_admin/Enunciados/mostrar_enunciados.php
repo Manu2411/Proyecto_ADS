@@ -34,7 +34,7 @@
 				//Creando una nueva instancia del objeto de conexión
 				//a la base de datos
 
-					@$db = new mysqli('localhost','root','','sirama', '3308');
+					@$db = new mysqli('localhost','root','','sirama', '3306');
 
 					// @$db = new mysqli('localhost','root','','sirama'); <-- Utilizar esta si no funciona la de arriba
 					

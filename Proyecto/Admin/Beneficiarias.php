@@ -127,8 +127,8 @@
             <div class="container-fluid p-0">
                 <div class="row no-gutters">
                     <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="/Proyecto_ADS/Proyecto/img/Beneficiarias/<?php echo imprimirPhoto(1); ?>"
-                            ><img class="img-fluid" src="/Proyecto_ADS/Proyecto/img/Beneficiarias/<?php echo imprimirPhoto(1); ?>" alt="" />
+                        <a class="portfolio-box" href="/ADS/Proyecto_ADS/Proyecto/img/Beneficiarias/<?php echo imprimirPhoto(1); ?>"
+                            ><img class="img-fluid" src="/ADS/Proyecto_ADS/Proyecto/img/Beneficiarias/<?php echo imprimirPhoto(1); ?>" alt="" />
                             <div class="portfolio-box-caption">
                                 <div class="project-category text-white-50"><?php echo imprimirBeneName(1); ?></div>
                                 <div class="project-name"><?php echo imprimirOpinion(1); ?></div>
@@ -136,8 +136,8 @@
                         >
                     </div>
                     <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="/Proyecto_ADS/Proyecto/img/Beneficiarias/<?php echo imprimirPhoto(2); ?>"
-                            ><img class="img-fluid" src="/Proyecto_ADS/Proyecto/img/Beneficiarias/<?php echo imprimirPhoto(2); ?>" alt="" />
+                        <a class="portfolio-box" href="/ADS/Proyecto_ADS/Proyecto/img/Beneficiarias/<?php echo imprimirPhoto(2); ?>"
+                            ><img class="img-fluid" src="/ADS/Proyecto_ADS/Proyecto/img/Beneficiarias/<?php echo imprimirPhoto(2); ?>" alt="" />
                             <div class="portfolio-box-caption">
                                 <div class="project-category text-white-50"><?php echo imprimirBeneName(2); ?></div>
                                 <div class="project-name"><?php echo imprimirOpinion(2); ?></div>
@@ -145,8 +145,8 @@
                         >
                     </div>
                     <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="/Proyecto_ADS/Proyecto/img/Beneficiarias/<?php echo imprimirPhoto(3); ?>"
-                            ><img class="img-fluid" src="/Proyecto_ADS/Proyecto/img/Beneficiarias/<?php echo imprimirPhoto(3); ?>" alt="" />
+                        <a class="portfolio-box" href="/ADS/Proyecto_ADS/Proyecto/img/Beneficiarias/<?php echo imprimirPhoto(3); ?>"
+                            ><img class="img-fluid" src="/ADS/Proyecto_ADS/Proyecto/img/Beneficiarias/<?php echo imprimirPhoto(3); ?>" alt="" />
                             <div class="portfolio-box-caption">
                                 <div class="project-category text-white-50"><?php echo imprimirBeneName(3); ?></div>
                                 <div class="project-name"><?php echo imprimirOpinion(3); ?></div>
@@ -154,8 +154,8 @@
                         >
                     </div>
                     <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="/Proyecto_ADS/Proyecto/img/Beneficiarias/<?php echo imprimirPhoto(4); ?>"
-                            ><img class="img-fluid" src="/Proyecto_ADS/Proyecto/img/Beneficiarias/<?php echo imprimirPhoto(4); ?>" alt="" />
+                        <a class="portfolio-box" href="/ADS/Proyecto_ADS/Proyecto/img/Beneficiarias/<?php echo imprimirPhoto(4); ?>"
+                            ><img class="img-fluid" src="/ADS/Proyecto_ADS/Proyecto/img/Beneficiarias/<?php echo imprimirPhoto(4); ?>" alt="" />
                             <div class="portfolio-box-caption">
                                 <div class="project-category text-white-50"><?php echo imprimirBeneName(4); ?></div>
                                 <div class="project-name"><?php echo imprimirOpinion(4); ?></div>
@@ -163,8 +163,8 @@
                         >
                     </div>
                     <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="/Proyecto_ADS/Proyecto/img/Beneficiarias/<?php echo imprimirPhoto(5); ?>"
-                            ><img class="img-fluid" src="/Proyecto_ADS/Proyecto/img/Beneficiarias/<?php echo imprimirPhoto(5); ?>" alt="" />
+                        <a class="portfolio-box" href="/ADS/Proyecto_ADS/Proyecto/img/Beneficiarias/<?php echo imprimirPhoto(5); ?>"
+                            ><img class="img-fluid" src="/ADS/Proyecto_ADS/Proyecto/img/Beneficiarias/<?php echo imprimirPhoto(5); ?>" alt="" />
                             <div class="portfolio-box-caption">
                                 <div class="project-category text-white-50"><?php echo imprimirBeneName(5); ?></div>
                                 <div class="project-name"><?php echo imprimirOpinion(5); ?></div>
@@ -172,8 +172,8 @@
                         >
                     </div>
                     <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="/Proyecto_ADS/Proyecto/img/Beneficiarias/<?php echo imprimirPhoto(6); ?>"
-                            ><img class="img-fluid" src="/Proyecto_ADS/Proyecto/img/Beneficiarias/<?php echo imprimirPhoto(6); ?>" alt="" />
+                        <a class="portfolio-box" href="/ADS/Proyecto_ADS/Proyecto/img/Beneficiarias/<?php echo imprimirPhoto(6); ?>"
+                            ><img class="img-fluid" src="/ADS/Proyecto_ADS/Proyecto/img/Beneficiarias/<?php echo imprimirPhoto(6); ?>" alt="" />
                             <div class="portfolio-box-caption p-3">
                                 <div class="project-category text-white-50"><?php echo imprimirBeneName(6); ?></div>
                                 <div class="project-name"><?php echo imprimirOpinion(6); ?></div>

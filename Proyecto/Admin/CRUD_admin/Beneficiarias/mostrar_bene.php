@@ -34,7 +34,7 @@
 				//Creando una nueva instancia del objeto de conexión
 				//a la base de datos
 
-					@$db = new mysqli('localhost','root','','sirama', '3308');
+					@$db = new mysqli('localhost','root','','sirama', '3306');
 
 					// @$db = new mysqli('localhost','root','','sirama'); <-- Utilizar esta si no funciona la de arriba
 
@@ -81,7 +81,7 @@
 								if ($tipo == 'image/jpg' || $tipo == 'image/png' || $tipo == 'image/jpeg') {
 	
 									//Ruta de la carpeta destino en servidor
-									$destino = $_SERVER['DOCUMENT_ROOT'] . '/Proyecto_ADS/Proyecto/img/Beneficiarias/';
+									$destino = $_SERVER['DOCUMENT_ROOT'] . '/ADS/Proyecto_ADS/Proyecto/img/Beneficiarias/';
 	
 									//Movemos la imagen del directorio temporal al directorio elegido
 									move_uploaded_file($_FILES['foto']['tmp_name'], $destino.$nombre);

@@ -117,7 +117,7 @@
 
 						//Conectando con el servidor MySQL y seleccionando
 						//la base de datos con la que se trabajará
-						@$db = new mysqli( 'localhost' , 'root' , '' , 'sirama', "3308");
+						@$db = new mysqli( 'localhost' , 'root' , '' , 'sirama', "3306");
 
 						// @$db = new mysqli('localhost','root','','sirama'); <-- Utilizar esta si no funciona la de arriba
 

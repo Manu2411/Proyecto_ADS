@@ -88,8 +88,8 @@
             <div class="container-fluid p-0">
                 <div class="row no-gutters">
                     <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="/Proyecto_ADS/Proyecto/img/Cursos/<?php echo imprimirImg(1); ?>">
-                            <img class="img-fluid" src="/Proyecto_ADS/Proyecto/img/Cursos/<?php echo imprimirImg(1); ?>" alt="Foto_Curso1" /> <!-- Colocar imagenes de tamaño de 650x350 -->
+                        <a class="portfolio-box" href="/ADS/Proyecto_ADS/Proyecto/img/Cursos/<?php echo imprimirImg(1); ?>">
+                            <img class="img-fluid" src="/ADS/Proyecto_ADS/Proyecto/img/Cursos/<?php echo imprimirImg(1); ?>" alt="Foto_Curso1" /> <!-- Colocar imagenes de tamaño de 650x350 -->
                             <div class="portfolio-box-caption">
                                 <div class="project-category text-white-50"><?php echo imprimirNombre(1); ?></div>
                                 <div class="project-name"><?php echo imprimirDescrip(1); ?></div>
@@ -98,8 +98,8 @@
                             </div></a>
                     </div>
                     <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="/Proyecto_ADS/Proyecto/img/Cursos/<?php echo imprimirImg(2); ?>">
-                            <img class="img-fluid" src="/Proyecto_ADS/Proyecto/img/Cursos/<?php echo imprimirImg(2); ?>" alt="Foto_Curso2" /> <!-- Colocar imagenes de tamaño de 650x350 -->
+                        <a class="portfolio-box" href="/ADS/Proyecto_ADS/Proyecto/img/Cursos/<?php echo imprimirImg(2); ?>">
+                            <img class="img-fluid" src="/ADS/Proyecto_ADS/Proyecto/img/Cursos/<?php echo imprimirImg(2); ?>" alt="Foto_Curso2" /> <!-- Colocar imagenes de tamaño de 650x350 -->
                             <div class="portfolio-box-caption">
                                 <div class="project-category text-white-50"><?php echo imprimirNombre(2); ?></div>
                                 <div class="project-name"><?php echo imprimirDescrip(2); ?></div>
@@ -108,8 +108,8 @@
                             </div></a>
                     </div>
                     <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="/Proyecto_ADS/Proyecto/img/Cursos/<?php echo imprimirImg(3); ?>">
-                            <img class="img-fluid" src="/Proyecto_ADS/Proyecto/img/Cursos/<?php echo imprimirImg(3); ?>" alt="Foto_Curso3" /> <!-- Colocar imagenes de tamaño de 650x350 -->
+                        <a class="portfolio-box" href="/ADS/Proyecto_ADS/Proyecto/img/Cursos/<?php echo imprimirImg(3); ?>">
+                            <img class="img-fluid" src="/ADS/Proyecto_ADS/Proyecto/img/Cursos/<?php echo imprimirImg(3); ?>" alt="Foto_Curso3" /> <!-- Colocar imagenes de tamaño de 650x350 -->
                             <div class="portfolio-box-caption">
                                 <div class="project-category text-white-50"><?php echo imprimirNombre(3); ?></div>
                                 <div class="project-name"><?php echo imprimirDescrip(3); ?></div>
@@ -118,8 +118,8 @@
                             </div></a>
                     </div>
                     <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="/Proyecto_ADS/Proyecto/img/Cursos/<?php echo imprimirImg(4); ?>">
-                            <img class="img-fluid" src="/Proyecto_ADS/Proyecto/img/Cursos/<?php echo imprimirImg(4); ?>" alt="Foto_Curso4" /> <!-- Colocar imagenes de tamaño de 650x350 -->
+                        <a class="portfolio-box" href="/ADS/Proyecto_ADS/Proyecto/img/Cursos/<?php echo imprimirImg(4); ?>">
+                            <img class="img-fluid" src="/ADS/Proyecto_ADS/Proyecto/img/Cursos/<?php echo imprimirImg(4); ?>" alt="Foto_Curso4" /> <!-- Colocar imagenes de tamaño de 650x350 -->
                             <div class="portfolio-box-caption">
                             <div class="project-category text-white-50"><?php echo imprimirNombre(4); ?></div>
                             <div class="project-name"><?php echo imprimirDescrip(4); ?></div>
@@ -128,8 +128,8 @@
                             </div></a>
                     </div>
                     <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="/Proyecto_ADS/Proyecto/img/Cursos/<?php echo imprimirImg(5); ?>">
-                            <img class="img-fluid" src="/Proyecto_ADS/Proyecto/img/Cursos/<?php echo imprimirImg(5); ?>" alt="Foto_Curso5" /> <!-- Colocar imagenes de tamaño de 650x350 -->
+                        <a class="portfolio-box" href="/ADS/Proyecto_ADS/Proyecto/img/Cursos/<?php echo imprimirImg(5); ?>">
+                            <img class="img-fluid" src="/ADS/Proyecto_ADS/Proyecto/img/Cursos/<?php echo imprimirImg(5); ?>" alt="Foto_Curso5" /> <!-- Colocar imagenes de tamaño de 650x350 -->
                             <div class="portfolio-box-caption">
                                 <div class="project-category text-white-50"><?php echo imprimirNombre(5); ?></div>
                                 <div class="project-name"><?php echo imprimirDescrip(5); ?></div>
@@ -138,8 +138,8 @@
                             </div></a>
                     </div>
                     <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="/Proyecto_ADS/Proyecto/img/Cursos/<?php echo imprimirImg(6); ?>">
-                            <img class="img-fluid" src="/Proyecto_ADS/Proyecto/img/Cursos/<?php echo imprimirImg(6); ?>" alt="Foto_Curso6" /> <!-- Colocar imagenes de tamaño de 650x350 -->
+                        <a class="portfolio-box" href="/ADS/Proyecto_ADS/Proyecto/img/Cursos/<?php echo imprimirImg(6); ?>">
+                            <img class="img-fluid" src="/ADS/Proyecto_ADS/Proyecto/img/Cursos/<?php echo imprimirImg(6); ?>" alt="Foto_Curso6" /> <!-- Colocar imagenes de tamaño de 650x350 -->
                             <div class="portfolio-box-caption p-3">
                                 <div class="project-category text-white-50"><?php imprimirNombre(6); ?></div>
                                 <div class="project-name"><?php echo imprimirDescrip(6); ?></div>

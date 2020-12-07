@@ -1,7 +1,7 @@
 <?php
     if (isset($_POST['check'])) {
 		try {
-			$base = new PDO("mysql:host=localhost:3308; dbname=sirama" , "root", "");
+			$base = new PDO("mysql:host=localhost:3306; dbname=sirama" , "root", "");
 	
 			// $base = new PDO("mysql:host=localhost; dbname=sirama" , "root", ""); <-- Usar esta si no funciona la de arriba
 	
